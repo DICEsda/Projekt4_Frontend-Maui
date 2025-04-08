@@ -26400,24 +26400,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\achih\\.nuget\\packages\\": {},
+    "C:\\Users\\yahya\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\achih\\source\\repos\\FinanceTrackerAPP\\FinanceTrackerAPP\\FinanceTrackerAPP.csproj",
+      "projectUniqueName": "C:\\Users\\yahya\\Desktop\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTrackerAPP\\FinanceTrackerAPP.csproj",
       "projectName": "FinanceTrackerAPP",
-      "projectPath": "C:\\Users\\achih\\source\\repos\\FinanceTrackerAPP\\FinanceTrackerAPP\\FinanceTrackerAPP.csproj",
-      "packagesPath": "C:\\Users\\achih\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\achih\\source\\repos\\FinanceTrackerAPP\\FinanceTrackerAPP\\obj\\",
+      "projectPath": "C:\\Users\\yahya\\Desktop\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTrackerAPP\\FinanceTrackerAPP.csproj",
+      "packagesPath": "C:\\Users\\yahya\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\yahya\\Desktop\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTrackerAPP\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\achih\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\yahya\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -26460,7 +26460,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net9.0-android35.0": {
@@ -26492,6 +26492,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+            "version": "[9.0.201, 9.0.201]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.Android": {
             "privateAssets": "all"
@@ -26500,7 +26506,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.104/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
       },
       "net9.0-ios18.2": {
         "targetAlias": "net9.0-ios",
@@ -26531,6 +26537,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+            "version": "[9.0.201, 9.0.201]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.iOS": {
             "privateAssets": "all"
@@ -26539,7 +26551,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.104/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
       },
       "net9.0-maccatalyst18.2": {
         "targetAlias": "net9.0-maccatalyst",
@@ -26571,6 +26583,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+            "version": "[9.0.201, 9.0.201]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.MacCatalyst": {
             "privateAssets": "all"
@@ -26579,7 +26597,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.104/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
       },
       "net9.0-windows10.0.19041": {
         "targetAlias": "net9.0-windows10.0.19041.0",
@@ -26606,6 +26624,10 @@
         "warn": true,
         "downloadDependencies": [
           {
+            "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+            "version": "[9.0.201, 9.0.201]"
+          },
+          {
             "name": "Microsoft.Windows.SDK.NET.Ref",
             "version": "[10.0.19041.57, 10.0.19041.57]"
           }
@@ -26618,7 +26640,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

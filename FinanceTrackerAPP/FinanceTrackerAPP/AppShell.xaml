@@ -7,9 +7,16 @@
     Shell.FlyoutBehavior="Flyout"
     Title="FinanceTrackerAPP">
 
+    <!-- First ShellContent for MainPage -->
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+
+    <!-- Second ShellContent for NewPage1 -->
+    <ShellContent
+        Title="Newpage1"
+        ContentTemplate="{DataTemplate local:NewPage1}"
+        Route="NewPage1" />
 
 </Shell>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YourNamespace.AddEditJobPage"
+             Title="Add/Edit job">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15" HorizontalOptions="Center">
+
+            <!-- Existing Job Fields -->
+            <Label Text="Job name:" FontAttributes="Bold"/>
+            <Entry Placeholder="job x" Text="{Binding JobName}"/>
+
+            <Label Text="Employment type:" FontAttributes="Bold"/>
+            <Entry Placeholder="eg. Full/Part time, hourly..." Text="{Binding EmploymentType}"/>
+
+            <Label Text="Tax card:" FontAttributes="Bold"/>
+            <HorizontalStackLayout Spacing="20">
+                <RadioButton Content="A-card" IsChecked="{Binding IsACard}"/>
+                <RadioButton Content="B-card" IsChecked="{Binding IsBCard}"/>
+            </HorizontalStackLayout>
+
+            <Label Text="CVR:" FontAttributes="Bold"/>
+            <Entry Placeholder="eg. 41826614" Keyboard="Numeric" Text="{Binding CVR}"/>
+
+            <Label Text="Hourly Rate (DKK/hr):" FontAttributes="Bold"/>
+            <Entry Placeholder="140" Keyboard="Numeric" Text="{Binding HourlyRate}"/>
+
+            <!-- Supplement Section -->
+            <Label Text="Add supplement" FontAttributes="Bold" FontSize="Medium"/>
+
+            <Label Text="Name:" FontAttributes="Bold"/>
+            <BoxView HeightRequest="1" Color="LightGray" Margin="0,20"/>
+            <Entry Placeholder="eg. night" Text="{Binding SupplementName}"/>
+
+            <Label Text="Day(s)" FontAttributes="Bold"/>
+            <Picker Title="Select days" ItemsSource="{Binding DaysOptions}" 
+                    SelectedItem="{Binding SelectedDays}"/>
+
+            <Label Text="Time range" FontAttributes="Bold"/>
+            <Grid ColumnDefinitions="*,Auto,*" ColumnSpacing="10">
+                <TimePicker Grid.Column="0" Time="{Binding StartTime}" Format="HH:mm"/>
+                <Label Grid.Column="1" Text="-" VerticalOptions="Center"/>
+                <TimePicker Grid.Column="2" Time="{Binding EndTime}" Format="HH:mm"/>
+            </Grid>
+
+            <Label Text="Extra rate" FontAttributes="Bold"/>
+            <Entry Placeholder="0" Keyboard="Numeric" Text="{Binding ExtraRate}"/>
+
+            <HorizontalStackLayout Spacing="15">
+                <Button Text="Add another" 
+                        BackgroundColor="Transparent" 
+                        TextColor="#512BD4"
+                        Command="{Binding AddAnotherSupplementCommand}"/>
+
+                <Button Text="Save" 
+                        BackgroundColor="#512BD4" 
+                        TextColor="White"
+                        CornerRadius="10"
+                        HorizontalOptions="EndAndExpand"
+                        Command="{Binding SaveSupplementCommand}"/>
+            </HorizontalStackLayout>
+
+            <!-- Remove button (conditional visibility) -->
+            <Button Text="Remove" 
+                    BackgroundColor="LightCoral" 
+                    TextColor="White"
+                    CornerRadius="10"
+                    IsVisible="{Binding CanRemoveSupplement}"
+                    Command="{Binding RemoveSupplementCommand}"/>
+
+            <!-- Original Save Button -->
+            <Button Text="Save Job" 
+                    BackgroundColor="#512BD4" 
+                    TextColor="White"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    Margin="0,20,0,0"
+                    Command="{Binding SaveCommand}"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

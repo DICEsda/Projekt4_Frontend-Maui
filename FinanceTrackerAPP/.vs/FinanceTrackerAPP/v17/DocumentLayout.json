@@ -1,7 +1,31 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\achih\\source\\repos\\FinanceTrackerAPP\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\yahya\\Desktop\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{23C69137-0EB1-4756-93F7-01835ED24B03}|FinanceTrackerAPP\\FinanceTrackerAPP.csproj|c:\\users\\yahya\\desktop\\projekt4_frontend-maui\\financetrackerapp\\financetrackerapp\\newpage1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{23C69137-0EB1-4756-93F7-01835ED24B03}|FinanceTrackerAPP\\FinanceTrackerAPP.csproj|solutionrelative:financetrackerapp\\newpage1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23C69137-0EB1-4756-93F7-01835ED24B03}|FinanceTrackerAPP\\FinanceTrackerAPP.csproj|c:\\users\\yahya\\desktop\\projekt4_frontend-maui\\financetrackerapp\\financetrackerapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{23C69137-0EB1-4756-93F7-01835ED24B03}|FinanceTrackerAPP\\FinanceTrackerAPP.csproj|solutionrelative:financetrackerapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23C69137-0EB1-4756-93F7-01835ED24B03}|FinanceTrackerAPP\\FinanceTrackerAPP.csproj|c:\\users\\yahya\\desktop\\projekt4_frontend-maui\\financetrackerapp\\financetrackerapp\\newpage1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23C69137-0EB1-4756-93F7-01835ED24B03}|FinanceTrackerAPP\\FinanceTrackerAPP.csproj|solutionrelative:financetrackerapp\\newpage1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\yahya\\AppData\\Local\\Temp\\c40ad582-a947-43bf-a266-4ca5f2918da0_FED (1).zip.da0\\FED\\Assignment-1\\Views\\NewPage1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23C69137-0EB1-4756-93F7-01835ED24B03}|FinanceTrackerAPP\\FinanceTrackerAPP.csproj|c:\\users\\yahya\\desktop\\projekt4_frontend-maui\\financetrackerapp\\financetrackerapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{23C69137-0EB1-4756-93F7-01835ED24B03}|FinanceTrackerAPP\\FinanceTrackerAPP.csproj|solutionrelative:financetrackerapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23C69137-0EB1-4756-93F7-01835ED24B03}|FinanceTrackerAPP\\FinanceTrackerAPP.csproj|c:\\users\\yahya\\desktop\\projekt4_frontend-maui\\financetrackerapp\\financetrackerapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23C69137-0EB1-4756-93F7-01835ED24B03}|FinanceTrackerAPP\\FinanceTrackerAPP.csproj|solutionrelative:financetrackerapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,19 +33,85 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NewPage1.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\yahya\\Desktop\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTrackerAPP\\NewPage1.xaml.cs",
+              "RelativeDocumentMoniker": "FinanceTrackerAPP\\NewPage1.xaml.cs",
+              "ToolTip": "C:\\Users\\yahya\\Desktop\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTrackerAPP\\NewPage1.xaml.cs",
+              "RelativeToolTip": "FinanceTrackerAPP\\NewPage1.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T13:58:27.15Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NewPage1.xaml",
+              "DocumentMoniker": "C:\\Users\\yahya\\Desktop\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTrackerAPP\\NewPage1.xaml",
+              "RelativeDocumentMoniker": "FinanceTrackerAPP\\NewPage1.xaml",
+              "ToolTip": "C:\\Users\\yahya\\Desktop\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTrackerAPP\\NewPage1.xaml",
+              "RelativeToolTip": "FinanceTrackerAPP\\NewPage1.xaml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-08T13:30:15.971Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\yahya\\Desktop\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTrackerAPP\\AppShell.xaml",
+              "RelativeDocumentMoniker": "FinanceTrackerAPP\\AppShell.xaml",
+              "ToolTip": "C:\\Users\\yahya\\Desktop\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTrackerAPP\\AppShell.xaml",
+              "RelativeToolTip": "FinanceTrackerAPP\\AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-08T13:58:37.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NewPage1.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\yahya\\AppData\\Local\\Temp\\c40ad582-a947-43bf-a266-4ca5f2918da0_FED (1).zip.da0\\FED\\Assignment-1\\Views\\NewPage1.xaml.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\c40ad582-a947-43bf-a266-4ca5f2918da0_FED (1).zip.da0\\FED\\Assignment-1\\Views\\NewPage1.xaml.cs",
+              "ToolTip": "C:\\Users\\yahya\\AppData\\Local\\Temp\\c40ad582-a947-43bf-a266-4ca5f2918da0_FED (1).zip.da0\\FED\\Assignment-1\\Views\\NewPage1.xaml.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\c40ad582-a947-43bf-a266-4ca5f2918da0_FED (1).zip.da0\\FED\\Assignment-1\\Views\\NewPage1.xaml.cs [Read Only]",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T13:18:46.793Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\yahya\\Desktop\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTrackerAPP\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "FinanceTrackerAPP\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\yahya\\Desktop\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTrackerAPP\\MainPage.xaml.cs",
+              "RelativeToolTip": "FinanceTrackerAPP\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T13:01:20.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\yahya\\Desktop\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTrackerAPP\\MainPage.xaml",
+              "RelativeDocumentMoniker": "FinanceTrackerAPP\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\yahya\\Desktop\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTrackerAPP\\MainPage.xaml",
+              "RelativeToolTip": "FinanceTrackerAPP\\MainPage.xaml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAkwCQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-08T12:47:14.716Z",
+              "EditorCaption": ""
             }
           ]
         }
