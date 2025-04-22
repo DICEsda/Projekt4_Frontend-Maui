@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
+using FinanceTrackerAPP.Views;
+using FinanceTrackerAPP.ViewModels;
 
 namespace FinanceTrackerAPP
 {
@@ -16,9 +18,15 @@ namespace FinanceTrackerAPP
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
+            // Register your pages and viewmodels here
+            builder.Services.AddTransient<LogHours>();
+            builder.Services.AddTransient<LogHoursViewModel>();
+            builder.Services.AddTransient<add_editViewmodel>();
+            builder.Services.AddTransient<MainPageViewModel>();
+            builder.Services.AddTransient<registerViewmodel>();
             return builder.Build();
         }
     }

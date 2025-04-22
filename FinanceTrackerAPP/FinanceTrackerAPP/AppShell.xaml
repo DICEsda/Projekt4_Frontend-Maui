@@ -4,19 +4,12 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:FinanceTrackerAPP"
+    xmlns:pages="clr-namespace:FinanceTrackerAPP.Views"
     Shell.FlyoutBehavior="Flyout"
     Title="FinanceTrackerAPP">
 
-    <!-- First ShellContent for MainPage -->
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
-    <!-- Second ShellContent for NewPage1 -->
-    <ShellContent
-        Title="Newpage1"
-        ContentTemplate="{DataTemplate local:NewPage1}"
-        Route="NewPage1" />
+    <ShellContent Title="Register" ContentTemplate="{DataTemplate pages:Register}" Route="Register" />
+    <ShellContent Title="Home" ContentTemplate="{DataTemplate pages:MainPage}" Route="MainPage" />
+    <ShellContent Title="Add_Edit" ContentTemplate="{DataTemplate pages:Add_Edit}" Route="Add_Edit" />
 
 </Shell>

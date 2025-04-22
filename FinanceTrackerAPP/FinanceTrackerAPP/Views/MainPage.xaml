@@ -1,0 +1,67 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:FinanceTrackerAPP.ViewModels"
+             x:Class="FinanceTrackerAPP.Views.Mainpage"
+             Title="Main Page">
+
+    <Grid Padding="20">
+        <!-- Top icons -->
+        <Grid RowDefinitions="Auto,*" ColumnDefinitions="*,*">
+            <ImageButton Source="logout.png"
+                         Clicked="OnLogoutClicked"
+                         HorizontalOptions="Start"
+                         BackgroundColor="Transparent"
+                         WidthRequest="30"
+                         HeightRequest="30"/>
+
+            <ImageButton Source="user.png"
+                         Clicked="OnUserClicked"
+                         HorizontalOptions="End"
+                         BackgroundColor="Transparent"
+                         WidthRequest="30"
+                         HeightRequest="30"/>
+        </Grid>
+
+        <!-- Content -->
+        <VerticalStackLayout Spacing="20"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center">
+
+            <Label Text="FinanceTracker"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="Teal"
+                   HorizontalOptions="Center"/>
+
+            <Button Text="Job overview"
+                    StyleClass="MainButton"
+                    Clicked="OnJobOverviewClicked"/>
+
+            <Button Text="Log hours"
+                    StyleClass="MainButton"
+                    Clicked="OnLogHoursClicked"/>
+
+            <Button Text="Paycheck"
+                    StyleClass="MainButton"
+                    Clicked="OnPaycheckClicked"/>
+
+            <Button Text="Holiday pay"
+                    StyleClass="MainButton"
+                    Clicked="OnHolidayPayClicked"/>
+
+            <Button Text="Student grant"
+                    StyleClass="MainButton"
+                    Clicked="OnStudentGrantClicked"/>
+
+        </VerticalStackLayout>
+
+        <!-- Language toggle -->
+        <ImageButton Source="language_icon.png"
+                     Clicked="OnLanguageToggleClicked"
+                     BackgroundColor="Transparent"
+                     HorizontalOptions="Start"
+                     VerticalOptions="End"
+                     WidthRequest="30"
+                     HeightRequest="30"/>
+    </Grid>
+</ContentPage>
