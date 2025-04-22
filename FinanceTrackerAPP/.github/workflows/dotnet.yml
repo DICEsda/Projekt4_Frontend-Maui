@@ -1,0 +1,40 @@
+name: .NET MAUI CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 9.0.x
+
+    - name: Install MAUI Workload
+      run: dotnet workload install maui
+
+    - name: Restore Dependencies
+      run: dotnet restore FinanceTrackerAPP.sln
+
+    - name: Build Project
+      run: dotnet build FinanceTrackerAPP.sln --no-restore --configuration Release
+
+    - name: Run Tests
+      run: dotnet test FinanceTrackerAPP.sln --no-build --verbosity normal
+
+    - name: Upload Build Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: maui-build-artifact
+        path: "**/bin/Release/net9.0-windows*/**/*.msix"
+        if-no-files-found: warn
+        retention-days: 7
