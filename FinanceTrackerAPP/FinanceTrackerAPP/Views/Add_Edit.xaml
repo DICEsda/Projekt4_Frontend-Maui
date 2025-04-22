@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinanceTrackerAPP.Views.Add_Edit"
+             Title="Add/Edit job">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15" HorizontalOptions="Center">
+
+            <Label Text="Job name:" FontAttributes="Bold"/>
+            <Entry Placeholder="job x" Text="{Binding JobName}"/>
+
+            <Label Text="Employment type:" FontAttributes="Bold"/>
+            <Entry Placeholder="eg. Full/Part time, hourly..." Text="{Binding EmploymentType}"/>
+
+            <Label Text="Tax card:" FontAttributes="Bold"/>
+            <HorizontalStackLayout Spacing="20">
+                <RadioButton Content="A-card" IsChecked="{Binding IsACard}"/>
+                <RadioButton Content="B-card" IsChecked="{Binding IsBCard}"/>
+            </HorizontalStackLayout>
+
+            <Label Text="CVR:" FontAttributes="Bold"/>
+            <Entry Placeholder="eg. 41826614" Keyboard="Numeric" Text="{Binding CVR}"/>
+
+            <Label Text="Hourly Rate (DKK/hr):" FontAttributes="Bold"/>
+            <Entry Placeholder="140" Keyboard="Numeric" Text="{Binding HourlyRate}"/>
+
+            <!-- Pay period pickers -->
+            <Label Text="Pay period:" FontAttributes="Bold"/>
+            <HorizontalStackLayout Spacing="10">
+                <Picker Title="Start" ItemsSource="{Binding Days}" SelectedItem="{Binding PayPeriodStart}" WidthRequest="100"/>
+                <Label Text="-" VerticalOptions="Center"/>
+                <Picker Title="End" ItemsSource="{Binding Days}" SelectedItem="{Binding PayPeriodEnd}" WidthRequest="100"/>
+            </HorizontalStackLayout>
+            <BoxView HeightRequest="1" Color="LightGray" Margin="0,20"/>
+
+            <Label Text="Add supplement" TextColor="Beige" FontAttributes="Bold" FontSize="Medium"/>
+
+            <Label Text="Name:" FontAttributes="Bold"/>
+            <Entry Placeholder="eg. night" Text="{Binding SupplementName}"/>
+
+            <Label Text="Day(s)" FontAttributes="Bold"/>
+            <Picker Title="Select days" ItemsSource="{Binding DaysOptions}" 
+                    SelectedItem="{Binding SelectedDays}"/>
+
+            <Label Text="Time range" FontAttributes="Bold"/>
+            <Grid ColumnDefinitions="*,Auto,*" ColumnSpacing="10">
+                <TimePicker Grid.Column="0" Time="{Binding StartTime}" Format="HH:mm"/>
+                <Label Grid.Column="1" Text="-" VerticalOptions="Center" Margin="0,20"/>
+                <TimePicker Grid.Column="2" Time="{Binding EndTime}" Format="HH:mm"/>
+            </Grid>
+
+            <Label Text="Extra rate" FontAttributes="Bold"/>
+            <Entry Placeholder="0" Keyboard="Numeric" Text="{Binding ExtraRate}"/>
+
+            <HorizontalStackLayout Spacing="15">
+                <Button Text="Add another" 
+                        BackgroundColor="Transparent" 
+                        TextColor="LightBlue"
+                        Command="{Binding AddAnotherSupplementCommand}"/>
+
+                <Button Text="Save" 
+                        BackgroundColor="BlueViolet" 
+                        TextColor="White"
+                        CornerRadius="10"
+                        HorizontalOptions="EndAndExpand"
+                        Command="{Binding SaveSupplementCommand}"/>
+
+            </HorizontalStackLayout>
+            <BoxView HeightRequest="1" Color="LightGray" Margin="0,30"/>
+
+            <Button Text="Remove" 
+                    BackgroundColor="PaleVioletRed" 
+                    TextColor="Black"
+                    CornerRadius="10"
+                    IsVisible="{Binding CanRemoveSupplement}"
+                    Command="{Binding RemoveSupplementCommand}"/>
+
+            <Button Text="Save Job" 
+                    BackgroundColor="LightGreen" 
+                    TextColor="Black"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    Margin="0,20,0,0"
+                    Command="{Binding SaveCommand}"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

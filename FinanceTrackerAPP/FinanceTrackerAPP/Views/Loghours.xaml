@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:FinanceTrackerAPP.ViewModels"
+             x:Class="FinanceTrackerAPP.Views.Loghours"
+             Title="Log Hours">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+
+            <!-- Job Selection -->
+            <Frame>
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Job" FontAttributes="Bold" FontSize="Medium"/>
+                    <Picker Title="Select Job" 
+                            ItemsSource="{Binding Jobs}"
+                            SelectedItem="{Binding SelectedJob}"/>
+                    <Label Text="{Binding DateRange}" FontSize="Small"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Existing Hours -->
+            <Frame>
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Hours completed:" FontAttributes="Bold" FontSize="Medium"/>
+
+                    <!-- List of logged hours -->
+                    <CollectionView ItemsSource="{Binding LoggedHours}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Padding="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0" Text="{Binding Date, StringFormat='{0:dd MMM}'}" FontAttributes="Bold"/>
+                                    <Label Grid.Column="1" Text="{Binding TimeRange}" FontSize="Small"/>
+                                    <Label Grid.Column="1" Text="{Binding JobName}" FontSize="Small" 
+                                           VerticalOptions="End" HorizontalOptions="End"/>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Add New Hours -->
+            <Frame>
+                <VerticalStackLayout Spacing="15">
+                    <Label Text="Add hours" FontAttributes="Bold" FontSize="Medium"/>
+
+                    <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto,Auto">
+                        <Label Grid.Row="0" Grid.Column="0" Text="Date:" VerticalOptions="Center"/>
+                        <DatePicker Grid.Row="0" Grid.Column="1" Date="{Binding NewEntryDate}"/>
+
+                        <Label Grid.Row="1" Grid.Column="0" Text="Start time:" VerticalOptions="Center"/>
+                        <TimePicker Grid.Row="1" Grid.Column="1" Time="{Binding NewEntryStartTime}"/>
+
+                        <Label Grid.Row="2" Grid.Column="0" Text="End time:" VerticalOptions="Center"/>
+                        <TimePicker Grid.Row="2" Grid.Column="1" Time="{Binding NewEntryEndTime}"/>
+
+                        <Label Grid.Row="3" Grid.Column="0" Text="Break minutes:" VerticalOptions="Center"/>
+                        <Entry Grid.Row="3" Grid.Column="1" Text="{Binding NewEntryBreakMinutes}" 
+                               Keyboard="Numeric" Placeholder="15"/>
+                    </Grid>
+
+                    <Label Text="{Binding CalculatedTime, StringFormat='Calculated time: {0}'}" 
+                           FontAttributes="Bold" HorizontalOptions="Center"/>
+
+                    <Button Text="Save Hours" Command="{Binding SaveCommand}" 
+                            BackgroundColor="{StaticResource Primary}" TextColor="White"/>
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
