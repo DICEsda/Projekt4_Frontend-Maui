@@ -9,7 +9,8 @@
     Title="FinanceTrackerAPP">
 
     <ShellContent Title="Register" ContentTemplate="{DataTemplate pages:Register}" Route="Register" />
-    <ShellContent Title="Home" ContentTemplate="{DataTemplate pages:MainPage}" Route="MainPage" />
+    <ShellContent Title="Home" ContentTemplate="{DataTemplate pages:Mainpage}" Route="MainPage" />
     <ShellContent Title="Add_Edit" ContentTemplate="{DataTemplate pages:Add_Edit}" Route="Add_Edit" />
+    <ShellContent Title="Log Hours" ContentTemplate="{DataTemplate pages:Loghours}" Route="Loghours" />
 
 </Shell>

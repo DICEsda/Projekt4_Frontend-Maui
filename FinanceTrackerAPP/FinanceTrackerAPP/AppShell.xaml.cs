@@ -9,7 +9,7 @@ namespace FinanceTrackerAPP
             Routing.RegisterRoute("RegisterPage", typeof(Register));
             Routing.RegisterRoute("HomePage", typeof(Mainpage));
             Routing.RegisterRoute("Add_EditPage", typeof(Add_Edit));
-
+            Routing.RegisterRoute(nameof(Loghours), typeof(Loghours));
         }
     }
 }

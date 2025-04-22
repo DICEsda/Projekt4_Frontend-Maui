@@ -23,12 +23,6 @@
     <None Update="AppShell.xaml">
       <SubType>Designer</SubType>
     </None>
-    <None Update="Platforms\Windows\App.xaml">
-      <SubType>Designer</SubType>
-    </None>
-    <None Update="Platforms\Windows\Package.appxmanifest">
-      <SubType>Designer</SubType>
-    </None>
     <None Update="Resources\Styles\Colors.xaml">
       <SubType>Designer</SubType>
     </None>
