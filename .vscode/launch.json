@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET MAUI",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "dotnet",
+            "args": [
+                "run",
+                "--project",
+                "${workspaceFolder}/FinanceTrackerAPP/FinanceTrackerAPP/FinanceTrackerAPP.csproj"
+            ],
+            "cwd": "${workspaceFolder}/FinanceTrackerAPP/FinanceTrackerAPP",
+            "console": "internalConsole"
+        }
+    ]
+} 
