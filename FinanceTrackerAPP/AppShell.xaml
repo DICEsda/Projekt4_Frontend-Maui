@@ -1,0 +1,37 @@
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:FinanceTracker.Views"
+       xmlns:style="clr-namespace:FinanceTracker.Resources.Styles"
+       xmlns:app="clr-namespace:FinanceTracker"
+       Title="FinanceTracker"
+       x:Class="FinanceTracker.AppShell" 
+       FlyoutBackgroundColor="{AppThemeBinding Light={StaticResource Secondary}, Dark={StaticResource Primary}}">
+
+    <TabBar>
+        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
+    </TabBar>
+
+    <FlyoutItem Title="Dashboard" Icon="{FontImage FontFamily=FontAwesomeSolid, Color=Black,
+        Glyph={x:Static style:FontAwesomeSolid.Question}}">
+        <ShellContent Route="DashboardPage" ContentTemplate="{DataTemplate local:DashboardPage}">
+        </ShellContent>
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Register" Icon="{FontImage FontFamily=FontAwesomeSolid, Color=Black,
+        Glyph={x:Static style:FontAwesomeSolid.AddressCard}}">
+        <ShellContent Route="RegisterPage" ContentTemplate="{DataTemplate local:RegisterPage}">
+        </ShellContent>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Add or Edit Jobs" Icon="{FontImage FontFamily=FontAwesomeSolid, Color=Black, 
+        Glyph={x:Static style:FontAwesomeSolid.Home}}">
+        <ShellContent Route="JobsPage" ContentTemplate="{DataTemplate local:JobsPage}">
+        </ShellContent>
+    </FlyoutItem>
+
+    <MenuItem Text="Logout" Clicked="OnMenuItemClicked" 
+              IconImageSource="{FontImage FontFamily=FontAwesomeSolid, Color=Black, 
+        Glyph={x:Static style:FontAwesomeSolid.SignOutAlt}}">
+    </MenuItem>
+
+</Shell>

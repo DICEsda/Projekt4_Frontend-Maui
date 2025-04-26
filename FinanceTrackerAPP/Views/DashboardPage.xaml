@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:style="clr-namespace:FinanceTracker.Resources.Styles"
+             x:Class="FinanceTracker.Views.DashboardPage"
+             xmlns:vm="clr-namespace:FinanceTracker.ViewModels"
+             Title="Dashboard">
+
+    <ContentPage.BindingContext>
+        <vm:DashboardViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid 
+          RowDefinitions="*,*,*,*,*,*,*,*" 
+          RowSpacing="15"
+          ColumnDefinitions="*,*"
+          Padding="20,10"
+          VerticalOptions="FillAndExpand">
+
+        <Frame Grid.Row="2"
+       Grid.RowSpan="3"
+       CornerRadius="8"
+       BackgroundColor="{StaticResource CardBackground}"
+       HeightRequest="500"
+       HasShadow="True"
+       Margin="30">
+
+            <Label Text="Pellentesque et laoreet elit, nec ultricies nibh. Aenean sagittis, ligula eu imperdiet porta, orci tellus luctus dolor, et interdum nisi nisi ac massa.\n\n
+Morbi pulvinar euismod aliquet. Nulla pretium tellus a congue pretium. Donec ullamcorper lectus ac turpis laoreet, ut pharetra augue suscipit.\n\n
+Nullam id lectus ante. Etiam porta nibh eget felis tincidunt varius. Pellentesque quis sollicitudin orci.\n\n
+Vivamus congue lacus tempus augue iaculis ultricies. Aliquam blandit eleifend felis quis feugiat.\n\n
+Sed condimentum ipsum quis bibendum rhoncus. Vivamus id commodo nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.\n\n
+Maecenas maximus augue et augue lobortis laoreet. Aenean interdum porta nibh, ut sollicitudin lectus rutrum sed."
+           FontSize="14"
+           TextColor="{StaticResource TextSecondary}"
+           LineBreakMode="WordWrap" />
+        </Frame>
+
+
+        <!-- Profile Button -->
+        <Frame Grid.Row="0" Grid.Column="1" HorizontalOptions="End" VerticalOptions="Start"
+               CornerRadius="8"
+               BackgroundColor="{StaticResource CardBackground}"
+               HeightRequest="60"
+               WidthRequest="120"
+               Padding="0"
+               HasShadow="False">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding UserCommand}" />
+            </Frame.GestureRecognizers>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Label FontFamily="FontAwesomeSolid" 
+                       Text="{x:Static style:FontAwesomeSolid.User}" 
+                       FontSize="20"
+                       VerticalOptions="Center"
+                       TextColor="{StaticResource Primary}"/>
+                <Label Text="Profile" 
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       TextColor="{StaticResource TextPrimary}"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <!-- Logout Button -->
+        <Frame Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Start"
+               CornerRadius="8"
+               BackgroundColor="{StaticResource CardBackground}"
+               HeightRequest="60"
+               WidthRequest="120"
+               Padding="0"
+               HasShadow="False">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding LogoutCommand}" />
+            </Frame.GestureRecognizers>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Label FontFamily="FontAwesomeSolid" 
+                       Text="{x:Static style:FontAwesomeSolid.SignOutAlt}" 
+                       FontSize="20"
+                       VerticalOptions="Center"
+                       TextColor="{StaticResource Primary}"/>
+                <Label Text="Logout" 
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       TextColor="{StaticResource TextPrimary}"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+
+        <!-- Main Action Buttons -->
+        <Frame Grid.Row="1" Grid.Column="1"
+               CornerRadius="8"
+               BackgroundColor="{StaticResource CardBackground}"
+               HeightRequest="100"
+               WidthRequest="600"
+               Padding="0"
+               HasShadow="False">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding YourCommand}" />
+            </Frame.GestureRecognizers>
+
+            <HorizontalStackLayout Spacing="15" Padding="15,0">
+                <Label FontFamily="FontAwesomeSolid" 
+                       Text="{x:Static style:FontAwesomeSolid.Briefcase}" 
+                       FontSize="20"
+                       VerticalOptions="Center"
+                       TextColor="{StaticResource Primary}"/>
+                <Label Text="Job Overview" 
+                       FontSize="18"
+                       VerticalOptions="Center"
+                       TextColor="{StaticResource TextPrimary}"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Grid.Row="2" Grid.Column="1"
+               CornerRadius="8"
+               BackgroundColor="{StaticResource CardBackground}"
+               HeightRequest="100"
+               WidthRequest="600"
+               Padding="0"
+               HasShadow="False">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding LogHoursCommand}" />
+            </Frame.GestureRecognizers>
+
+            <HorizontalStackLayout Spacing="15" Padding="15,0">
+                <Label FontFamily="FontAwesomeSolid" 
+                       Text="{x:Static style:FontAwesomeSolid.Clock}" 
+                       FontSize="20"
+                       VerticalOptions="Center"
+                       TextColor="{StaticResource Primary}"/>
+                <Label Text="Log Hours" 
+                       FontSize="18"
+                       VerticalOptions="Center"
+                       TextColor="{StaticResource TextPrimary}"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Grid.Row="3" Grid.Column="1"
+               CornerRadius="8"
+               BackgroundColor="{StaticResource CardBackground}"
+               HeightRequest="100"
+               WidthRequest="600"
+               Padding="0"
+               HasShadow="False">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding PaycheckCommand}" />
+            </Frame.GestureRecognizers>
+
+            <HorizontalStackLayout Spacing="15" Padding="15,0">
+                <Label FontFamily="FontAwesomeSolid" 
+                       Text="{x:Static style:FontAwesomeSolid.MoneyBillWave}" 
+                       FontSize="20"
+                       VerticalOptions="Center"
+                       TextColor="{StaticResource Primary}"/>
+                <Label Text="Paycheck" 
+                       FontSize="18"
+                       VerticalOptions="Center"
+                       TextColor="{StaticResource TextPrimary}"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Grid.Row="4" Grid.Column="1"
+               CornerRadius="8"
+               BackgroundColor="{StaticResource CardBackground}"
+               HeightRequest="100"
+               WidthRequest="600"
+               Padding="0"
+               HasShadow="False">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding HolidayPayCommand}" />
+            </Frame.GestureRecognizers>
+
+            <HorizontalStackLayout Spacing="15" Padding="15,0">
+                <Label FontFamily="FontAwesomeSolid" 
+                       Text="{x:Static style:FontAwesomeSolid.UmbrellaBeach}" 
+                       FontSize="20"
+                       VerticalOptions="Center"
+                       TextColor="{StaticResource Primary}"/>
+                <Label Text="Holiday Pay" 
+                       FontSize="18"
+                       VerticalOptions="Center"
+                       TextColor="{StaticResource TextPrimary}"/>
+            </HorizontalStackLayout>
+            
+        </Frame>
+        <BoxView HeightRequest="1" Color="#F0F0F0" Margin="220,12" Grid.Row="5" Grid.Column="1" ></BoxView>
+        <Frame Grid.Row="6" Grid.Column="1"
+               CornerRadius="8"
+               BackgroundColor="{StaticResource CardBackground}"
+               HeightRequest="100"
+               WidthRequest="600"
+               Padding="0"
+               Margin="0,20"
+               HasShadow="True">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding HolidayPayCommand}" />
+            </Frame.GestureRecognizers>
+
+            <HorizontalStackLayout Spacing="15" Padding="15,0">
+                <Label FontFamily="FontAwesomeSolid" 
+                       Text="{x:Static style:FontAwesomeSolid.GraduationCap}" 
+                       FontSize="20"
+                       VerticalOptions="Center"
+                       TextColor="{StaticResource Primary}"/>
+                <Label Text="Student Grant" 
+                       FontSize="18"
+                       VerticalOptions="Center"
+                       TextColor="{StaticResource TextPrimary}"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Grid.Row="7" Grid.Column="0" HorizontalOptions="Start"
+               CornerRadius="8"
+               BackgroundColor="{StaticResource CardBackground}"
+               HeightRequest="60"
+               WidthRequest="245"
+               Padding="0"
+               HasShadow="True">
+
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding HolidayPayCommand}" />
+            </Frame.GestureRecognizers>
+
+            <HorizontalStackLayout Spacing="15" Padding="15,0 ">
+                <Label FontFamily="FontAwesomeSolid" 
+                       Text="{x:Static style:FontAwesomeSolid.Language}" 
+                       FontSize="20"
+                       VerticalOptions="Center"
+                       TextColor="{StaticResource Primary}"/>
+                <Label Text="Language DA/EN" 
+                       FontSize="18"
+                       
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       TextColor="{StaticResource TextPrimary}"/>
+            </HorizontalStackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>
