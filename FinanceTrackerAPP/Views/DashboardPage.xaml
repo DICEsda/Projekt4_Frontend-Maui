@@ -185,7 +185,7 @@ Maecenas maximus augue et augue lobortis laoreet. Aenean interdum porta nibh, ut
                        VerticalOptions="Center"
                        TextColor="{StaticResource TextPrimary}"/>
             </HorizontalStackLayout>
-            
+
         </Frame>
         <BoxView HeightRequest="1" Color="#F0F0F0" Margin="220,12" Grid.Row="5" Grid.Column="1" ></BoxView>
         <Frame Grid.Row="6" Grid.Column="1"

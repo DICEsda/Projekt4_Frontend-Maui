@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Hosting;
 using System;
-
+using System.Net.Http;
 namespace FinanceTracker
 {
     public static class MauiProgram
@@ -25,9 +25,11 @@ namespace FinanceTracker
                 });
 
             // Register HttpClient
-            builder.Services.AddSingleton<AuthenticationService>();
             // Register Services
-            
+            builder.Services.AddHttpClient();
+
+            builder.Services.AddSingleton<IAuthenticationService, AuthenticationService>();
+
             // Register generic IDataStore
             builder.Services.AddSingleton<IDataStore<JobDTO>, JobDataStore>();
 
