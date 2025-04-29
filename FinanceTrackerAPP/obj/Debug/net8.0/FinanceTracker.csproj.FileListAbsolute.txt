@@ -3,3 +3,9 @@ C:\Users\Dice8\Desktop\FinanceTracker-New\FinanceTracker\obj\Debug\net8.0\Financ
 C:\Users\Dice8\Desktop\FinanceTracker-New\FinanceTracker\obj\Debug\net8.0\FinanceTracker.AssemblyInfoInputs.cache
 C:\Users\Dice8\Desktop\FinanceTracker-New\FinanceTracker\obj\Debug\net8.0\FinanceTracker.AssemblyInfo.cs
 C:\Users\Dice8\Desktop\FinanceTracker-New\FinanceTracker\obj\Debug\net8.0\FinanceTracker.csproj.CoreCompileInputs.cache
+C:\Users\omary\OneDrive\Documents\School - AU\4. Semester\Project4\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0\FinanceTracker.csproj.AssemblyReference.cache
+C:\Users\omary\OneDrive\Documents\School - AU\4. Semester\Project4\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0\FinanceTracker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\omary\OneDrive\Documents\School - AU\4. Semester\Project4\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0\FinanceTracker.AssemblyInfoInputs.cache
+C:\Users\omary\OneDrive\Documents\School - AU\4. Semester\Project4\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0\FinanceTracker.AssemblyInfo.cs
+C:\Users\omary\OneDrive\Documents\School - AU\4. Semester\Project4\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0\FinanceTracker.csproj.CoreCompileInputs.cache
+C:\Users\omary\OneDrive\Documents\School - AU\4. Semester\Project4\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0\FinanceTracker.sourcelink.json

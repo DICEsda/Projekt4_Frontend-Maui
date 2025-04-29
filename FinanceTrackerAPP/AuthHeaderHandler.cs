@@ -1,11 +1,11 @@
-﻿using FinanceTracker.Services;
+﻿using FinanceTrackerAPP.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinanceTracker
+namespace FinanceTrackerAPP
 {
     public class AuthHeaderHandler : DelegatingHandler
     {

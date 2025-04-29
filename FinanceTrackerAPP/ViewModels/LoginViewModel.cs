@@ -1,16 +1,47 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using FinanceTracker.Views;
+using FinanceTrackerAPP.DTO;
+using FinanceTrackerAPP.Models;
+using FinanceTrackerAPP.Services;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace FinanceTracker.ViewModels
+namespace FinanceTrackerAPP.ViewModels
 {
     public partial class LoginViewModel : ObservableObject
     {
-        [RelayCommand]
-        private async Task Login(object obj)
+
+        private readonly IAuthenticationService _authenticationService;
+
+        public LoginViewModel(IAuthenticationService authenticationService)
         {
-            // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-            await Shell.Current.GoToAsync($"//{nameof(DashboardPage)}");
+            _authenticationService = authenticationService;
         }
+
+        [ObservableProperty]
+        private string userName;
+
+        [ObservableProperty]
+        private string password;
+
+        [RelayCommand]
+        async Task Login()
+        {
+            LoginDTO financeUserDTO = new LoginDTO
+            {
+                Password = password,
+                UserName = userName
+            };
+            var token = await _authenticationService.Login(financeUserDTO);
+
+
+
+        }
+
+
+
     }
 }

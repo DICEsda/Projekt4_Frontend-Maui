@@ -453,3 +453,15 @@ C:\Users\yahya\Desktop\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0
 C:\Users\yahya\Desktop\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\FinanceTracker.dll
 C:\Users\yahya\Desktop\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\refint\FinanceTracker.dll
 C:\Users\yahya\Desktop\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\FinanceTracker.pdb
+C:\Users\omary\OneDrive\Documents\School - AU\4. Semester\Project4\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\FinanceTracker.csproj.AssemblyReference.cache
+C:\Users\omary\OneDrive\Documents\School - AU\4. Semester\Project4\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauiimage.inputs
+C:\Users\omary\OneDrive\Documents\School - AU\4. Semester\Project4\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauifont.inputs
+C:\Users\omary\OneDrive\Documents\School - AU\4. Semester\Project4\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauisplash.inputs
+C:\Users\omary\OneDrive\Documents\School - AU\4. Semester\Project4\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauimanifest.stamp
+C:\Users\omary\OneDrive\Documents\School - AU\4. Semester\Project4\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.i.cs
+C:\Users\omary\OneDrive\Documents\School - AU\4. Semester\Project4\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.cs
+C:\Users\omary\OneDrive\Documents\School - AU\4. Semester\Project4\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\XamlTypeInfo.g.cs
+C:\Users\omary\OneDrive\Documents\School - AU\4. Semester\Project4\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xaml
+C:\Users\omary\OneDrive\Documents\School - AU\4. Semester\Project4\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xbf
+C:\Users\omary\OneDrive\Documents\School - AU\4. Semester\Project4\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\XamlSaveStateFile.xml
+C:\Users\omary\OneDrive\Documents\School - AU\4. Semester\Project4\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\FinanceTracker.GeneratedMSBuildEditorConfig.editorconfig
