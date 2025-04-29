@@ -10,9 +10,13 @@ if %ERRORLEVEL% NEQ 0 (
     exit /b %ERRORLEVEL%
 )
 
-REM Now run the app separately
+echo Build succeeded
 echo Running the application...
-dotnet run --project FinanceTrackerAPP/FinanceTrackerAPP.csproj -f net9.0-windows10.0.19041.0 --no-build
+
+REM Launch the executable directly instead of using dotnet run
+set APP_PATH=FinanceTrackerAPP\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\
+cd %APP_PATH%
+start FinanceTrackerAPP.exe
 if %ERRORLEVEL% NEQ 0 (
     echo Run failed with error code %ERRORLEVEL%
     pause
@@ -20,6 +24,7 @@ if %ERRORLEVEL% NEQ 0 (
 )
 
 echo Application started successfully.
+cd ..\..\..\..\..
 pause
 
 dotnet workload update 

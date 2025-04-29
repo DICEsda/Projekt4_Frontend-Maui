@@ -1,0 +1,5 @@
+C:\Users\Dice8\Desktop\FinanceTracker-New\FinanceTracker\obj\Debug\net8.0\FinanceTracker.csproj.AssemblyReference.cache
+C:\Users\Dice8\Desktop\FinanceTracker-New\FinanceTracker\obj\Debug\net8.0\FinanceTracker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dice8\Desktop\FinanceTracker-New\FinanceTracker\obj\Debug\net8.0\FinanceTracker.AssemblyInfoInputs.cache
+C:\Users\Dice8\Desktop\FinanceTracker-New\FinanceTracker\obj\Debug\net8.0\FinanceTracker.AssemblyInfo.cs
+C:\Users\Dice8\Desktop\FinanceTracker-New\FinanceTracker\obj\Debug\net8.0\FinanceTracker.csproj.CoreCompileInputs.cache
