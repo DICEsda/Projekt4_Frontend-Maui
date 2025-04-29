@@ -1,6 +1,7 @@
-﻿using FinanceTrackerAPP.Models;
+﻿using FinanceTracker.Models;
+using System.Threading.Tasks;
 
-namespace FinanceTrackerAPP.Services
+namespace FinanceTracker.Services.Interfaces
 {
     public interface IUserService
     {

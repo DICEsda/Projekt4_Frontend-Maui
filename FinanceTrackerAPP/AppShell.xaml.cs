@@ -1,5 +1,4 @@
 using System.Diagnostics;
-
 using FinanceTracker.Views;
 using FinanceTracker.ViewModels;
 

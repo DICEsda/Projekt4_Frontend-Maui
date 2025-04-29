@@ -2,7 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.Extensions.Logging;
 using FinanceTracker.Models;
-using FinanceTracker.Services;
+using FinanceTracker.Services.Interfaces;
 
 namespace FinanceTracker.ViewModels
 {

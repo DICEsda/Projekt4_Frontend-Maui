@@ -5,10 +5,6 @@
              BackgroundColor="#E8F8F8"
              Title="Login">
 
-    <ContentPage.BindingContext>
-        <vm:LoginViewModel />
-    </ContentPage.BindingContext>
-
     <ScrollView>
         <Grid Padding="30">
             <Grid.RowDefinitions>

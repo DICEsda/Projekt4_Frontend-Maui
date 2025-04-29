@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FinanceTrackerAPP.Models
+﻿namespace FinanceTracker.Models
 {
-    public class FinanceUserDTO
+    public class RegisterDTO
     {
-        public string FullName { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-     
+        public string FullName { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
     }
 }

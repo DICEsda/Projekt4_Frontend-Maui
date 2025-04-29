@@ -20,6 +20,9 @@ namespace FinanceTracker.ViewModels
         // Declare the EmploymentTypes list for the Picker
         public ObservableCollection<string> EmploymentTypes { get; set; }
 
+        [ObservableProperty]
+        private string employmentType;
+
         // Declare the CurrentSupplement property for supplements
         public Supplement CurrentSupplement { get; set; }
 

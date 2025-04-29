@@ -1,15 +1,15 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using FinanceTrackerAPP.DTO;
-using FinanceTrackerAPP.Models;
-using FinanceTrackerAPP.Services;
+using FinanceTracker.Models;
+using FinanceTracker.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FinanceTracker.Services.Interfaces;
 
-namespace FinanceTrackerAPP.ViewModels
+namespace FinanceTracker.ViewModels
 {
     public partial class LoginViewModel : ObservableObject
     {
@@ -36,12 +36,6 @@ namespace FinanceTrackerAPP.ViewModels
                 UserName = userName
             };
             var token = await _authenticationService.Login(financeUserDTO);
-
-
-
         }
-
-
-
     }
 }

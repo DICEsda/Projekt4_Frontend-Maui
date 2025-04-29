@@ -1,53 +1,53 @@
-﻿using Microsoft.Extensions.Logging;
-using FinanceTracker.Models;
+﻿using FinanceTracker.Models;
 using FinanceTracker.Services;
+using FinanceTracker.Services.Interfaces;
 using FinanceTracker.ViewModels;
 using FinanceTracker.Views;
-using FinanceTracker.IServices;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Hosting;
+using System;
 
-namespace FinanceTracker;
-
-public static class MauiProgram
+namespace FinanceTracker
 {
-	public static MauiApp CreateMauiApp()
-	{
-        var builder = MauiApp.CreateBuilder();
-        builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("fa-regular-400.ttf", "FontAwesomeRegular");
-                fonts.AddFont("fa-solid-900.ttf", "FontAwesomeSolid");
-                fonts.AddFont("fa-brands-400.ttf", "FontAwesomeBrands");
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                fonts.AddFont("OpenSans-SemiBold.ttf", "OpenSansSemiBold");
-            });
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                });
+
+            // Register HttpClient
+            builder.Services.AddSingleton<AuthenticationService>();
+            // Register Services
+            
+            // Register generic IDataStore
+            builder.Services.AddSingleton<IDataStore<JobDTO>, JobDataStore>();
+
+            // Register ViewModels
+            builder.Services.AddSingleton<LoginViewModel>();
+            builder.Services.AddSingleton<RegisterViewModel>();
+            builder.Services.AddSingleton<JobsViewModel>();
+            // Register other ViewModels as needed
+
+            // Register Views
+            builder.Services.AddSingleton<LoginPage>();
+            builder.Services.AddSingleton<RegisterPage>();
+            builder.Services.AddSingleton<JobsPage>();
+            // Register other Views as needed
 
 #if DEBUG
-        builder.Logging.AddDebug();
-		builder.Logging.SetMinimumLevel(LogLevel.Debug);
+            builder.Logging.AddDebug();
 #endif
 
-        builder.Services.AddTransient<IAuthenticationService, AuthenticationService>();
-        builder.Services.AddTransient<AuthHeaderHandler>();
-
-
-        // Register HttpClient with AuthHeaderHandler for UserService
-        builder.Services.AddHttpClient<IUserService, UserService>(client =>
-        {
-            client.BaseAddress = new Uri("https://localhost:5140/");
-        }).AddHttpMessageHandler<AuthHeaderHandler>();
-
-        builder.Services.AddTransient<LoginViewModel>();
-        builder.Services.AddTransient<RegisterViewModel>();
-        builder.Services.AddSingleton<IDataStore<Item>, MockDataStore>();
-        builder.Services.AddScoped<JobsViewModel>();
-        builder.Services.AddScoped<JobsPage>();
-        builder.Services.AddScoped<ItemDetailViewModel>();
-        builder.Services.AddScoped<ItemDetailPage>();
-        builder.Services.AddScoped<NewItemViewModel>();
-        builder.Services.AddScoped<NewItemPage>();
-
-        return builder.Build();
-	}
+            return builder.Build();
+        }
+    }
 }

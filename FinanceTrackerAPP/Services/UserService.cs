@@ -1,12 +1,13 @@
-﻿using FinanceTrackerAPP.Models;
+﻿using FinanceTracker.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
+using FinanceTracker.Services.Interfaces;
 
-namespace FinanceTrackerAPP.Services
+namespace FinanceTracker.Services
 {
     public class UserService : IUserService
     {

@@ -7,12 +7,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FinanceTracker.Services.Interfaces;
 
 namespace FinanceTracker.ViewModels
 {
     public partial class RegisterViewModel : ObservableObject // Ensure the class inherits from ObservableObject
     {
         private readonly IUserService _userService;
+
         public RegisterViewModel(IUserService userService)
         {
             _userService = userService;
@@ -34,7 +36,7 @@ namespace FinanceTracker.ViewModels
         [RelayCommand]
         async Task RegisterUser()
         {
-            FinanceUserModel financeUserModel = new FinanceUserModel
+            FinanceUserDTO financeUserDTO = new FinanceUserDTO
             {
                 Email = email,
                 Password = password,
@@ -42,14 +44,10 @@ namespace FinanceTracker.ViewModels
 
             };
 
-            await _userService.RegisterUserAsync(financeUserModel);
+            await _userService.RegisterUserAsync(financeUserDTO);
 
 
         }
 
     }
-
-
-
-
 }
