@@ -8,7 +8,7 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FinanceTracker
-build_property.ProjectDir = C:\Users\Dice8\Desktop\New folder\Projekt4_Frontend-Maui\FinanceTrackerAPP\
+build_property.ProjectDir = C:\Users\yahya\Desktop\Projekt4_Frontend-Maui\FinanceTrackerAPP\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTAotOptimizerEnabled = true
@@ -22,67 +22,67 @@ build_property.CsWinRTUseWindowsUIXamlProjections = false
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Dice8/Desktop/New folder/Projekt4_Frontend-Maui/FinanceTrackerAPP/App.xaml]
+[C:/Users/yahya/Desktop/Projekt4_Frontend-Maui/FinanceTrackerAPP/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinanceTracker.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/Dice8/Desktop/New folder/Projekt4_Frontend-Maui/FinanceTrackerAPP/AppShell.xaml]
+[C:/Users/yahya/Desktop/Projekt4_Frontend-Maui/FinanceTrackerAPP/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinanceTracker.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/Dice8/Desktop/New folder/Projekt4_Frontend-Maui/FinanceTrackerAPP/Resources/Styles/Colors.xaml]
+[C:/Users/yahya/Desktop/Projekt4_Frontend-Maui/FinanceTrackerAPP/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinanceTracker.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/Dice8/Desktop/New folder/Projekt4_Frontend-Maui/FinanceTrackerAPP/Resources/Styles/Styles.xaml]
+[C:/Users/yahya/Desktop/Projekt4_Frontend-Maui/FinanceTrackerAPP/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinanceTracker.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/Dice8/Desktop/New folder/Projekt4_Frontend-Maui/FinanceTrackerAPP/Views/DashboardPage.xaml]
+[C:/Users/yahya/Desktop/Projekt4_Frontend-Maui/FinanceTrackerAPP/Views/DashboardPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinanceTracker.Views.DashboardPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\DashboardPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\DashboardPage.xaml
 
-[C:/Users/Dice8/Desktop/New folder/Projekt4_Frontend-Maui/FinanceTrackerAPP/Views/ItemDetailPage.xaml]
+[C:/Users/yahya/Desktop/Projekt4_Frontend-Maui/FinanceTrackerAPP/Views/ItemDetailPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinanceTracker.Views.ItemDetailPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\ItemDetailPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\ItemDetailPage.xaml
 
-[C:/Users/Dice8/Desktop/New folder/Projekt4_Frontend-Maui/FinanceTrackerAPP/Views/JobsPage.xaml]
+[C:/Users/yahya/Desktop/Projekt4_Frontend-Maui/FinanceTrackerAPP/Views/JobsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinanceTracker.Views.JobsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\JobsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\JobsPage.xaml
 
-[C:/Users/Dice8/Desktop/New folder/Projekt4_Frontend-Maui/FinanceTrackerAPP/Views/LoginPage.xaml]
+[C:/Users/yahya/Desktop/Projekt4_Frontend-Maui/FinanceTrackerAPP/Views/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinanceTracker.Views.LoginPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\LoginPage.xaml
 
-[C:/Users/Dice8/Desktop/New folder/Projekt4_Frontend-Maui/FinanceTrackerAPP/Views/NewItemPage.xaml]
+[C:/Users/yahya/Desktop/Projekt4_Frontend-Maui/FinanceTrackerAPP/Views/NewItemPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinanceTracker.Views.NewItemPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\NewItemPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\NewItemPage.xaml
 
-[C:/Users/Dice8/Desktop/New folder/Projekt4_Frontend-Maui/FinanceTrackerAPP/Views/RegisterPage.xaml]
+[C:/Users/yahya/Desktop/Projekt4_Frontend-Maui/FinanceTrackerAPP/Views/RegisterPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinanceTracker.Views.RegisterPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\RegisterPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\RegisterPage.xaml
 
-[C:/Users/Dice8/Desktop/New folder/Projekt4_Frontend-Maui/FinanceTrackerAPP/Views/Templates/KeyValueView.xaml]
+[C:/Users/yahya/Desktop/Projekt4_Frontend-Maui/FinanceTrackerAPP/Views/Templates/KeyValueView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinanceTracker.Views.Templates.KeyValueView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Templates\KeyValueView.xaml

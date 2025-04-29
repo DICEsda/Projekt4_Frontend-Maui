@@ -3,8 +3,7 @@ using FinanceTracker.Models;
 using FinanceTracker.Services;
 using FinanceTracker.ViewModels;
 using FinanceTracker.Views;
-
-
+using FinanceTracker.IServices;
 
 namespace FinanceTracker;
 
@@ -28,6 +27,17 @@ public static class MauiProgram
         builder.Logging.AddDebug();
 		builder.Logging.SetMinimumLevel(LogLevel.Debug);
 #endif
+
+        builder.Services.AddTransient<IAuthenticationService, AuthenticationService>();
+        builder.Services.AddTransient<AuthHeaderHandler>();
+
+
+        // Register HttpClient with AuthHeaderHandler for UserService
+        builder.Services.AddHttpClient<IUserService, UserService>(client =>
+        {
+            client.BaseAddress = new Uri("https://localhost:5140/");
+        }).AddHttpMessageHandler<AuthHeaderHandler>();
+
         builder.Services.AddTransient<LoginViewModel>();
         builder.Services.AddTransient<RegisterViewModel>();
         builder.Services.AddSingleton<IDataStore<Item>, MockDataStore>();

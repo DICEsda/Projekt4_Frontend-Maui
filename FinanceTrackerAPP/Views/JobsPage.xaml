@@ -22,7 +22,6 @@
                    FontAttributes="Bold"
                    Margin="0,0,0,10"/>
 
-            <!-- Corrected Binding to 'Jobs' -->
             <CollectionView ItemsSource="{Binding Jobs}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
@@ -32,7 +31,7 @@
                                BackgroundColor="{StaticResource CardBackground}">
                             <VerticalStackLayout>
                                 <!-- Ensure that the 'Job' model has these properties -->
-                                <Label Text="{Binding Name}" 
+                                <Label Text="Placeholder" 
                                        FontSize="16"
                                        FontAttributes="Bold"/>
                                 <Label Text="{Binding EmploymentType}"

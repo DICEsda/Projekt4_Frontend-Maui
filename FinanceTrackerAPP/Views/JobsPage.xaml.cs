@@ -2,7 +2,7 @@
 using FinanceTracker.Models;
 using FinanceTracker.ViewModels;
 using FinanceTracker.Views;
-
+ 
 namespace FinanceTracker.Views
 {
 
@@ -11,6 +11,7 @@ namespace FinanceTracker.Views
         public JobsPage()
         {
             InitializeComponent();
+            BindingContext = new JobsViewModel();
         }
     }
 }
