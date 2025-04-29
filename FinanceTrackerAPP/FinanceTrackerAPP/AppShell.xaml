@@ -5,11 +5,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:FinanceTrackerAPP"
     Shell.FlyoutBehavior="Flyout"
+    xmlns:views="clr-namespace:FinanceTrackerAPP.Views"
+
     Title="FinanceTrackerAPP">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        ContentTemplate="{DataTemplate views:MainPage}"
         Route="MainPage" />
 
 </Shell>
