@@ -4,11 +4,43 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CommunityToolkit.Mvvm.Input;
+using FinanceTracker.DTO;
+using FinanceTracker.Services;
 
 namespace FinanceTracker.ViewModels
 {
-    internal class PayCheckViewModel : ObservableObject
+    public partial class PayCheckViewModel : ObservableObject
     {
+        private readonly PayCheckService _payCheckService;
+
+        public PayCheckViewModel(PayCheckService payCheckService)
+        {
+            _payCheckService = payCheckService;
+        }
+        [ObservableProperty]
+        private decimal salaryBeforeTax;
+        [ObservableProperty]
+        private TimeSpan workedHours;
+        [ObservableProperty]
+        private decimal amContribution;
+        [ObservableProperty]
+        private decimal tax;
+
+        [RelayCommand]
+        async Task SalaryEstimationForMonth((string companyName, int month) input)
+        {
+            var payCheck = await _payCheckService.SalaryEstimationForMonth(input.companyName, input.month);
+            if (payCheck == null)
+            {
+                return;
+            }
+            SalaryBeforeTax = payCheck.SalaryBeforeTax;
+            WorkedHours = payCheck.WorkedHours;
+            AmContribution = payCheck.AMContribution;
+            Tax = payCheck.Tax;
+        }
+
 
     }
 }

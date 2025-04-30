@@ -38,7 +38,10 @@ namespace FinanceTracker
             builder.Services.AddSingleton<RegisterViewModel>();
             builder.Services.AddSingleton<JobsViewModel>();
             // Register other ViewModels as needed
-
+            builder.Services.AddSingleton<IPayCheckService, PayCheckService>();
+            builder.Services.AddSingleton<PayCheckService>();
+            builder.Services.AddTransient<PayCheckViewModel>();
+            builder.Services.AddTransient<PayCheckPage>();
             // Register Views
             builder.Services.AddSingleton<LoginPage>();
             builder.Services.AddSingleton<RegisterPage>();
