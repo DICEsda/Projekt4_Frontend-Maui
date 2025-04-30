@@ -6,8 +6,14 @@ using Microsoft.Maui.Controls;
 
 namespace FinanceTracker.ViewModels
 {
+
     public partial class DashboardViewModel : ObservableObject
     {
+        [RelayCommand]
+        async Task Logout()
+        {
+            await Shell.Current.GoToAsync("//LoginPage");
+        }
 
     }
 }

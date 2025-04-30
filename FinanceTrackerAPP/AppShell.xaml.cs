@@ -12,13 +12,13 @@ public partial class AppShell : Shell
     {
         InitializeComponent();
 
-        Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
+        Routing.RegisterRoute("ItemDetailPage", typeof(ItemDetailPage));
         //Routing.RegisterRoute(nameof(NotesPage), typeof(NotesPage));
-        Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+        Routing.RegisterRoute("NewItemPage", typeof(NewItemPage));
         //Routing.RegisterRoute(nameof(SignUpPage), typeof(SignUpPage));
-        Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
+        Routing.RegisterRoute("LoginPage", typeof(LoginPage));
         //Routing.RegisterRoute(nameof(SearchPage), typeof(SearchPage));
-        Routing.RegisterRoute(nameof(JobsPage), typeof(JobsPage));
+        Routing.RegisterRoute("JobsPage", typeof(JobsPage));
         Routing.RegisterRoute("DashboardPage", typeof(DashboardPage));
 
         CurrentAppShell = this;
