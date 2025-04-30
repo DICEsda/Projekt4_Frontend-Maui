@@ -1,16 +1,16 @@
-﻿using FinanceTracker.ViewModels;
-using System.ComponentModel;
-using Microsoft.Maui;
-using Microsoft.Maui.Controls;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using FinanceTracker.ViewModels;
 
-namespace FinanceTracker.Views
+namespace FinanceTracker.Views;
+
+public partial class PayCheckPage : ContentPage
 {
-    public partial class PayCheckPage : ContentPage
+    public PayCheckPage()
     {
-        public PayCheckPage(PaycheckViewModel viewModel)
-        {
-            InitializeComponent();
-            BindingContext = viewModel;
-        }
+        InitializeComponent();
     }
 }

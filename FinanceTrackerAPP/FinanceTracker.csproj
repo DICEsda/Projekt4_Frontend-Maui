@@ -77,15 +77,18 @@
     <Compile Update="Views\DashboardPage.xaml.cs">
       <DependentUpon>DashboardPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\PaycheckPage.xaml.cs">
-      <DependentUpon>PayCheckPage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Views\JobsPage.xaml.cs">
       <DependentUpon>JobsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PayCheckPage.xaml.cs">
+      <DependentUpon>PayCheckPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
+    <MauiXaml Update="Views\PayCheckPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
     <MauiXaml Update="Views\RegisterPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>

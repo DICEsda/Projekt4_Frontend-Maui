@@ -1,1 +1,1 @@
-C:\Users\omary\OneDrive\Documents\School - AU\4. Semester\Project4\Projekt4_Frontend-Maui\FinanceTrackerAPP\FinanceTracker.csproj;x64
+C:\Users\achih\Desktop\AU\Projekt\maui\Projekt4_Frontend-Maui\FinanceTrackerAPP\FinanceTracker.csproj;x64

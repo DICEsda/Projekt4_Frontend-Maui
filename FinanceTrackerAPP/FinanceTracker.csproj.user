@@ -27,11 +27,5 @@
     <None Update="Views\LoginPage.xaml">
       <SubType>Designer</SubType>
     </None>
-    <None Update="Views\NewItemPage.xaml">
-      <SubType>Designer</SubType>
-    </None>
-    <None Update="Views\Templates\KeyValueView.xaml">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
 </Project>
