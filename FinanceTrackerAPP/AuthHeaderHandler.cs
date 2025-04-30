@@ -16,7 +16,7 @@ namespace FinanceTracker
             _authenticationService = authenticationService;
         }
 
-        protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+        public async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             // Retrieve the token from the authentication service
             var token = await _authenticationService.GetTokenAsync();

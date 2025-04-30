@@ -13,11 +13,14 @@ namespace FinanceTracker.ViewModels
     public partial class PayCheckViewModel : ObservableObject
     {
         private readonly PayCheckService _payCheckService;
+        private readonly AuthHeaderHandler _authHeaderHandler;
 
-        public PayCheckViewModel(PayCheckService payCheckService)
+        public PayCheckViewModel(PayCheckService payCheckService, AuthHeaderHandler authHeaderHandler)
         {
             _payCheckService = payCheckService;
+            _authHeaderHandler = authHeaderHandler;
         }
+
         [ObservableProperty]
         private decimal salaryBeforeTax;
         [ObservableProperty]
@@ -30,6 +33,7 @@ namespace FinanceTracker.ViewModels
         [RelayCommand]
         async Task SalaryEstimationForMonth((string companyName, int month) input)
         {
+            var tester = await _authHeaderHandler.SendAsync();
             var payCheck = await _payCheckService.SalaryEstimationForMonth(input.companyName, input.month);
             if (payCheck == null)
             {
