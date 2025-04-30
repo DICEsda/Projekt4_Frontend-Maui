@@ -23,6 +23,9 @@ namespace FinanceTracker.ViewModels
         [ObservableProperty]
         private string employmentType;
 
+        [ObservableProperty]
+        private decimal payRate;
+
         // Declare the CurrentSupplement property for supplements
         public Supplement CurrentSupplement { get; set; }
 

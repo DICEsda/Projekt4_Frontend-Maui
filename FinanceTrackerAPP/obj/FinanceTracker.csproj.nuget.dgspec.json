@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\omary\\OneDrive\\Documents\\School - AU\\4. Semester\\Project4\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTracker.csproj": {}
+    "C:\\Users\\achih\\Desktop\\AU\\Projekt\\MAUI\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTracker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\omary\\OneDrive\\Documents\\School - AU\\4. Semester\\Project4\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTracker.csproj": {
+    "C:\\Users\\achih\\Desktop\\AU\\Projekt\\MAUI\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\omary\\OneDrive\\Documents\\School - AU\\4. Semester\\Project4\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTracker.csproj",
+        "projectUniqueName": "C:\\Users\\achih\\Desktop\\AU\\Projekt\\MAUI\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTracker.csproj",
         "projectName": "FinanceTracker",
-        "projectPath": "C:\\Users\\omary\\OneDrive\\Documents\\School - AU\\4. Semester\\Project4\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTracker.csproj",
-        "packagesPath": "C:\\Users\\omary\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\omary\\OneDrive\\Documents\\School - AU\\4. Semester\\Project4\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\obj\\",
+        "projectPath": "C:\\Users\\achih\\Desktop\\AU\\Projekt\\MAUI\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTracker.csproj",
+        "packagesPath": "C:\\Users\\achih\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\achih\\Desktop\\AU\\Projekt\\MAUI\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\omary\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\achih\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -76,6 +76,10 @@
               "target": "Package",
               "version": "[8.2.1, )"
             },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -105,7 +109,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.105/PortableRuntimeIdentifierGraph.json"
         },
         "net8.0-android34.0": {
           "targetAlias": "net8.0-android",
@@ -113,6 +117,10 @@
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.1, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[9.0.4, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -129,7 +137,7 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.12, )",
+              "version": "[8.0.15, )",
               "autoReferenced": true
             }
           },
@@ -174,7 +182,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.105/PortableRuntimeIdentifierGraph.json"
         },
         "net8.0-ios18.0": {
           "targetAlias": "net8.0-ios",
@@ -182,6 +190,10 @@
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.1, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[9.0.4, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -198,7 +210,7 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.12, )",
+              "version": "[8.0.15, )",
               "autoReferenced": true
             }
           },
@@ -231,7 +243,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.105/PortableRuntimeIdentifierGraph.json"
         },
         "net8.0-maccatalyst18.0": {
           "targetAlias": "net8.0-maccatalyst",
@@ -239,6 +251,10 @@
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.1, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[9.0.4, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -255,7 +271,7 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.12, )",
+              "version": "[8.0.15, )",
               "autoReferenced": true
             }
           },
@@ -289,7 +305,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.105/PortableRuntimeIdentifierGraph.json"
         },
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
@@ -297,6 +313,10 @@
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.1, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[9.0.4, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -336,7 +356,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.105\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

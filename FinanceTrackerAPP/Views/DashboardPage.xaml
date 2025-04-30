@@ -64,30 +64,27 @@ Maecenas maximus augue et augue lobortis laoreet. Aenean interdum porta nibh, ut
         </Frame>
 
         <!-- Logout Button -->
-        <Frame Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Start"
+        <Button Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Start"
                CornerRadius="8"
                BackgroundColor="{StaticResource CardBackground}"
                HeightRequest="60"
                WidthRequest="120"
                Padding="0"
-               HasShadow="False">
-            <Frame.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding LogoutCommand}" />
-            </Frame.GestureRecognizers>
+               Command="{Binding LogoutCommand}" />
 
-            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
-                <Label FontFamily="FontAwesomeSolid" 
+
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+            <Label FontFamily="FontAwesomeSolid" 
                        Text="{x:Static style:FontAwesomeSolid.SignOutAlt}" 
                        FontSize="20"
                        VerticalOptions="Center"
                        TextColor="{StaticResource Primary}"/>
-                <Label Text="Logout" 
+            <Label Text="Logout" 
                        FontSize="16"
                        FontAttributes="Bold"
                        VerticalOptions="Center"
                        TextColor="{StaticResource TextPrimary}"/>
-            </HorizontalStackLayout>
-        </Frame>
+        </HorizontalStackLayout>
 
 
         <!-- Main Action Buttons -->
@@ -185,7 +182,7 @@ Maecenas maximus augue et augue lobortis laoreet. Aenean interdum porta nibh, ut
                        VerticalOptions="Center"
                        TextColor="{StaticResource TextPrimary}"/>
             </HorizontalStackLayout>
-            
+
         </Frame>
         <BoxView HeightRequest="1" Color="#F0F0F0" Margin="220,12" Grid.Row="5" Grid.Column="1" ></BoxView>
         <Frame Grid.Row="6" Grid.Column="1"

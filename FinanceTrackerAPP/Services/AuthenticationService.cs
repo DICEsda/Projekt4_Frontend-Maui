@@ -17,7 +17,7 @@ namespace FinanceTracker.Services
         public AuthenticationService(HttpClient httpClient)
         {
             _httpClient = httpClient;
-            _httpClient.BaseAddress = new Uri("https://yourapiurl.com/api/"); // Replace with your API URL
+            _httpClient.BaseAddress = new Uri("http://localhost:5140/"); // Replace with your API URL
         }
 
 

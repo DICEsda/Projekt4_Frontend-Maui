@@ -22,7 +22,7 @@ namespace FinanceTracker.ViewModels
         }
 
         [ObservableProperty]
-        private string userName;
+        private string email;
 
         [ObservableProperty]
         private string password;
@@ -33,9 +33,13 @@ namespace FinanceTracker.ViewModels
             LoginDTO financeUserDTO = new LoginDTO
             {
                 Password = password,
-                UserName = userName
+                UserName = email
             };
             var token = await _authenticationService.Login(financeUserDTO);
+            if (token != null)
+            {
+                await Shell.Current.GoToAsync("//DashboardPage");
+            }
         }
     }
 }
