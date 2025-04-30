@@ -34,6 +34,11 @@
         </ShellContent>
     </FlyoutItem>
 
+    <FlyoutItem Title="Log Hours">
+        <ShellContent Route="LogHoursPage" ContentTemplate="{DataTemplate local:LogHours}">
+        </ShellContent>
+    </FlyoutItem>
+
     <MenuItem Text="Logout" Clicked="OnMenuItemClicked" 
               IconImageSource="{FontImage FontFamily=FontAwesomeSolid, Color=Black, 
         Glyph={x:Static style:FontAwesomeSolid.SignOutAlt}}">
