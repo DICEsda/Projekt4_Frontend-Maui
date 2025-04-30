@@ -5,9 +5,9 @@ using Microsoft.Maui.Controls;
 
 namespace FinanceTracker.Views
 {
-    public partial class ItemDetailPage : ContentPage
+    public partial class PayCheckPage : ContentPage
     {
-        public ItemDetailPage(ItemDetailViewModel viewModel)
+        public PayCheckPage(PaycheckViewModel viewModel)
         {
             InitializeComponent();
             BindingContext = viewModel;

@@ -6,12 +6,12 @@ using FinanceTracker.Services.Interfaces;
 namespace FinanceTracker.ViewModels
 {
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
-    public partial class ItemDetailViewModel : ObservableObject
+    public partial class PaycheckViewModel : ObservableObject
     {
         readonly IDataStore<Item> dataStore;
-        ILogger<ItemDetailViewModel> logger;
+        ILogger<PaycheckViewModel> logger;
 
-        public ItemDetailViewModel(IDataStore<Item> dataStore, ILogger<ItemDetailViewModel> logger)
+        public PaycheckViewModel(IDataStore<Item> dataStore, ILogger<PaycheckViewModel> logger)
         {
             this.dataStore = dataStore;
             this.logger = logger;

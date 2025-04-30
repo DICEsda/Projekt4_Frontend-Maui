@@ -24,9 +24,6 @@
     <None Update="Resources\Styles\Styles.xaml">
       <SubType>Designer</SubType>
     </None>
-    <None Update="Views\ItemDetailPage.xaml">
-      <SubType>Designer</SubType>
-    </None>
     <None Update="Views\LoginPage.xaml">
       <SubType>Designer</SubType>
     </None>

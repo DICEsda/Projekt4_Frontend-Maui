@@ -64,27 +64,31 @@ Maecenas maximus augue et augue lobortis laoreet. Aenean interdum porta nibh, ut
         </Frame>
 
         <!-- Logout Button -->
-        <Button Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Start"
+        <Frame Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Start"
                CornerRadius="8"
                BackgroundColor="{StaticResource CardBackground}"
                HeightRequest="60"
                WidthRequest="120"
-               Padding="0"
-               Command="{Binding LogoutCommand}" />
+               Padding="0">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding LogoutCommand}" />
+            </Frame.GestureRecognizers>
 
 
-        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
-            <Label FontFamily="FontAwesomeSolid" 
-                       Text="{x:Static style:FontAwesomeSolid.SignOutAlt}" 
-                       FontSize="20"
-                       VerticalOptions="Center"
-                       TextColor="{StaticResource Primary}"/>
-            <Label Text="Logout" 
-                       FontSize="16"
-                       FontAttributes="Bold"
-                       VerticalOptions="Center"
-                       TextColor="{StaticResource TextPrimary}"/>
-        </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Label FontFamily="FontAwesomeSolid" 
+                           Text="{x:Static style:FontAwesomeSolid.SignOutAlt}" 
+                           FontSize="20"
+                           VerticalOptions="Center"
+                           TextColor="{StaticResource Primary}"/>
+                <Label Text="Logout" 
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"
+                           TextColor="{StaticResource TextPrimary}"/>
+            </HorizontalStackLayout>
+        </Frame>
+
 
 
         <!-- Main Action Buttons -->
@@ -96,7 +100,7 @@ Maecenas maximus augue et augue lobortis laoreet. Aenean interdum porta nibh, ut
                Padding="0"
                HasShadow="False">
             <Frame.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding YourCommand}" />
+                <TapGestureRecognizer Command="{Binding JobCommand}" />
             </Frame.GestureRecognizers>
 
             <HorizontalStackLayout Spacing="15" Padding="15,0">
@@ -120,7 +124,7 @@ Maecenas maximus augue et augue lobortis laoreet. Aenean interdum porta nibh, ut
                Padding="0"
                HasShadow="False">
             <Frame.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding LogHoursCommand}" />
+                <TapGestureRecognizer Command="{Binding }" />
             </Frame.GestureRecognizers>
 
             <HorizontalStackLayout Spacing="15" Padding="15,0">
@@ -144,7 +148,7 @@ Maecenas maximus augue et augue lobortis laoreet. Aenean interdum porta nibh, ut
                Padding="0"
                HasShadow="False">
             <Frame.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding PaycheckCommand}" />
+                <TapGestureRecognizer Command="{Binding PayCheckCommand}" />
             </Frame.GestureRecognizers>
 
             <HorizontalStackLayout Spacing="15" Padding="15,0">

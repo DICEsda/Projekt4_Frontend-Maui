@@ -15,5 +15,19 @@ namespace FinanceTracker.ViewModels
             await Shell.Current.GoToAsync("//LoginPage");
         }
 
+        [RelayCommand]
+        async Task Job()
+        {
+            await Shell.Current.GoToAsync("//JobsPage");
+        }
+
+
+        [RelayCommand]
+        async Task PayCheck()
+        {
+            await Shell.Current.GoToAsync("//PayCheckPage"); 
+        }
+
+        
     }
 }

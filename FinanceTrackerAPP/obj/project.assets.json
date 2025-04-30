@@ -4470,12 +4470,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/GoogleGson.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/GoogleGson.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -4789,12 +4789,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.Compatibility.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.Compatibility.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         }
       },
@@ -4809,12 +4809,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "resource": {
@@ -4960,12 +4960,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "build": {
@@ -4983,12 +4983,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Essentials.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Essentials.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         }
       },
@@ -5012,7 +5012,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -6607,12 +6607,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/Jsr305Binding.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Jsr305Binding.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -6626,12 +6626,12 @@
         },
         "compile": {
           "lib/net6.0-android31.0/Xamarin.Google.Crypto.Tink.Android.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Xamarin.Google.Crypto.Tink.Android.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -6639,12 +6639,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/Xamarin.Google.ErrorProne.Annotations.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Xamarin.Google.ErrorProne.Annotations.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -6818,12 +6818,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/GoogleGson.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/GoogleGson.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -7137,12 +7137,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.Compatibility.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.Compatibility.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         }
       },
@@ -7157,12 +7157,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "resource": {
@@ -7308,12 +7308,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "build": {
@@ -7331,12 +7331,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Essentials.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Essentials.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         }
       },
@@ -7360,7 +7360,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -8955,12 +8955,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/Jsr305Binding.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Jsr305Binding.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -8974,12 +8974,12 @@
         },
         "compile": {
           "lib/net6.0-android31.0/Xamarin.Google.Crypto.Tink.Android.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Xamarin.Google.Crypto.Tink.Android.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -8987,12 +8987,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/Xamarin.Google.ErrorProne.Annotations.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Xamarin.Google.ErrorProne.Annotations.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -9166,12 +9166,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/GoogleGson.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/GoogleGson.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -9485,12 +9485,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.Compatibility.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.Compatibility.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         }
       },
@@ -9505,12 +9505,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "resource": {
@@ -9656,12 +9656,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "build": {
@@ -9679,12 +9679,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Essentials.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Essentials.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         }
       },
@@ -9708,7 +9708,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -11303,12 +11303,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/Jsr305Binding.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Jsr305Binding.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -11322,12 +11322,12 @@
         },
         "compile": {
           "lib/net6.0-android31.0/Xamarin.Google.Crypto.Tink.Android.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Xamarin.Google.Crypto.Tink.Android.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -11335,12 +11335,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/Xamarin.Google.ErrorProne.Annotations.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Xamarin.Google.ErrorProne.Annotations.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -11514,12 +11514,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/GoogleGson.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/GoogleGson.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -11833,12 +11833,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.Compatibility.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.Compatibility.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         }
       },
@@ -11853,12 +11853,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "resource": {
@@ -12004,12 +12004,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "build": {
@@ -12027,12 +12027,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Essentials.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Essentials.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         }
       },
@@ -12056,7 +12056,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -13651,12 +13651,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/Jsr305Binding.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Jsr305Binding.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -13670,12 +13670,12 @@
         },
         "compile": {
           "lib/net6.0-android31.0/Xamarin.Google.Crypto.Tink.Android.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Xamarin.Google.Crypto.Tink.Android.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -13683,12 +13683,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/Xamarin.Google.ErrorProne.Annotations.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Xamarin.Google.ErrorProne.Annotations.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -13862,12 +13862,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/GoogleGson.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/GoogleGson.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -14181,12 +14181,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.Compatibility.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.Compatibility.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         }
       },
@@ -14201,12 +14201,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "resource": {
@@ -14352,12 +14352,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "build": {
@@ -14375,12 +14375,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Essentials.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Essentials.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         }
       },
@@ -14404,7 +14404,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -15999,12 +15999,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/Jsr305Binding.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Jsr305Binding.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -16018,12 +16018,12 @@
         },
         "compile": {
           "lib/net6.0-android31.0/Xamarin.Google.Crypto.Tink.Android.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Xamarin.Google.Crypto.Tink.Android.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -16031,12 +16031,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/Xamarin.Google.ErrorProne.Annotations.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Xamarin.Google.ErrorProne.Annotations.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -16210,12 +16210,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/GoogleGson.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/GoogleGson.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -16529,12 +16529,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.Compatibility.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.Compatibility.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         }
       },
@@ -16549,12 +16549,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "resource": {
@@ -16700,12 +16700,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "build": {
@@ -16723,12 +16723,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Essentials.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Essentials.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         }
       },
@@ -16752,7 +16752,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -18347,12 +18347,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/Jsr305Binding.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Jsr305Binding.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -18366,12 +18366,12 @@
         },
         "compile": {
           "lib/net6.0-android31.0/Xamarin.Google.Crypto.Tink.Android.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Xamarin.Google.Crypto.Tink.Android.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -18379,12 +18379,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/Xamarin.Google.ErrorProne.Annotations.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Xamarin.Google.ErrorProne.Annotations.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -18558,12 +18558,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/GoogleGson.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/GoogleGson.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -18877,12 +18877,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.Compatibility.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.Compatibility.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         }
       },
@@ -18897,12 +18897,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "resource": {
@@ -19048,12 +19048,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "build": {
@@ -19071,12 +19071,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Essentials.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Essentials.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         }
       },
@@ -19100,7 +19100,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -20695,12 +20695,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/Jsr305Binding.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Jsr305Binding.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -20714,12 +20714,12 @@
         },
         "compile": {
           "lib/net6.0-android31.0/Xamarin.Google.Crypto.Tink.Android.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Xamarin.Google.Crypto.Tink.Android.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -20727,12 +20727,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/Xamarin.Google.ErrorProne.Annotations.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Xamarin.Google.ErrorProne.Annotations.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -20906,12 +20906,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/GoogleGson.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/GoogleGson.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -21225,12 +21225,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.Compatibility.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.Compatibility.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         }
       },
@@ -21245,12 +21245,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Controls.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "resource": {
@@ -21396,12 +21396,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "build": {
@@ -21419,12 +21419,12 @@
         },
         "compile": {
           "lib/net8.0-android34.0/Microsoft.Maui.Essentials.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         },
         "runtime": {
           "lib/net8.0-android34.0/Microsoft.Maui.Essentials.dll": {
-            "related": ".aar;.pdb;.xml"
+            "related": ".pdb;.xml;.aar"
           }
         }
       },
@@ -21448,7 +21448,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -23043,12 +23043,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/Jsr305Binding.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Jsr305Binding.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -23062,12 +23062,12 @@
         },
         "compile": {
           "lib/net6.0-android31.0/Xamarin.Google.Crypto.Tink.Android.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Xamarin.Google.Crypto.Tink.Android.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -23075,12 +23075,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0-android31.0/Xamarin.Google.ErrorProne.Annotations.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         },
         "runtime": {
           "lib/net6.0-android31.0/Xamarin.Google.ErrorProne.Annotations.dll": {
-            "related": ".aar;.xml"
+            "related": ".xml;.aar"
           }
         }
       },
@@ -23772,7 +23772,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -24334,7 +24334,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -24896,7 +24896,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -25458,7 +25458,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -26020,7 +26020,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -26582,7 +26582,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -27144,7 +27144,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -27706,7 +27706,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -28268,7 +28268,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -28830,7 +28830,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -29392,7 +29392,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -29954,7 +29954,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -30516,7 +30516,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -31078,7 +31078,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -31640,7 +31640,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -32202,7 +32202,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "Microsoft.NET.ILLink.Tasks/8.0.12": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -39209,10 +39209,10 @@
         "microsoft.maui.resizetizer.nuspec"
       ]
     },
-    "Microsoft.NET.ILLink.Tasks/8.0.15": {
-      "sha512": "s4eXlcRGyHeCgFUGQnhq0e/SCHBPp0jOHgMqZg3fQ2OCHJSm1aOUhI6RFWuVIcEb9ig2WgI2kWukk8wu72EbUQ==",
+    "Microsoft.NET.ILLink.Tasks/8.0.12": {
+      "sha512": "FV4HnQ3JI15PHnJ5PGTbz+rYvrih42oLi/7UMIshNwCwUZhTq13UzrggtXk4ygrcMcN+4jsS6hhshx2p/Zd0ig==",
       "type": "package",
-      "path": "microsoft.net.illink.tasks/8.0.15",
+      "path": "microsoft.net.illink.tasks/8.0.12",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -39226,7 +39226,7 @@
         "build/Microsoft.NET.ILLink.Analyzers.props",
         "build/Microsoft.NET.ILLink.Tasks.props",
         "build/Microsoft.NET.ILLink.targets",
-        "microsoft.net.illink.tasks.8.0.15.nupkg.sha512",
+        "microsoft.net.illink.tasks.8.0.12.nupkg.sha512",
         "microsoft.net.illink.tasks.nuspec",
         "tools/net472/ILLink.Tasks.dll",
         "tools/net472/ILLink.Tasks.dll.config",
@@ -42188,7 +42188,7 @@
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
       "Microsoft.Maui.Controls >= 8.0.80",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.80",
-      "Microsoft.NET.ILLink.Tasks >= 8.0.15"
+      "Microsoft.NET.ILLink.Tasks >= 8.0.12"
     ],
     "net8.0-ios18.0": [
       "CommunityToolkit.Mvvm >= 8.2.1",
@@ -42196,7 +42196,7 @@
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
       "Microsoft.Maui.Controls >= 8.0.80",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.80",
-      "Microsoft.NET.ILLink.Tasks >= 8.0.15"
+      "Microsoft.NET.ILLink.Tasks >= 8.0.12"
     ],
     "net8.0-maccatalyst18.0": [
       "CommunityToolkit.Mvvm >= 8.2.1",
@@ -42204,7 +42204,7 @@
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
       "Microsoft.Maui.Controls >= 8.0.80",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.80",
-      "Microsoft.NET.ILLink.Tasks >= 8.0.15"
+      "Microsoft.NET.ILLink.Tasks >= 8.0.12"
     ],
     "net8.0-windows10.0.19041": [
       "CommunityToolkit.Mvvm >= 8.2.1",
@@ -42215,24 +42215,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\achih\\.nuget\\packages\\": {},
+    "C:\\Users\\omary\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\achih\\Desktop\\AU\\Projekt\\MAUI\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTracker.csproj",
+      "projectUniqueName": "C:\\Users\\omary\\OneDrive\\Documents\\School - AU\\4. Semester\\Project4\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTracker.csproj",
       "projectName": "FinanceTracker",
-      "projectPath": "C:\\Users\\achih\\Desktop\\AU\\Projekt\\MAUI\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTracker.csproj",
-      "packagesPath": "C:\\Users\\achih\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\achih\\Desktop\\AU\\Projekt\\MAUI\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\obj\\",
+      "projectPath": "C:\\Users\\omary\\OneDrive\\Documents\\School - AU\\4. Semester\\Project4\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\FinanceTracker.csproj",
+      "packagesPath": "C:\\Users\\omary\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\omary\\OneDrive\\Documents\\School - AU\\4. Semester\\Project4\\Projekt4_Frontend-Maui\\FinanceTrackerAPP\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\achih\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\omary\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -42323,7 +42323,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.105/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       },
       "net8.0-android34.0": {
         "targetAlias": "net8.0-android",
@@ -42351,7 +42351,7 @@
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[8.0.15, )",
+            "version": "[8.0.12, )",
             "autoReferenced": true
           }
         },
@@ -42396,7 +42396,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.105/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       },
       "net8.0-ios18.0": {
         "targetAlias": "net8.0-ios",
@@ -42424,7 +42424,7 @@
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[8.0.15, )",
+            "version": "[8.0.12, )",
             "autoReferenced": true
           }
         },
@@ -42457,7 +42457,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.105/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       },
       "net8.0-maccatalyst18.0": {
         "targetAlias": "net8.0-maccatalyst",
@@ -42485,7 +42485,7 @@
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[8.0.15, )",
+            "version": "[8.0.12, )",
             "autoReferenced": true
           }
         },
@@ -42519,7 +42519,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.105/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       },
       "net8.0-windows10.0.19041": {
         "targetAlias": "net8.0-windows10.0.19041.0",
@@ -42570,7 +42570,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.105\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
