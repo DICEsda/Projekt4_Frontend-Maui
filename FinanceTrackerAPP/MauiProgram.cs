@@ -29,14 +29,14 @@ namespace FinanceTracker
             builder.Services.AddSingleton<ITokenProvider, TokenProvider>();
             builder.Services.AddHttpClient();
             builder.Services.AddTransient<AuthHeaderHandler>();
-            builder.Services.AddHttpClient<IAuthenticationService, AuthenticationService>()
-                .AddHttpMessageHandler<AuthHeaderHandler>();
+            builder.Services.AddSingleton<IAuthenticationService, AuthenticationService>();
             builder.Services.AddHttpClient<IPayCheckService, PayCheckService>()
                 .AddHttpMessageHandler<AuthHeaderHandler>();
+            builder.Services.AddHttpClient<IJobService, JobService>()
+                .AddHttpMessageHandler<AuthHeaderHandler>();
 
 
-            // Register generic IDataStore
-            builder.Services.AddSingleton<IDataStore<JobDTO>, JobDataStore>();
+
 
             // Register ViewModels
             builder.Services.AddSingleton<LoginViewModel>();

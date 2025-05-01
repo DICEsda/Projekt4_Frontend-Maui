@@ -21,15 +21,16 @@ namespace FinanceTracker.WinUI
         [global::System.Runtime.InteropServices.DefaultDllImportSearchPaths(global::System.Runtime.InteropServices.DllImportSearchPath.SafeDirectories)]
         private static extern void XamlCheckProcessRequirements();
 
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2406")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler", " 3.0.0.2406")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.STAThreadAttribute]
         static void Main(string[] args)
         {
             XamlCheckProcessRequirements();
-            
+
             global::WinRT.ComWrappersSupport.InitializeComWrappers();
-            global::Microsoft.UI.Xaml.Application.Start((p) => {
+            global::Microsoft.UI.Xaml.Application.Start((p) =>
+            {
                 var context = new global::Microsoft.UI.Dispatching.DispatcherQueueSynchronizationContext(global::Microsoft.UI.Dispatching.DispatcherQueue.GetForCurrentThread());
                 global::System.Threading.SynchronizationContext.SetSynchronizationContext(context);
                 new App();
@@ -40,12 +41,12 @@ namespace FinanceTracker.WinUI
 
     partial class App : global::Microsoft.Maui.MauiWinUIApplication
     {
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2406")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler", " 3.0.0.2406")]
         private bool _contentLoaded;
         /// <summary>
         /// InitializeComponent()
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2406")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler", " 3.0.0.2406")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public void InitializeComponent()
         {
@@ -64,7 +65,7 @@ namespace FinanceTracker.WinUI
             };
 #endif
 #if DEBUG && !DISABLE_XAML_GENERATED_RESOURCE_REFERENCE_DEBUG_OUTPUT
-            DebugSettings.XamlResourceReferenceFailed  += (sender, args) =>
+            DebugSettings.XamlResourceReferenceFailed += (sender, args) =>
             {
                 global::System.Diagnostics.Debug.WriteLine(args.Message);
             };

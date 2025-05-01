@@ -1,28 +1,86 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:FinanceTracker.ViewModels"
+             x:Class="FinanceTracker.Views.JobsPage"
+             Title="Opret Job">
+
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Titel" />
+            <Entry Text="{Binding Title}" Placeholder="F.eks. Butiksassistent" />
+
+            <Label Text="Virksomhedsnavn" />
+            <Entry Text="{Binding CompanyName}" Placeholder="F.eks. Netto" />
+
+            <Label Text="Ansættelsestype" />
+            <Entry Text="{Binding EmploymentType}" Placeholder="F.eks. Deltid" />
+
+            <Label Text="Timepris (kr)" />
+            <Entry Text="{Binding HourlyRate}" Placeholder="F.eks. 150" Keyboard="Numeric" />
+
+            <Label Text="Skattekort" />
+            <Entry Text="{Binding TaxCard}" Placeholder="Hovedkort / Bikort" />
+
+            <Button Text="Registrér Job"
+                    Command="{Binding RegisterJobCommand}" 
+                    BackgroundColor="DodgerBlue"
+                    TextColor="White"
+                    CornerRadius="8"
+                    Padding="10" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinanceTracker.Views.JobsPage"
              xmlns:local="clr-namespace:FinanceTracker.ViewModels"
              xmlns:style="clr-namespace:FinanceTracker.Resources.Styles"
-             xmlns:template="clr-namespace:FinanceTracker.Views.Templates"
              xmlns:model="clr-namespace:FinanceTracker.Models"  
              x:DataType="local:JobsViewModel"
              x:Name="PageRoot">
 
-    <ContentPage.BindingContext>
-        <!-- Set the BindingContext to JobsViewModel -->
-        <local:JobsViewModel />
-    </ContentPage.BindingContext>
-
     <Grid ColumnDefinitions="*,2*" ColumnSpacing="20">
-        <!-- Left Column - Job List Overview -->
+        -->
+<!-- Left Column - Job List Overview -->
+<!--
         <VerticalStackLayout Grid.Column="0" Padding="10">
             <Label Text="Job Overview" 
                    FontSize="18"
                    FontAttributes="Bold"
                    Margin="0,0,0,10"/>
 
-            <CollectionView ItemsSource="{Binding Jobs}">
+            <CollectionView ItemsSource="{Binding Job}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Frame Padding="15" 
@@ -30,13 +88,15 @@
                                Margin="0,0,0,10"
                                BackgroundColor="{StaticResource CardBackground}">
                             <VerticalStackLayout>
-                                <!-- Ensure that the 'Job' model has these properties -->
+                                -->
+<!-- Ensure that the 'Job' model has these properties -->
+<!--
                                 <Label Text="Placeholder" 
                                        FontSize="16"
                                        FontAttributes="Bold"/>
                                 <Label Text="{Binding EmploymentType}"
                                        FontSize="14"/>
-                                <Label Text="{Binding PayRate, StringFormat='Rate: {0} DKK/h'}"
+                                <Label Text="{Binding HourlyRate, StringFormat='Rate: {0} DKK/h'}"
                                        FontSize="14"/>
                             </VerticalStackLayout>
                         </Frame>
@@ -45,21 +105,27 @@
             </CollectionView>
         </VerticalStackLayout>
 
-        <!-- Right Column - Scrollable Form -->
+        -->
+<!-- Right Column - Scrollable Form -->
+<!--
         <ScrollView Grid.Column="1" Padding="10">
             <VerticalStackLayout Spacing="15">
                 <Label Text="Add/Edit Job" 
                        FontSize="18"
                        FontAttributes="Bold"/>
 
-                <!-- Job Name -->
+                -->
+<!-- Job Name -->
+<!--
                 <VerticalStackLayout Spacing="5">
                     <Label Text="Job name:"/>
                     <Entry Text="{Binding CurrentJob.Name}" 
                            Placeholder="Job X"/>
                 </VerticalStackLayout>
 
-                <!-- Employment Type -->
+                -->
+<!-- Employment Type -->
+<!--
                 <VerticalStackLayout Spacing="5">
                     <Label Text="Employment type:"/>
                     <Picker Title="Select type"
@@ -73,7 +139,9 @@
                     </Picker>
                 </VerticalStackLayout>
 
-                <!-- Tax Card -->
+                -->
+<!-- Tax Card -->
+<!--
                 <VerticalStackLayout Spacing="5">
                     <Label Text="Tax card:"/>
                     <HorizontalStackLayout Spacing="10">
@@ -84,7 +152,9 @@
                     </HorizontalStackLayout>
                 </VerticalStackLayout>
 
-                <!-- CVR -->
+                -->
+<!-- CVR -->
+<!--
                 <VerticalStackLayout Spacing="5">
                     <Label Text="CVR:"/>
                     <Entry Text="{Binding CurrentJob.CVR}" 
@@ -92,7 +162,9 @@
                            Keyboard="Numeric"/>
                 </VerticalStackLayout>
 
-                <!-- Hourly Rate -->
+                -->
+<!-- Hourly Rate -->
+<!--
                 <VerticalStackLayout Spacing="5">
                     <Label Text="Hourly Rate (DKK/h):"/>
                     <Entry Text="{Binding CurrentJob.PayRate}" 
@@ -100,7 +172,9 @@
                            Keyboard="Numeric"/>
                 </VerticalStackLayout>
 
-                <!-- Pay Period -->
+                -->
+<!-- Pay Period -->
+<!--
                 <VerticalStackLayout Spacing="5">
                     <Label Text="Pay period:"/>
                     <HorizontalStackLayout Spacing="5">
@@ -114,7 +188,9 @@
                     </HorizontalStackLayout>
                 </VerticalStackLayout>
 
-                <!-- Supplements -->
+                -->
+<!-- Supplements -->
+<!--
                 <VerticalStackLayout Spacing="10">
                     <Label Text="Add supplement:" 
                            FontAttributes="Bold"/>
@@ -155,7 +231,9 @@
                             TextColor="{StaticResource Primary}"/>
                 </VerticalStackLayout>
 
-                <!-- Save Button -->
+                -->
+<!-- Save Button -->
+<!--
                 <Button Text="Save Job" 
                         Command="{Binding SaveJobCommand}"
                         BackgroundColor="{StaticResource Primary}"
@@ -165,4 +243,4 @@
             </VerticalStackLayout>
         </ScrollView>
     </Grid>
-</ContentPage>
+</ContentPage>-->

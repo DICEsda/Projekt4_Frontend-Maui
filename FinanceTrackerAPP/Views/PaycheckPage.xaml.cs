@@ -10,13 +10,12 @@ namespace FinanceTracker.Views;
 
 public partial class PayCheckPage : ContentPage
 {
-    private PayCheckService payCheckService;
     private PayCheckViewModel payCheckViewModel;
 
     public PayCheckPage(PayCheckViewModel payCheckViewModel)
     {
         InitializeComponent();
-        BindingContext =payCheckViewModel;
+        BindingContext = payCheckViewModel;
     }
     private async void OnFetchTapped(object sender, EventArgs e)
     {

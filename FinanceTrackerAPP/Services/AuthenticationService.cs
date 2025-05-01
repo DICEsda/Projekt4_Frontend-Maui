@@ -26,9 +26,9 @@ namespace FinanceTracker.Services
 
             if (response.IsSuccessStatusCode)
             {
-
                 var rawtoken = await response.Content.ReadAsStringAsync();
                 var token = rawtoken.Trim('"');
+                SecureStorage.SetAsync("auth_token", token);
                 return token;
             }
             return null;
