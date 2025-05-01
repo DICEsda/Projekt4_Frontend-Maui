@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Users\achih\Desktop\AU\Projekt\maui\Projekt4_Frontend-Maui\FinanceTrackerAPP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-04-30T13:12:19.126</Modified>
+      <Modified>2025-05-01T12:16:08.349</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\achih\Desktop\AU\Projekt\maui\Projekt4_Frontend-Maui\FinanceTrackerAPP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\FinanceTracker.dll">
       <PackagePath>FinanceTracker.dll</PackagePath>
-      <Modified>2025-04-30T13:12:18.589</Modified>
+      <Modified>2025-05-01T12:16:06.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\achih\Desktop\AU\Projekt\maui\Projekt4_Frontend-Maui\FinanceTrackerAPP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>FinanceTracker.exe</PackagePath>
-      <Modified>2025-04-30T13:12:18.595</Modified>
+      <Modified>2025-05-01T12:16:06.456</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\achih\Desktop\AU\Projekt\maui\Projekt4_Frontend-Maui\FinanceTrackerAPP\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>

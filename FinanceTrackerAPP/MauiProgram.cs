@@ -26,9 +26,14 @@ namespace FinanceTracker
 
             // Register HttpClient
             // Register Services
+            builder.Services.AddSingleton<ITokenProvider, TokenProvider>();
             builder.Services.AddHttpClient();
+            builder.Services.AddTransient<AuthHeaderHandler>();
+            builder.Services.AddHttpClient<IAuthenticationService, AuthenticationService>()
+                .AddHttpMessageHandler<AuthHeaderHandler>();
+            builder.Services.AddHttpClient<IPayCheckService, PayCheckService>()
+                .AddHttpMessageHandler<AuthHeaderHandler>();
 
-            builder.Services.AddSingleton<IAuthenticationService, AuthenticationService>();
 
             // Register generic IDataStore
             builder.Services.AddSingleton<IDataStore<JobDTO>, JobDataStore>();
@@ -38,8 +43,6 @@ namespace FinanceTracker
             builder.Services.AddSingleton<RegisterViewModel>();
             builder.Services.AddSingleton<JobsViewModel>();
             // Register other ViewModels as needed
-            builder.Services.AddSingleton<IPayCheckService, PayCheckService>();
-            builder.Services.AddSingleton<PayCheckService>();
             builder.Services.AddTransient<PayCheckViewModel>();
             builder.Services.AddTransient<PayCheckPage>();
             // Register Views

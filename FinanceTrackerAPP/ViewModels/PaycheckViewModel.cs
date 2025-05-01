@@ -7,15 +7,16 @@ using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.Input;
 using FinanceTracker.DTO;
 using FinanceTracker.Services;
+using FinanceTracker.Services.Interfaces;
 
 namespace FinanceTracker.ViewModels
 {
     public partial class PayCheckViewModel : ObservableObject
     {
-        private readonly PayCheckService _payCheckService;
+        private readonly IPayCheckService _payCheckService;
         private readonly AuthHeaderHandler _authHeaderHandler;
 
-        public PayCheckViewModel(PayCheckService payCheckService, AuthHeaderHandler authHeaderHandler)
+        public PayCheckViewModel(IPayCheckService payCheckService, AuthHeaderHandler authHeaderHandler)
         {
             _payCheckService = payCheckService;
             _authHeaderHandler = authHeaderHandler;
@@ -29,11 +30,12 @@ namespace FinanceTracker.ViewModels
         private decimal amContribution;
         [ObservableProperty]
         private decimal tax;
+        [ObservableProperty]
+        private decimal salaryAfterTax;
 
         [RelayCommand]
         async Task SalaryEstimationForMonth((string companyName, int month) input)
         {
-            var tester = await _authHeaderHandler.SendAsync();
             var payCheck = await _payCheckService.SalaryEstimationForMonth(input.companyName, input.month);
             if (payCheck == null)
             {
@@ -43,6 +45,7 @@ namespace FinanceTracker.ViewModels
             WorkedHours = payCheck.WorkedHours;
             AmContribution = payCheck.AMContribution;
             Tax = payCheck.Tax;
+            SalaryAfterTax = payCheck.SalaryAfterTax;
         }
 
 

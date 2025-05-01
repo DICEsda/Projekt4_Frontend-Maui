@@ -16,7 +16,7 @@ public class PayCheckService : IPayCheckService
 
     public async Task<PayCheckDTO> SalaryEstimationForMonth(string companyName, int month)
     {
-        var response = await _httpClient.GetAsync($"PayCheck?=month={month}&companyName={companyName}");
+        var response = await _httpClient.GetAsync($"PayCheck?month={month}&companyName={companyName}");
         if (!response.IsSuccessStatusCode)
         {
             throw new Exception("Failed to fetch paycheck data.");

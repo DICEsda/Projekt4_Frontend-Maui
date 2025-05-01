@@ -13,20 +13,12 @@ namespace FinanceTracker.Services
     {
         private readonly HttpClient _httpClient;
 
-        private const string TokenKey = "auth_token";
         public AuthenticationService(HttpClient httpClient)
         {
             _httpClient = httpClient;
             _httpClient.BaseAddress = new Uri("http://localhost:5140/"); // Replace with your API URL
         }
 
-
-
-
-        public async Task<string?> GetTokenAsync()
-        {
-            return await SecureStorage.GetAsync(TokenKey);
-        }
 
         public async Task<string?> Login(LoginDTO loginDTO)
         {
@@ -35,8 +27,8 @@ namespace FinanceTracker.Services
             if (response.IsSuccessStatusCode)
             {
 
-                var token = await response.Content.ReadAsStringAsync();
-                await SecureStorage.SetAsync(TokenKey, token);
+                var rawtoken = await response.Content.ReadAsStringAsync();
+                var token = rawtoken.Trim('"');
                 return token;
             }
             return null;

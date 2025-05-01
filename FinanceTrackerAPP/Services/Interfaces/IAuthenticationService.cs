@@ -6,7 +6,5 @@ namespace FinanceTracker.Services.Interfaces
     public interface IAuthenticationService
     {
         Task<string> Login(LoginDTO loginDTO);
-        Task<string> GetTokenAsync();
-
     }
 }
