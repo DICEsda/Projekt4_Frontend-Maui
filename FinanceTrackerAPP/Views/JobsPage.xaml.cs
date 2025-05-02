@@ -8,11 +8,11 @@ namespace FinanceTracker.Views
 
     public partial class JobsPage : ContentPage
     {
-        private readonly JobsViewModel JobsViewModel;
-        public JobsPage()
+
+        public JobsPage(JobsViewModel jobsViewModel)
         {
             InitializeComponent();
-            BindingContext = JobsViewModel;
+            BindingContext = jobsViewModel;
         }
 
 
