@@ -15,7 +15,7 @@ namespace FinanceTracker.Services
         public WorkshiftService(HttpClient httpClient)
         {
             _httpClient = httpClient;
-            _httpClient.BaseAddress = new Uri("api");
+            _httpClient.BaseAddress = new Uri("http://localhost:5140/");
         }
         public async Task<WorkshiftDTO> AddWorkShift(WorkshiftDTO workshift)
         {
@@ -27,7 +27,7 @@ namespace FinanceTracker.Services
         }
         public async Task<List<WorkshiftDTO>> GetAllWorkShifts()
         {
-            var response = await _httpClient.GetAsync("Paycheck/GetAllWorkShiftsForUser");
+            var response = await _httpClient.GetAsync("Paychecks");
 
             if (response.IsSuccessStatusCode) return await response.Content.ReadFromJsonAsync<List<WorkshiftDTO>>();
 

@@ -30,7 +30,7 @@ namespace FinanceTracker.Services
 
         public async Task<string?> Login(LoginDTO loginDTO)
         {
-            var response = await _httpClient.PostAsJsonAsync("Account/Login", loginDTO);
+            var response = await _httpClient.PostAsJsonAsync("Accounts/login", loginDTO);
 
             if (response.IsSuccessStatusCode)
             {
