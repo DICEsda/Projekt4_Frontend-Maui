@@ -5,8 +5,18 @@
             xmlns:cal="clr-namespace:Plugin.Maui.Calendar.Controls;assembly=Plugin.Maui.Calendar"
             Title="LogHours">
 
-    <cal:Calendar Events="{Binding Events}"/>
+
+    <VerticalStackLayout>
+
+
+        <cal:Calendar Events="{Binding Events, Mode=TwoWay}" EventIndicatorColor="Red" EventIndicatorSelectedColor="Green" EventIndicatorTextColor="Red" SelectedDate="{Binding SelectedDate, Mode=TwoWay}"/>
 
 
 
+
+        <TimePicker Time="{Binding StartTime}"></TimePicker>
+        <TimePicker Time="{Binding EndTime}"></TimePicker>
+        <TimePicker></TimePicker>
+        <Button Text="Add workshift" Command="{Binding AddWorkshiftCommand}"></Button>
+    </VerticalStackLayout>
 </ContentPage>

@@ -20,8 +20,9 @@ namespace FinanceTracker.Services
         }
         public async Task<WorkshiftDTO> AddWorkShift(WorkshiftDTO workshift)
         {
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdHVzZXJAZXhhbXBsZS5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0dXNlckBleGFtcGxlLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiZTI5NDU3NDMtN2QwMC00YWZhLThmZDMtM2QyOThlOTIxMjlmIiwiZXhwIjoxNzQ2MjM5NDY4LCJpc3MiOiJNeUJHTGlzdCIsImF1ZCI6Ik15QkdMaXN0In0.Wk7o0QRUQ0hZ9zWq1PUy4HRw4MvthTnh6N93ZkJxknQ");
 
-            var response = await _httpClient.PostAsJsonAsync("Paycheck/registerWorkshift", workshift);
+            var response = await _httpClient.PostAsJsonAsync("Workshifts", workshift);
 
             if (response.IsSuccessStatusCode) return await response.Content.ReadFromJsonAsync<WorkshiftDTO>();
 
@@ -29,7 +30,7 @@ namespace FinanceTracker.Services
         }
         public async Task<List<WorkshiftDTO>> GetAllWorkShifts()
         {
-            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdHVzZXJAZXhhbXBsZS5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0dXNlckBleGFtcGxlLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiZTI5NDU3NDMtN2QwMC00YWZhLThmZDMtM2QyOThlOTIxMjlmIiwiZXhwIjoxNzQ2MjIyMDQ2LCJpc3MiOiJNeUJHTGlzdCIsImF1ZCI6Ik15QkdMaXN0In0.mjZw86Gprn68mYri2fI0rpvVTN9s1prkIVFhbp2WWeM");
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdHVzZXJAZXhhbXBsZS5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0dXNlckBleGFtcGxlLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiZTI5NDU3NDMtN2QwMC00YWZhLThmZDMtM2QyOThlOTIxMjlmIiwiZXhwIjoxNzQ2MjM5NDY4LCJpc3MiOiJNeUJHTGlzdCIsImF1ZCI6Ik15QkdMaXN0In0.Wk7o0QRUQ0hZ9zWq1PUy4HRw4MvthTnh6N93ZkJxknQ");
 
             var response = await _httpClient.GetAsync("Workshifts");
 
