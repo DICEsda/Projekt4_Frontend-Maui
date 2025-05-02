@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace FinanceTracker.ViewModels
 {
     public partial class LogHoursViewModel : ObservableObject
@@ -27,6 +28,7 @@ namespace FinanceTracker.ViewModels
         public async Task InitializeCalendar()
         {
 
+
             var workshifts = await _workshiftService.GetAllWorkShifts();
             foreach (var workshift in workshifts)
             {
@@ -34,13 +36,11 @@ namespace FinanceTracker.ViewModels
 
                 Events[date] = new List<string> { "workshift" };
 
+
             }
+
+
         }
-
-
-
-
-
 
     }
 }
