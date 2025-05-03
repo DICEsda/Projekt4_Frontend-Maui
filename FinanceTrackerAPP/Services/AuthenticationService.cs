@@ -13,7 +13,6 @@ namespace FinanceTracker.Services
     {
         private readonly HttpClient _httpClient;
 
-        private const string TokenKey = "auth_token";
         public AuthenticationService(HttpClient httpClient)
         {
             _httpClient = httpClient;
@@ -21,22 +20,15 @@ namespace FinanceTracker.Services
         }
 
 
-
-
-        public async Task<string?> GetTokenAsync()
-        {
-            return await SecureStorage.GetAsync(TokenKey);
-        }
-
         public async Task<string?> Login(LoginDTO loginDTO)
         {
             var response = await _httpClient.PostAsJsonAsync("Account/Login", loginDTO);
 
             if (response.IsSuccessStatusCode)
             {
-
-                var token = await response.Content.ReadAsStringAsync();
-                await SecureStorage.SetAsync(TokenKey, token);
+                var rawtoken = await response.Content.ReadAsStringAsync();
+                var token = rawtoken.Trim('"');
+                SecureStorage.SetAsync("auth_token", token);
                 return token;
             }
             return null;

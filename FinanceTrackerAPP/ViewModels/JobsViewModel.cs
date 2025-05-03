@@ -6,69 +6,54 @@ using FinanceTracker.Models;
 using FinanceTracker.Services;
 using FinanceTracker.Views;
 using System.Windows.Input;
+using FinanceTracker.Services.Interfaces;
+using System;
 
 namespace FinanceTracker.ViewModels
 {
     public partial class JobsViewModel : ObservableObject
     {
-        // Declare the Jobs property
-        public ObservableCollection<Job> Jobs { get; set; }
+        private readonly IJobService _jobService;
+        private readonly AuthHeaderHandler _authHeaderHandler;
 
-        // Declare the CurrentJob property
-        public Job CurrentJob { get; set; }
+        public JobsViewModel(IJobService jobService, AuthHeaderHandler authHeaderHandler)
+        {
+            _jobService = jobService;
+            _authHeaderHandler = authHeaderHandler;
+        }
 
-        // Declare the EmploymentTypes list for the Picker
-        public ObservableCollection<string> EmploymentTypes { get; set; }
+        [ObservableProperty]
+        private string title;
+
+        [ObservableProperty]
+        private string companyName;
 
         [ObservableProperty]
         private string employmentType;
 
         [ObservableProperty]
-        private decimal payRate;
+        private decimal hourlyRate;
+        [ObservableProperty]
+        private string taxCard;
 
-        // Declare the CurrentSupplement property for supplements
-        public Supplement CurrentSupplement { get; set; }
-
-        // Command for adding a supplement
-        public ICommand AddSupplementCommand { get; set; }
-
-        // Command for saving the job
-        public ICommand SaveJobCommand { get; set; }
-
-        // Constructor to initialize the properties
-        public JobsViewModel()
+        [RelayCommand]
+        async Task RegisterJob()
         {
-            // Initialize the Jobs collection
-            Jobs = new ObservableCollection<Job>
+
+            var job = new JobDTO
             {
-                new Job { Name = "Developer", EmploymentType = "Full-time", PayRate = 150 },
-                new Job { Name = "Designer", EmploymentType = "Part-time", PayRate = 120 }
+                Title = Title,
+                CompanyName = CompanyName,
+                EmploymentType = EmploymentType,
+                HourlyRate = HourlyRate,
+                TaxCard = TaxCard
             };
 
-            // Initialize the CurrentJob property
-            CurrentJob = new Job();
-
-            // Initialize the EmploymentTypes list
-            EmploymentTypes = new ObservableCollection<string> { "Full-time", "Part-time", "Hourly" };
-
-            // Initialize the CurrentSupplement property
-            CurrentSupplement = new Supplement();
-
-            // Initialize the commands
-            AddSupplementCommand = new Command(OnAddSupplement);
-            SaveJobCommand = new Command(OnSaveJob);
+            var result = await _jobService.RegisterJobAsync(job);
         }
 
-        // Method to handle adding a supplement
-        private void OnAddSupplement()
-        {
-            // Your logic to add a supplement
-        }
 
-        // Method to handle saving the job
-        private void OnSaveJob()
-        {
-            // Your logic to save the job
-        }
+
+
     }
 }
