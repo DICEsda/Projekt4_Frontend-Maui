@@ -9,14 +9,16 @@
     <VerticalStackLayout>
 
 
-        <cal:Calendar Events="{Binding Events, Mode=TwoWay}" EventIndicatorColor="Red" EventIndicatorSelectedColor="Green" EventIndicatorTextColor="Red" SelectedDate="{Binding SelectedDate, Mode=TwoWay}"/>
+        <cal:Calendar Events="{Binding Events, Mode=TwoWay}" EventIndicatorColor="Red" EventIndicatorSelectedColor="Red" EventIndicatorTextColor="Red" SelectedDate="{Binding SelectedDate, Mode=TwoWay}" OtherMonthDayIsVisible="False" />
 
 
 
+        <Label Text="Workshift starttime"></Label>
+        <TimePicker Format="HH:mm" Time="{Binding StartTime}"></TimePicker>
 
-        <TimePicker Time="{Binding StartTime}"></TimePicker>
-        <TimePicker Time="{Binding EndTime}"></TimePicker>
-        <TimePicker></TimePicker>
+        <Label Text="Workshift endtime"></Label>
+        <TimePicker Format="HH:mm" Time="{Binding EndTime}"></TimePicker>
+
         <Button Text="Add workshift" Command="{Binding AddWorkshiftCommand}"></Button>
     </VerticalStackLayout>
 </ContentPage>

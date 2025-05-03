@@ -19,6 +19,7 @@ namespace FinanceTracker.ViewModels
         private readonly IWorkshiftService _workshiftService;
         public ObservableCollection<WorkshiftDTO> Workshifts { get; set; }
 
+
         public EventCollection Events { get; } = new EventCollection();
 
 
@@ -36,7 +37,7 @@ namespace FinanceTracker.ViewModels
             {
                 var date = workshift.StartTime.Date;
 
-                Events[date] = new List<string> { "workshift" };
+                Events[date] = new List<string> { workshift.StartTime.ToString("HH:mm") + "-" + workshift.EndTime.ToString("HH:mm") };
             }
         }
 
@@ -56,24 +57,18 @@ namespace FinanceTracker.ViewModels
         {
             if (selectedDate == null) return;
 
-
             WorkshiftDTO workshift = new WorkshiftDTO
             {
                 StartTime = selectedDate.Value.Date + startTime,
                 EndTime = selectedDate.Value.Date + endTime
             };
 
-
             var result = await _workshiftService.AddWorkShift(workshift);
 
             if (result == null) return;
 
-
-
             var date = selectedDate.Value.Date;
-            Events[date] = new List<string> { "workshift" };
-            OnPropertyChanged(nameof(Events));
-
+            Events[date] = new List<string> { workshift.StartTime.ToString("HH:mm") + "-" + workshift.EndTime.ToString("HH:mm") };
 
         }
 
