@@ -20,7 +20,7 @@ namespace FinanceTracker.Services
         }
         public async Task<WorkshiftDTO> AddWorkShift(WorkshiftDTO workshift)
         {
-            //_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "TOKEN")
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("auth_token"));
             var response = await _httpClient.PostAsJsonAsync("Workshifts", workshift);
 
             if (response.IsSuccessStatusCode) return await response.Content.ReadFromJsonAsync<WorkshiftDTO>();
@@ -30,7 +30,7 @@ namespace FinanceTracker.Services
         public async Task<List<WorkshiftDTO>> GetAllWorkShifts()
         {
             //waiting for automatic token insertion into header
-            //_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "TOKEN")
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("auth_token"));
             var response = await _httpClient.GetAsync("Workshifts");
 
 
