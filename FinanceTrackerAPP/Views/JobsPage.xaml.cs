@@ -2,16 +2,19 @@
 using FinanceTracker.Models;
 using FinanceTracker.ViewModels;
 using FinanceTracker.Views;
- 
+
 namespace FinanceTracker.Views
 {
 
     public partial class JobsPage : ContentPage
     {
-        public JobsPage()
+
+        public JobsPage(JobsViewModel jobsViewModel)
         {
             InitializeComponent();
-            BindingContext = new JobsViewModel();
+            BindingContext = jobsViewModel;
         }
+
+
     }
 }

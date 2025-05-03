@@ -4,22 +4,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FinanceTracker.Services;
 
 namespace FinanceTracker
 {
     public class AuthHeaderHandler : DelegatingHandler
     {
-        private readonly IAuthenticationService _authenticationService;
 
-        public AuthHeaderHandler(IAuthenticationService authenticationService)
+
+        public AuthHeaderHandler()
         {
-            _authenticationService = authenticationService;
         }
 
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             // Retrieve the token from the authentication service
-            var token = await _authenticationService.GetTokenAsync();
+            var token = await SecureStorage.GetAsync("auth_token");
 
             if (!string.IsNullOrEmpty(token))
             {
