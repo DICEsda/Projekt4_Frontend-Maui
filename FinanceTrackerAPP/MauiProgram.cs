@@ -26,7 +26,6 @@ namespace FinanceTracker
 
             // Register HttpClient
             // Register Services
-            builder.Services.AddSingleton<ITokenProvider, TokenProvider>();
             builder.Services.AddHttpClient();
             builder.Services.AddTransient<AuthHeaderHandler>();
             builder.Services.AddSingleton<IAuthenticationService, AuthenticationService>();
