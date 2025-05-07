@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"  
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+            x:Class="FinanceTracker.Views.LogHours"  
+            xmlns:cal="clr-namespace:Plugin.Maui.Calendar.Controls;assembly=Plugin.Maui.Calendar"
+            Title="LogHours">
+
+
+    <VerticalStackLayout>
+
+
+        <cal:Calendar Events="{Binding Events, Mode=TwoWay}" EventIndicatorColor="Red" EventIndicatorSelectedColor="Red" EventIndicatorTextColor="Red" SelectedDate="{Binding SelectedDate, Mode=TwoWay}" OtherMonthDayIsVisible="False" />
+
+
+
+        <Label Text="Workshift starttime"></Label>
+        <TimePicker Format="HH:mm" Time="{Binding StartTime}"></TimePicker>
+
+        <Label Text="Workshift endtime"></Label>
+        <TimePicker Format="HH:mm" Time="{Binding EndTime}"></TimePicker>
+
+        <Button Text="Add workshift" Command="{Binding AddWorkshiftCommand}"></Button>
+    </VerticalStackLayout>
+</ContentPage>

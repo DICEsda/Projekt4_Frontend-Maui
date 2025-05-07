@@ -1,4 +1,4 @@
-﻿using FinanceTracker.Models;
+﻿    using FinanceTracker.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,12 +17,12 @@ namespace FinanceTracker.Services
         public UserService(HttpClient httpClient)
         {
             _httpClient = httpClient;
-            _httpClient.BaseAddress = new Uri("https://yourapiurl.com/api/"); // Replace with your API URL
+            _httpClient.BaseAddress = new Uri("http://localhost:5140/"); // Replace with your API URL
         }
 
         public async Task<FinanceUserDTO?> RegisterUserAsync(FinanceUserDTO financeUser)
         {
-            var response = await _httpClient.PostAsJsonAsync("Account/Register", financeUser);
+            var response = await _httpClient.PostAsJsonAsync("Accounts/register", financeUser);
 
             if (response.IsSuccessStatusCode)
             {

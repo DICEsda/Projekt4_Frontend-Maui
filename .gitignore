@@ -80,3 +80,4 @@ ios/.xcode.env.local
 *.zip
 *.tar.gz
 *.rar
+/FinanceTrackerAPP/FinanceTracker.csproj.SdkResolver.1981936763.proj.Backup (1).tmp

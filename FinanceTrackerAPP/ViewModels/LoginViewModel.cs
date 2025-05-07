@@ -41,5 +41,13 @@ namespace FinanceTracker.ViewModels
                 await Shell.Current.GoToAsync("//DashboardPage");
             }
         }
+
+        [RelayCommand]
+        async Task NavigateToRegisterPage()
+        {
+            await Shell.Current.GoToAsync("//RegisterPage");
+        }
+
+
     }
 }

@@ -71,6 +71,7 @@
     <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+    <PackageReference Include="Plugin.Maui.Calendar" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
