@@ -44,8 +44,8 @@ namespace FinanceTracker.ViewModels
 
             };
 
-            await _userService.RegisterUserAsync(financeUserDTO);
-
+           var res =  await _userService.RegisterUserAsync(financeUserDTO);
+            if (res!=null) await Shell.Current.GoToAsync("//LoginPage");
 
         }
 

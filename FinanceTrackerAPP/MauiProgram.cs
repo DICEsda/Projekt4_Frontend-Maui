@@ -29,6 +29,7 @@ namespace FinanceTracker
             builder.Services.AddHttpClient();
             builder.Services.AddTransient<AuthHeaderHandler>();
             builder.Services.AddSingleton<IAuthenticationService, AuthenticationService>();
+            builder.Services.AddSingleton<IUserService, UserService>();
 
 
             builder.Services.AddHttpClient<IPayCheckService, PayCheckService>()

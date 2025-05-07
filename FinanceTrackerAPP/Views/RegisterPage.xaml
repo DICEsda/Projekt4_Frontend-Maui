@@ -26,11 +26,14 @@
                         <Entry Margin="500,0"
                         Placeholder="Full name (e.g., Jane Doe)" 
                         Style="{StaticResource RoundedEntry}"
-                        TextColor="{AppThemeBinding Light=#333333, Dark=#FFFFFF}"/>
+                        TextColor="{AppThemeBinding Light=#333333, Dark=#FFFFFF}"
+                        Text="{Binding FullName}"
+                               />
                     <BoxView HeightRequest="1" Color="#F0F0F0" Margin="500,0"/>
 
                         <!-- Email -->
                         <Entry Placeholder="Email address (e.g., name@mail.com)" 
+                        Text="{Binding Email}"
                         Margin="500,0"
                         Keyboard="Email"
                         Style="{StaticResource RoundedEntry}"
@@ -50,15 +53,19 @@
                         Margin="500,0"
                         IsPassword="True"
                         Style="{StaticResource RoundedEntry}"
-                        TextColor="{AppThemeBinding Light=#333333, Dark=#FFFFFF}"/>
+                        TextColor="{AppThemeBinding Light=#333333, Dark=#FFFFFF}"
+                        Text="{Binding Password}"
+                        />
+                        
                     </VerticalStackLayout>
 
 
                 <!-- Save Button -->
-                <Button Text="Save Profile" 
+                <Button Text="Save Profile"
+                Command="{Binding RegisterUserCommand}"
                 Margin="500,0"
                 BackgroundColor="#6200EE"
-                TextColor="White"
+                TextColor="White"   
                 CornerRadius="12"
                 HeightRequest="50"
                 HorizontalOptions="Fill"/>

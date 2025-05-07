@@ -95,7 +95,7 @@
                         BorderWidth="1"
                         CornerRadius="10"
                         WidthRequest="200"
-                        Command="{Binding RegisterCommand}" />
+                        Command="{Binding NavigateToRegisterPageCommand}" />
             </StackLayout>
         </Grid>
     </ScrollView>
