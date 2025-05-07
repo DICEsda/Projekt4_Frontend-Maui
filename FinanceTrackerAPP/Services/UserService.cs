@@ -1,4 +1,4 @@
-﻿using FinanceTracker.Models;
+﻿    using FinanceTracker.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +22,7 @@ namespace FinanceTracker.Services
 
         public async Task<FinanceUserDTO?> RegisterUserAsync(FinanceUserDTO financeUser)
         {
-            var response = await _httpClient.PostAsJsonAsync("Account/Register", financeUser);
+            var response = await _httpClient.PostAsJsonAsync("Accounts/register", financeUser);
 
             if (response.IsSuccessStatusCode)
             {

@@ -20,6 +20,7 @@ public partial class AppShell : Shell
         Routing.RegisterRoute("JobsPage", typeof(JobsPage));
         Routing.RegisterRoute("DashboardPage", typeof(DashboardPage));
         Routing.RegisterRoute("LogHours", typeof(LogHours));
+        Routing.RegisterRoute("RegisterPage", typeof(RegisterPage));
 
         CurrentAppShell = this;
     }
