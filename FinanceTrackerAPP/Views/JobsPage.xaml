@@ -5,10 +5,10 @@
              x:DataType="viewmodels:JobsViewModel"
              Title="Opret Job">
 
-
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">
 
+            <!-- Jobregistrering -->
             <Label Text="Titel" />
             <Entry Text="{Binding Title}" Placeholder="F.eks. Butiksassistent" />
 
@@ -30,6 +30,45 @@
                     TextColor="White"
                     CornerRadius="8"
                     Padding="10" />
+
+            <!-- Hent alle jobs -->
+            <Button Text="Hent Jobs"
+                    Command="{Binding GetAllJobsCommand}"
+                    BackgroundColor="LightGreen"
+                    TextColor="Black"
+                    CornerRadius="8"
+                    Padding="10" />
+
+            <!-- Liste over jobs -->
+            <CollectionView ItemsSource="{Binding Jobs}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="Gray" CornerRadius="10" Padding="10" Margin="0,5">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Title}" FontAttributes="Bold" />
+                                <Label Text="{Binding CompanyName}" />
+                                <Label Text="{Binding EmploymentType}" />
+                                <Label Text="{Binding HourlyRate, StringFormat='Timepris: {0} kr'}" />
+                                <Label Text="{Binding TaxCard}" />
+
+                                <!-- Slet og opdater -->
+                                <HorizontalStackLayout Spacing="10">
+                                    <Button Text="Slet"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:JobsViewModel}}, Path=DeleteJobCommand}"
+                                            CommandParameter="{Binding CompanyName}"
+                                            BackgroundColor="Tomato" TextColor="White" />
+
+                                    <Button Text="Opdater"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:JobsViewModel}}, Path=UpdateJobCommand}"
+                                            CommandParameter="{Binding CompanyName}"
+                                            BackgroundColor="Orange" TextColor="White" />
+                                </HorizontalStackLayout>
+
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
         </VerticalStackLayout>
     </ScrollView>

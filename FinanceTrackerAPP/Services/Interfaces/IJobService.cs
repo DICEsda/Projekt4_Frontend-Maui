@@ -9,6 +9,10 @@ namespace FinanceTracker.Services.Interfaces
 {
     public interface IJobService
     {
-        public Task<JobDTO> RegisterJobAsync(JobDTO jobDTO);
+        Task<JobDTO> RegisterJobAsync(JobDTO jobDTO);
+        Task<List<JobDTO>> GetAllJobsAsync();
+        Task DeleteJobAsync(string companyName);
+        Task<JobDTO> UpdateJobAsync(JobDTO jobDTO, string companyName);
+
     }
 }
