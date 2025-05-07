@@ -25,7 +25,7 @@ namespace FinanceTracker.ViewModels
         [ObservableProperty]
         private decimal salaryBeforeTax;
         [ObservableProperty]
-        private TimeSpan workedHours;
+        private double workedHours;
         [ObservableProperty]
         private decimal amContribution;
         [ObservableProperty]
