@@ -5,14 +5,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:local="clr-namespace:FinanceTracker.Views"
-    BackgroundColor="{AppThemeBinding Light=#F5F5F5, Dark=#121212}"
-    mc:Ignorable="d">
+    xmlns:local="clr-namespace:FinanceTracker.Views">
 
     <ContentPage.Content>
         <ScrollView>
             <VerticalStackLayout Spacing="25" Padding="30,40" VerticalOptions="Center" >
-
+                
                 <!-- Header -->
                 <Label Text="Register" 
                 FontSize="28" 
@@ -20,8 +18,7 @@
                 HorizontalOptions="Center"
                 TextColor="{AppThemeBinding Light=#333333, Dark=#FFFFFF}"/>
 
-
-                    <VerticalStackLayout Spacing="0">
+                <VerticalStackLayout Spacing="0">
                         <!-- Full Name -->
                         <Entry Margin="500,0"
                         Placeholder="Full name (e.g., Jane Doe)" 
@@ -56,19 +53,17 @@
                         TextColor="{AppThemeBinding Light=#333333, Dark=#FFFFFF}"
                         Text="{Binding Password}"
                         />
-                        
-                    </VerticalStackLayout>
+                    <BoxView HeightRequest="1" Color="#F0F0F0" Margin="500,0"/>
+
+                </VerticalStackLayout>
 
 
                 <!-- Save Button -->
                 <Button Text="Save Profile"
                 Command="{Binding RegisterUserCommand}"
-                Margin="500,0"
-                BackgroundColor="#6200EE"
-                TextColor="White"   
-                CornerRadius="12"
-                HeightRequest="50"
-                HorizontalOptions="Fill"/>
+                Style="{StaticResource ConfirmButtonStyle}"
+                BackgroundColor="LightGreen" 
+                TextColor="Black"/>
             </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>
