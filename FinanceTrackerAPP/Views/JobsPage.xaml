@@ -3,73 +3,112 @@
              xmlns:viewmodels="clr-namespace:FinanceTracker.ViewModels"
              x:Class="FinanceTracker.Views.JobsPage"
              x:DataType="viewmodels:JobsViewModel"
-             Title="Opret Job">
+             xmlns:style="clr-namespace:FinanceTracker.Resources.Styles">
 
     <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="15">
+        <Grid Padding="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
-            <!-- Jobregistrering -->
-            <Label Text="Titel" />
-            <Entry Text="{Binding Title}" Placeholder="F.eks. Butiksassistent" />
+            <!-- Left-side buttons -->
+            <VerticalStackLayout Grid.Column="1"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Center"
+                                 Spacing="10"
+                                 Margin="20"
+                                 WidthRequest="250">
 
-            <Label Text="Virksomhedsnavn" />
-            <Entry Text="{Binding CompanyName}" Placeholder="F.eks. Netto" />
+                <Button Text="Registrér Job"
+                        Command="{Binding RegisterJobCommand}"
+                        BackgroundColor="DodgerBlue"
+                        TextColor="White"
+                        CornerRadius="10"
+                        FontAttributes="Bold"/>
 
-            <Label Text="Ansættelsestype" />
-            <Entry Text="{Binding EmploymentType}" Placeholder="F.eks. Deltid" />
+                <Button Text="Hent Jobs"
+                        Command="{Binding GetAllJobsCommand}"
+                        BackgroundColor="LightGreen"
+                        TextColor="Black"
+                        CornerRadius="10"
+                        FontAttributes="Bold"/>
+            </VerticalStackLayout>
 
-            <Label Text="Timepris (kr)" />
-            <Entry Text="{Binding HourlyRate}" Placeholder="F.eks. 150" Keyboard="Numeric" />
+            <!-- Centered form -->
+            <VerticalStackLayout Grid.Column="0"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Center"
+                                 WidthRequest="400"
+                                 Padding="10"
+                                 Margin="30"
+                                 Spacing="15">
 
-            <Label Text="Skattekort" />
-            <Entry Text="{Binding TaxCard}" Placeholder="Hovedkort / Bikort" />
+                <Label Text="Opret Job"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       TextColor="{StaticResource TitleColor}"
+                       HorizontalOptions="Start" />
 
-            <Button Text="Registrér Job"
-                    Command="{Binding RegisterJobCommand}" 
-                    BackgroundColor="DodgerBlue"
-                    TextColor="White"
-                    CornerRadius="8"
-                    Padding="10" />
+                <!-- Form fields with borders -->
+                <Label Text="Titel" FontSize="14" TextColor="{StaticResource BodyColor}" />
+                <Border BackgroundColor="White" Stroke="#ccc" StrokeThickness="1" StrokeShape="RoundRectangle 10" Padding="5">
+                    <Entry Placeholder="F.eks. Butiksassistent" Text="{Binding Title}" TextColor="Black" BackgroundColor="Transparent"/>
+                </Border>
 
-            <!-- Hent alle jobs -->
-            <Button Text="Hent Jobs"
-                    Command="{Binding GetAllJobsCommand}"
-                    BackgroundColor="LightGreen"
-                    TextColor="Black"
-                    CornerRadius="8"
-                    Padding="10" />
+                <Label Text="Virksomhedsnavn" FontSize="14" TextColor="{StaticResource BodyColor}" />
+                <Border BackgroundColor="White" Stroke="#ccc" StrokeThickness="1" StrokeShape="RoundRectangle 10" Padding="5">
+                    <Entry Placeholder="F.eks. Netto" Text="{Binding CompanyName}" TextColor="Black" BackgroundColor="Transparent"/>
+                </Border>
 
-            <!-- Liste over jobs -->
-            <CollectionView ItemsSource="{Binding Jobs}">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame BorderColor="Gray" CornerRadius="10" Padding="10" Margin="0,5">
-                            <VerticalStackLayout>
-                                <Label Text="{Binding Title}" FontAttributes="Bold" />
-                                <Label Text="{Binding CompanyName}" />
-                                <Label Text="{Binding EmploymentType}" />
-                                <Label Text="{Binding HourlyRate, StringFormat='Timepris: {0} kr'}" />
-                                <Label Text="{Binding TaxCard}" />
+                <Label Text="Ansættelsestype" FontSize="14" TextColor="{StaticResource BodyColor}" />
+                <Border BackgroundColor="White" Stroke="#ccc" StrokeThickness="1" StrokeShape="RoundRectangle 10" Padding="5">
+                    <Entry Placeholder="F.eks. Deltid" Text="{Binding EmploymentType}" TextColor="Black" BackgroundColor="Transparent"/>
+                </Border>
 
-                                <!-- Slet og opdater -->
-                                <HorizontalStackLayout Spacing="10">
-                                    <Button Text="Slet"
-                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:JobsViewModel}}, Path=DeleteJobCommand}"
-                                            CommandParameter="{Binding CompanyName}"
-                                            BackgroundColor="Tomato" TextColor="White" />
+                <Label Text="Timepris (kr)" FontSize="14" TextColor="{StaticResource BodyColor}" />
+                <Border BackgroundColor="White" Stroke="#ccc" StrokeThickness="1" StrokeShape="RoundRectangle 10" Padding="5">
+                    <Entry Placeholder="F.eks. 150" Text="{Binding HourlyRate}" Keyboard="Numeric" TextColor="Black" BackgroundColor="Transparent"/>
+                </Border>
 
-                                    <Button Text="Opdater"
-                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:JobsViewModel}}, Path=UpdateJobCommand}"
-                                            CommandParameter="{Binding CompanyName}"
-                                            BackgroundColor="Orange" TextColor="White" />
-                                </HorizontalStackLayout>
+                <Label Text="Skattekort" FontSize="14" TextColor="{StaticResource BodyColor}" />
+                <Border BackgroundColor="White" Stroke="#ccc" StrokeThickness="1" StrokeShape="RoundRectangle 10" Padding="5">
+                    <Entry Placeholder="Hovedkort / Bikort" Text="{Binding TaxCard}" TextColor="Black" BackgroundColor="Transparent"/>
+                </Border>
 
-                            </VerticalStackLayout>
-                        </Frame>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+                <!-- Job list -->
+                <CollectionView ItemsSource="{Binding Jobs}" Margin="20">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BorderColor="#ccc" CornerRadius="10" Padding="10" Margin="0,5">
+                                <VerticalStackLayout>
+                                    <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="16" />
+                                    <Label Text="{Binding CompanyName}" />
+                                    <Label Text="{Binding EmploymentType}" />
+                                    <Label Text="{Binding HourlyRate, StringFormat='Timepris: {0} kr'}" />
+                                    <Label Text="{Binding TaxCard}" />
 
-        </VerticalStackLayout>
+                                    <HorizontalStackLayout Spacing="10" Margin="0,10,0,0">
+                                        <Button Text="Slet"
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:JobsViewModel}}, Path=DeleteJobCommand}"
+                                                CommandParameter="{Binding CompanyName}"
+                                                BackgroundColor="Tomato"
+                                                TextColor="White"
+                                                CornerRadius="8" />
+
+                                        <Button Text="Opdater"
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:JobsViewModel}}, Path=UpdateJobCommand}"
+                                                CommandParameter="{Binding CompanyName}"
+                                                BackgroundColor="Orange"
+                                                TextColor="White"
+                                                CornerRadius="8" />
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </Grid>
     </ScrollView>
 </ContentPage>

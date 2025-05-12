@@ -5,84 +5,72 @@
              x:Class="FinanceTracker.Views.PayCheckPage"
              Title="Paycheck">
 
-    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="*,*">
+
+    <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="Center">
 
         <!-- Header -->
-        <Frame Grid.Row="0" Grid.ColumnSpan="2"
-               CornerRadius="8"
-               BackgroundColor="{StaticResource CardBackground}"
-               Padding="20"
-               HasShadow="True">
-            <Label Text="Paycheck Details"
-                   FontSize="20"
-                   FontAttributes="Bold"
-                   TextColor="{StaticResource Primary}" />
-        </Frame>
+        <Label Text="Paycheck Details"
+               HorizontalOptions="Start"
+               Style="{StaticResource TitleLabelStyle}" />
 
-        <!-- Company Name -->
-        <Frame Grid.Row="1" Grid.ColumnSpan="2"
-               CornerRadius="8"
-               BackgroundColor="{StaticResource CardBackground}"
-               Padding="10"
-               HasShadow="True">
-            <VerticalStackLayout>
-                <Label Text="Company Name" />
-                <Entry x:Name="CompanyEntry" Placeholder="e.g. Novo Nordisk" />
-            </VerticalStackLayout>
-        </Frame>
+        <!-- Input Grid -->
+        <Grid ColumnDefinitions="*,*"
+              RowDefinitions="Auto,Auto,Auto,Auto,Auto"
+              ColumnSpacing="75"
+              RowSpacing="5">
 
-        <!-- Month -->
-        <Frame Grid.Row="2" Grid.ColumnSpan="2"
-               CornerRadius="8"
-               BackgroundColor="{StaticResource CardBackground}"
-               Padding="10"
-               HasShadow="True">
-            <VerticalStackLayout>
-                <Label Text="Month (1-12)" />
-                <Entry x:Name="MonthEntry" Keyboard="Numeric" Placeholder="e.g. 4" />
-            </VerticalStackLayout>
-        </Frame>
+            <!-- Company Name -->
+            <Label Text="Company Name"
+                   Grid.Column="0"
+                   Grid.Row="0"
+                   Style="{StaticResource LabelStyle}" 
+                   Margin="0,20,0,0"/>
 
-        <!-- Fetch Button -->
-        <Frame Grid.Row="3" Grid.ColumnSpan="2"
-               CornerRadius="8"
-               BackgroundColor="{StaticResource Primary}"
-               Padding="10"
-               Margin="0,10"
-               HasShadow="True">
-            <Frame.GestureRecognizers>
-                <TapGestureRecognizer Tapped="OnFetchTapped" />
-            </Frame.GestureRecognizers>
-            <Label Text="Hent Lønseddel"
-                   FontSize="16"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"
-                   TextColor="White" />
-        </Frame>
+            <Entry x:Name="CompanyEntry"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   Placeholder="e.g. Novo Nordisk"
+                   Style="{StaticResource EntryStyle}" />
 
-        <!-- Result -->
-        <Frame Grid.Row="4" Grid.ColumnSpan="2"
-               CornerRadius="8"
-               BackgroundColor="{StaticResource CardBackground}"
-               Padding="10"
-               HasShadow="True">
-            <VerticalStackLayout>
-                <Label Text="Løn før skat:" />
-                <Label Text="{Binding SalaryBeforeTax}" />
+            <!-- Month -->
+            <Label Text="Month (1-12)"
+                   Grid.Row="2"
+                   Grid.Column="0"
+                Margin="0,20,0,0"
+                   Style="{StaticResource LabelStyle}" />
 
-                <Label Text="Arbejdstimer:" />
-                <Label Text="{Binding WorkedHours}" />
+            <Entry x:Name="MonthEntry"
+                   Grid.Row="3"
+                   Grid.Column="0"
+                   Placeholder="e.g. 4"
+                   Keyboard="Numeric"
+                   Style="{StaticResource EntryStyle}" />
 
-                <Label Text="AM-bidrag:" />
-                <Label Text="{Binding AmContribution}" />
+            <!-- Fetch Button -->
+            <Button Text="Hent Lønseddel"
+                BackgroundColor="LightGreen"
+                Grid.Column="0"
+                Grid.Row="4"
+                TextColor="Black"
+                Command="{Binding FetchCommand}"
+                Margin="0,25" />
 
-                <Label Text="Skat i %:" />
-                <Label Text="{Binding Tax}" />
 
-                <Label Text="Løn efter skat:" />
-                <Label Text="{Binding SalaryAfterTax}"/>
-            </VerticalStackLayout>
-        </Frame>
-    </Grid>
+
+            <Label Text="Løn før skat:" Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelStyle}" />
+            <Label Text="{Binding SalaryBeforeTax}" Grid.Row="0" Grid.Column="1" HorizontalOptions="End" Style="{StaticResource LabelStyle}" />
+
+            <Label Text="Arbejdstimer:" Grid.Row="1" Grid.Column="1" Style="{StaticResource LabelStyle}" />
+            <Label Text="{Binding WorkedHours}" Grid.Row="1" Grid.Column="1" HorizontalOptions="End" Style="{StaticResource LabelStyle}" />
+
+            <Label Text="AM-bidrag:" Grid.Row="2" Grid.Column="1" Style="{StaticResource LabelStyle}" />
+            <Label Text="{Binding AmContribution}" Grid.Row="2" Grid.Column="1" HorizontalOptions="End"  Style="{StaticResource LabelStyle}" />
+
+            <Label Text="Skat i %:" Grid.Row="3" Grid.Column="1" Style="{StaticResource LabelStyle}" />
+            <Label Text="{Binding Tax}" Grid.Row="3" Grid.Column="1" HorizontalOptions="End" Style="{StaticResource LabelStyle}" />
+
+            <Label Text="Løn efter skat:" Grid.Row="4" Grid.Column="1" Style="{StaticResource LabelStyle}" />
+            <Label Text="{Binding SalaryAfterTax}" Grid.Row="4" Grid.Column="1" HorizontalOptions="End" Style="{StaticResource LabelStyle}" />
+        </Grid>
+    </VerticalStackLayout>
 </ContentPage>

@@ -24,11 +24,9 @@
                 EventIndicatorTextColor="LightGreen" 
                 SelectedDate="{Binding SelectedDate, Mode=TwoWay}" 
                 OtherMonthDayIsVisible="True"/>
-            
         </VerticalStackLayout>
 
         <VerticalStackLayout Grid.Column="0" VerticalOptions="Center">
-            <!--  <cal:Calendar Events="{Binding Events, Mode=TwoWay}" EventIndicatorColor="Red" EventIndicatorSelectedColor="Red" EventIndicatorTextColor="Red" SelectedDate="{Binding SelectedDate, Mode=TwoWay}" OtherMonthDayIsVisible="False" /> -->
 
             <Label 
                 Style="{StaticResource LabelStyle}" 
@@ -48,7 +46,12 @@
                 HorizontalOptions="Center">
             </Label>
 
-            <TimePicker HorizontalOptions="Center" Format="HH:mm" Time="{Binding EndTime}"></TimePicker>
+            <TimePicker 
+                HorizontalOptions="Center" 
+                Format="HH:mm" 
+                Time="{Binding EndTime}">
+            </TimePicker>
+            
             <Button 
                 Style="{StaticResource ConfirmButtonStyle}" 
                 Text="Add workshift" 

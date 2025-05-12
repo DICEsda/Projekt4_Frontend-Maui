@@ -1,70 +1,106 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage
-    x:Class="FinanceTracker.Views.RegisterPage"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:local="clr-namespace:FinanceTracker.Views">
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinanceTracker.Views.RegisterPage"
+             Title="Register">
 
-    <ContentPage.Content>
-        <ScrollView>
-            <VerticalStackLayout Spacing="25" Padding="30,40" VerticalOptions="Center" >
-                
-                <!-- Header -->
-                <Label Text="Register" 
-                FontSize="28" 
-                FontAttributes="Bold"
-                HorizontalOptions="Center"
-                TextColor="{AppThemeBinding Light=#333333, Dark=#FFFFFF}"/>
+    <ScrollView>
+        <Grid Padding="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
-                <VerticalStackLayout Spacing="0">
-                        <!-- Full Name -->
-                        <Entry Margin="500,0"
-                        Placeholder="Full name (e.g., Jane Doe)" 
-                        Style="{StaticResource RoundedEntry}"
-                        TextColor="{AppThemeBinding Light=#333333, Dark=#FFFFFF}"
-                        Text="{Binding FullName}"
-                               />
-                    <BoxView HeightRequest="1" Color="#F0F0F0" Margin="500,0"/>
+        <VerticalStackLayout Grid.Column="1"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                WidthRequest="400"
+                                Padding="10">
 
-                        <!-- Email -->
-                        <Entry Placeholder="Email address (e.g., name@mail.com)" 
-                        Text="{Binding Email}"
-                        Margin="500,0"
-                        Keyboard="Email"
-                        Style="{StaticResource RoundedEntry}"
-                        TextColor="{AppThemeBinding Light=#333333, Dark=#FFFFFF}"/>
-                    <BoxView HeightRequest="1" Color="#F0F0F0" Margin="500,0"/>
+                <Image Source="user_icon.png"
+                       HeightRequest="100"
+                       WidthRequest="100"
+                       HorizontalOptions="Center" />
 
-                        <!-- Phone -->
-                        <Entry Placeholder="Phone (e.g., +45 12 34 56 78)" 
-                        Margin="500,0"
-                        Keyboard="Telephone"
-                        Style="{StaticResource RoundedEntry}"
-                        TextColor="{AppThemeBinding Light=#333333, Dark=#FFFFFF}"/>
-                    <BoxView HeightRequest="1" Color="#F0F0F0" Margin="500,0"/>
+                <Label Text="Register"
+                       FontSize="35"
+                       Margin="0,15"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Start"
+                       TextColor="{StaticResource TitleColor}" />
 
-                        <!-- Password -->
-                        <Entry Placeholder="Password"
-                        Margin="500,0"
-                        IsPassword="True"
-                        Style="{StaticResource RoundedEntry}"
-                        TextColor="{AppThemeBinding Light=#333333, Dark=#FFFFFF}"
-                        Text="{Binding Password}"
-                        />
-                    <BoxView HeightRequest="1" Color="#F0F0F0" Margin="500,0"/>
+                <Label Text="Full Name"
+                       FontSize="14"
+                       TextColor="{StaticResource BodyColor}" />
+            
+                <Border BackgroundColor="White"
+                        Stroke="#ccc"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 10"
+                        Padding="5"
+                        Margin="0,5,0,15">
+                    <Entry Placeholder="Full name (e.g., Jane Doe)"
+                           Text="{Binding FullName}"
+                           TextColor="Black"
+                           BackgroundColor="Transparent" />
+                </Border>
 
-                </VerticalStackLayout>
+                <Label Text="Email"
+                       FontSize="14"
+                       TextColor="{StaticResource BodyColor}" />
+                <Border BackgroundColor="White"
+                        Stroke="#ccc"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 10"
+                        Padding="5"
+                        Margin="0,5,0,15">
+                    <Entry Placeholder="Email address"
+                           Text="{Binding Email}"
+                           Keyboard="Email"
+                           TextColor="Black"
+                           BackgroundColor="Transparent" />
+                </Border>
 
+                <Label Text="Phone"
+                       FontSize="14"
+                       TextColor="{StaticResource BodyColor}" />
+                <Border BackgroundColor="White"
+                        Stroke="#ccc"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 10"
+                        Padding="5"
+                        Margin="0,5,0,15">
+                    <Entry Placeholder="Phone (e.g., +45 12 34 56 78)"
+                           Keyboard="Telephone"
+                           Text="{Binding Phone}"
+                           TextColor="Black"
+                           BackgroundColor="Transparent" />
+                </Border>
 
-                <!-- Save Button -->
+                <Label Text="Password"
+                       FontSize="14"
+                       TextColor="{StaticResource BodyColor}" />
+                <Border BackgroundColor="White"
+                        Stroke="#ccc"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 10"
+                        Padding="5"
+                        Margin="0,5,0,20">
+                    <Entry Placeholder="Password"
+                           IsPassword="True"
+                           Text="{Binding Password}"
+                           TextColor="Black"
+                           BackgroundColor="Transparent" />
+                </Border>
+
                 <Button Text="Save Profile"
-                Command="{Binding RegisterUserCommand}"
-                Style="{StaticResource ConfirmButtonStyle}"
-                BackgroundColor="LightGreen" 
-                TextColor="Black"/>
+                        Command="{Binding RegisterUserCommand}"
+                        BackgroundColor="#0078D7"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        CornerRadius="10"
+                        HeightRequest="50" />
             </VerticalStackLayout>
-        </ScrollView>
-    </ContentPage.Content>
+        </Grid>
+    </ScrollView>
 </ContentPage>

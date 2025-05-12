@@ -98,4 +98,8 @@
     </MauiXaml>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Resources\Lang\" />
+  </ItemGroup>
+
 </Project>
