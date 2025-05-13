@@ -3,10 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:FinanceTracker.ViewModels"
              x:Class="FinanceTracker.Views.PayCheckPage"
+             x:DataType="vm:PayCheckViewModel"
              Title="Paycheck">
 
 
     <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="Center">
+
+
+        <Label HorizontalOptions="Center" FontSize="Large" Text="{Binding CompareResult}"></Label>
 
         <!-- Header -->
         <Label Text="Paycheck Details"
@@ -24,19 +28,20 @@
                    Grid.Column="0"
                    Grid.Row="0"
                    Style="{StaticResource LabelStyle}" 
-                   Margin="0,20,0,0"/>
+                   Margin="0,10,0,0"/>
 
             <Entry x:Name="CompanyEntry"
                    Grid.Row="1"
                    Grid.Column="0"
                    Placeholder="e.g. Novo Nordisk"
+                   Text="{Binding CompanyName}"
                    Style="{StaticResource EntryStyle}" />
 
             <!-- Month -->
             <Label Text="Month (1-12)"
                    Grid.Row="2"
                    Grid.Column="0"
-                Margin="0,20,0,0"
+                Margin="0,10,0,0"
                    Style="{StaticResource LabelStyle}" />
 
             <Entry x:Name="MonthEntry"
@@ -44,16 +49,17 @@
                    Grid.Column="0"
                    Placeholder="e.g. 4"
                    Keyboard="Numeric"
+                   Text="{Binding Month}"
                    Style="{StaticResource EntryStyle}" />
 
             <!-- Fetch Button -->
-            <Button Text="Hent Lønseddel"
+            <Button Text="Generer lønestimation"
                 BackgroundColor="LightGreen"
                 Grid.Column="0"
                 Grid.Row="4"
                 TextColor="Black"
-                Command="{Binding FetchCommand}"
-                Margin="0,25" />
+                Command="{Binding SalaryEstimationForMonthCommand}"
+                Margin="0,15" />
 
 
 
@@ -72,5 +78,40 @@
             <Label Text="Løn efter skat:" Grid.Row="4" Grid.Column="1" Style="{StaticResource LabelStyle}" />
             <Label Text="{Binding SalaryAfterTax}" Grid.Row="4" Grid.Column="1" HorizontalOptions="End" Style="{StaticResource LabelStyle}" />
         </Grid>
+
+
+        <Grid RowDefinitions="*,*,*,*,*" ColumnDefinitions="0.3*,0.5*,*">
+            <Label Grid.Row="0" Grid.Column="0" Text="Løn før skat"></Label>
+            <Entry Text="{Binding SalaryBeforeTaxActual}" Grid.Row="0" Grid.Column="1" ></Entry>
+
+            <Label Grid.Row="1" Grid.Column="0" Text="Arbejdstimer"></Label>
+            <Entry Text="{Binding WorkedHoursActual}" Grid.Row="1" Grid.Column="1"></Entry>
+            
+            <Label Grid.Row="2" Grid.Column="0" Text="AM-bidrag"></Label>
+            <Entry Text="{Binding AmContributionActual}" Grid.Row="2" Grid.Column="1"></Entry>
+            <Label Grid.Row="3" Grid.Column="0" Text="Skat i %"></Label>
+            <Entry Text="{Binding TaxActual}" Grid.Row="3" Grid.Column="1"></Entry>
+
+            <Label Grid.Row="4" Grid.Column="0" Text="Løn efter skat"></Label>
+            <Entry Text="{Binding SalaryAfterTaxActual}" Grid.Row="4" Grid.Column="1"></Entry>
+
+
+
+            <Label BackgroundColor="{Binding SalaryBeforeTaxIndicator}" Grid.Row="0" Grid.Column="3"></Label>
+
+            <Label BackgroundColor="{Binding WorkedHoursIndicator}" Grid.Row="1" Grid.Column="3"></Label>
+
+            <Label BackgroundColor="{Binding AmContributionIndicator}" Grid.Row="2" Grid.Column="3"></Label>
+
+            <Label BackgroundColor="{Binding TaxIndicator}" Grid.Row="3" Grid.Column="3"></Label>
+
+            <Label BackgroundColor="{Binding SalaryAfterTaxIndicator}" Grid.Row="4" Grid.Column="3"></Label>
+        </Grid>
+
+            <Button Command="{Binding CompareCommand}" Margin="10,0,0,0" Text="Compare!">
+                
+            </Button>
+
+
     </VerticalStackLayout>
 </ContentPage>
