@@ -39,6 +39,13 @@
         </ShellContent>
     </FlyoutItem>
 
+    <FlyoutItem Title="Supplement Details">
+        <ShellContent Route="SupplementDetails" ContentTemplate="{DataTemplate local:SupplementDetails}">
+        </ShellContent>
+    </FlyoutItem>
+
+
+
     <MenuItem Text="Logout" Clicked="OnMenuItemClicked" 
               IconImageSource="{FontImage FontFamily=FontAwesomeSolid, Color=Black, 
         Glyph={x:Static style:FontAwesomeSolid.SignOutAlt}}">
