@@ -28,6 +28,14 @@
         <ShellContent Route="JobsPage" ContentTemplate="{DataTemplate local:JobsPage}">
         </ShellContent>
     </FlyoutItem>
+
+    <FlyoutItem Title="JobsOverview" Icon="{FontImage FontFamily=FontAwesomeSolid, Color=Black, 
+        Glyph={x:Static style:FontAwesomeSolid.Home}}">
+        <ShellContent Route="JobsOverviewPage" ContentTemplate="{DataTemplate local:JobsOverviewPage}">
+        </ShellContent>
+    </FlyoutItem>
+    
+    
     <FlyoutItem Title="Paycheck" Icon="{FontImage FontFamily=FontAwesomeSolid, Color=Black, 
         Glyph={x:Static style:FontAwesomeSolid.Home}}">
         <ShellContent Route="PayCheckPage" ContentTemplate="{DataTemplate local:PayCheckPage}">

@@ -1,0 +1,27 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:FinanceTracker.ViewModels"
+             xmlns:models="clr-namespace:FinanceTracker.Models"
+             x:Class="FinanceTracker.Views.JobsOverviewPage"
+             x:DataType="viewmodels:JobsOverviewViewModel"
+             Title="Job overview">
+
+    <VerticalStackLayout Padding="20">
+
+        <CollectionView ItemsSource="{Binding Jobs}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:JobDTO">
+                    <Frame BorderColor="Gray" Padding="10" Margin="5">
+                        <Label Text="{Binding CompanyName}" FontSize="16"/>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Text="Add Job"
+                Command="{Binding NavigateToAddJobCommand}"
+                BackgroundColor="Purple"
+                TextColor="White"
+                Margin="0,20,0,0"/>
+    </VerticalStackLayout>
+</ContentPage>

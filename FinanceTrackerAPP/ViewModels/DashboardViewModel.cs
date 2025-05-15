@@ -40,20 +40,6 @@ namespace FinanceTracker.ViewModels
 
         private bool _isDanish = true;
 
-        private void ToggleLanguage()
-        {
-            var culture = _isDanish ? new CultureInfo("en") : new CultureInfo("da");
-            Thread.CurrentThread.CurrentCulture = culture;
-            Thread.CurrentThread.CurrentUICulture = culture;
-
-            // Apply globally
-            CultureInfo.DefaultThreadCurrentCulture = culture;
-            CultureInfo.DefaultThreadCurrentUICulture = culture;
-
-            _isDanish = !_isDanish;
-
-        }
-    }
 
 }
 }

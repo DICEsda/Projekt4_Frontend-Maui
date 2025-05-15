@@ -90,6 +90,9 @@
     <MauiXaml Update="Resources\Styles\CustomStyles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
+    <MauiXaml Update="Views\JobsOverviewPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
     <MauiXaml Update="Views\PayCheckPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
