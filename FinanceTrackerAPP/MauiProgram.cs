@@ -31,7 +31,7 @@ namespace FinanceTracker
             builder.Services.AddTransient<AuthHeaderHandler>();
             builder.Services.AddSingleton<IAuthenticationService, AuthenticationService>();
             builder.Services.AddSingleton<IUserService, UserService>();
-
+            
 
             builder.Services.AddHttpClient<IPayCheckService, PayCheckService>()
                 .AddHttpMessageHandler<AuthHeaderHandler>();
@@ -44,21 +44,25 @@ namespace FinanceTracker
             builder.Services.AddHttpClient<IWorkshiftService, WorkshiftService>()
                 .AddHttpMessageHandler<AuthHeaderHandler>();
 
+            builder.Services.AddHttpClient<ISupplementDetailService, SupplementDetailService>()
+                .AddHttpMessageHandler<AuthHeaderHandler>();
 
 
 
+            builder.Services.AddTransient<SupplementDetailsViewModel>();
             // Register ViewModels
-            builder.Services.AddSingleton<LoginViewModel>();
-            builder.Services.AddSingleton<RegisterViewModel>();
-            builder.Services.AddSingleton<JobsViewModel>();
+            builder.Services.AddTransient<LoginViewModel>();
+            builder.Services.AddTransient<RegisterViewModel>();
+            builder.Services.AddTransient<JobsViewModel>();
             // Register other ViewModels as needed
             builder.Services.AddTransient<PayCheckViewModel>();
             builder.Services.AddTransient<PayCheckPage>();
             // Register Views
-            builder.Services.AddSingleton<LoginPage>();
-            builder.Services.AddSingleton<RegisterPage>();
-            builder.Services.AddSingleton<JobsPage>();
+            builder.Services.AddTransient<LoginPage>();
+            builder.Services.AddTransient<RegisterPage>();
+            builder.Services.AddTransient<JobsPage>();
             // Register other Views as needed
+            builder.Services.AddTransient<SupplementDetails>();
 
 #if DEBUG
             builder.Logging.AddDebug();

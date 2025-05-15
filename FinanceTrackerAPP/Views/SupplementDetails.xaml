@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinanceTracker.Views.SupplementDetails"
+             
+             Title="SupplementDetails">
+
+    <VerticalStackLayout>
+        
+    <Entry Text="{Binding CompanyName}" Placeholder="Enter company name">
+        
+    </Entry>
+    
+    <Grid
+        RowDefinitions="*,*"
+        ColumnDefinitions="*,*,2*,2*,*,*"
+        >
+            <Label Grid.Row="0" Grid.Column="0" FontSize="Small">Day</Label>
+
+            <Entry Text="{Binding DayNum}" Grid.Row="1" Grid.Column="0" Placeholder="Enter day number" ></Entry>
+                
+        
+        
+            <Label Grid.Row="0" Grid.Column="1">Amount</Label>
+        
+            <Entry Text="{Binding Amount}" Grid.Row="1" Grid.Column="1" Placeholder="Enter Amount"></Entry>
+
+        
+           
+            <Label Grid.Row="0" Grid.Column="2">Enter start time</Label>
+
+            <TimePicker Format="HH:mm" Time="{Binding StartTime}" Grid.Row="1" Grid.Column="2"></TimePicker>
+
+            <Label Grid.Row="0" Grid.Column="3">Enter end time</Label>
+
+            <TimePicker Format="HH:mm" Time="{Binding EndTime}" Grid.Row="1" Grid.Column="3"></TimePicker>
+
+         
+        
+    </Grid>
+
+
+
+
+
+
+
+        <Button Command="{Binding AddSupplementDetailCommand}" Text="Add supplement details"></Button>
+
+        <Label Text="{Binding Status}"></Label>
+        
+    </VerticalStackLayout>
+    
+</ContentPage>
