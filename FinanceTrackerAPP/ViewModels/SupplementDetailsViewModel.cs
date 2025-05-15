@@ -54,8 +54,9 @@ namespace FinanceTracker.ViewModels
                 EndTime=DateTime.Today.Add(endTime)
                 
             };
+            var supplementDetails = new List<SupplementDetailsDTO> { supplementDetail };
 
-           var response = await _supplementDetailService.AddSupplementDetails(supplementDetail, companyName);
+           var response = await _supplementDetailService.AddSupplementDetails(supplementDetails, companyName);
 
             if (response != null)
             {

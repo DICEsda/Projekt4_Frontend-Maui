@@ -21,12 +21,12 @@ namespace FinanceTracker.Services
             _httpClient.BaseAddress = new Uri("http://localhost:5140/");
         }
 
-        public async Task<SupplementDetailsDTO> AddSupplementDetails(SupplementDetailsDTO supplementDetailsDTO, string companyName)
+        public async Task<List<SupplementDetailsDTO>> AddSupplementDetails(List<SupplementDetailsDTO> supplementDetailsDTO, string companyName)
         {
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("auth_token"));
-            var response = await _httpClient.PostAsJsonAsync($"SupplementDetails/{companyName}", supplementDetailsDTO);
+            var response = await _httpClient.PostAsJsonAsync($"SupplementDetails/?companyName={companyName}", supplementDetailsDTO);
 
-            if (response.IsSuccessStatusCode) return await response.Content.ReadFromJsonAsync<SupplementDetailsDTO>();
+            if (response.IsSuccessStatusCode) return await response.Content.ReadFromJsonAsync<List<SupplementDetailsDTO>>();
 
             return null;
 

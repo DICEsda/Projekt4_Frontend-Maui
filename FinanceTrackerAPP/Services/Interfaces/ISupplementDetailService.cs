@@ -4,6 +4,6 @@ namespace FinanceTracker.Services.Interfaces
 {
     public interface ISupplementDetailService
     {
-        Task<SupplementDetailsDTO> AddSupplementDetails(SupplementDetailsDTO supplementDetailsDTO,string companyName);
+        Task<List<SupplementDetailsDTO>> AddSupplementDetails(List<SupplementDetailsDTO> supplementDetailsDTO,string companyName);
     }
 }
