@@ -6,7 +6,8 @@
              x:DataType="vm:PayCheckViewModel"
              Title="Paycheck">
 
-
+    <ScrollView>
+        
     <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="Center">
 
 
@@ -114,4 +115,5 @@
 
 
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
