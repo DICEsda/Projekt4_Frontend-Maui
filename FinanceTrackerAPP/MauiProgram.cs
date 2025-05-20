@@ -41,6 +41,10 @@ namespace FinanceTracker
                 .AddHttpMessageHandler<AuthHeaderHandler>();
 
 
+            builder.Services.AddHttpClient<IVacationPayService, VacationPayService>()
+                .AddHttpMessageHandler<AuthHeaderHandler>();
+
+
             builder.Services.AddHttpClient<IWorkshiftService, WorkshiftService>()
                 .AddHttpMessageHandler<AuthHeaderHandler>();
 
@@ -48,7 +52,7 @@ namespace FinanceTracker
                 .AddHttpMessageHandler<AuthHeaderHandler>();
 
 
-
+            builder.Services.AddTransient<VacationPayViewModel>();
             builder.Services.AddTransient<SupplementDetailsViewModel>();
             // Register ViewModels
             builder.Services.AddTransient<LoginViewModel>();
@@ -57,6 +61,7 @@ namespace FinanceTracker
             // Register other ViewModels as needed
             builder.Services.AddTransient<PayCheckViewModel>();
             builder.Services.AddTransient<PayCheckPage>();
+            builder.Services.AddTransient<VacationPayPage>();
             // Register Views
             builder.Services.AddTransient<LoginPage>();
             builder.Services.AddTransient<RegisterPage>();

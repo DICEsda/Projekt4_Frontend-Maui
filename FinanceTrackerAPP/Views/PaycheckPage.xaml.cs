@@ -10,22 +10,21 @@ namespace FinanceTracker.Views;
 
 public partial class PayCheckPage : ContentPage
 {
-    private PayCheckViewModel payCheckViewModel;
 
     public PayCheckPage(PayCheckViewModel payCheckViewModel)
     {
         InitializeComponent();
         BindingContext = payCheckViewModel;
     }
-    private async void OnFetchTapped(object sender, EventArgs e)
-    {
-        if (BindingContext is PayCheckViewModel vm)
-        {
-            string company = CompanyEntry.Text;
-            int.TryParse(MonthEntry.Text, out int month);
+    //private async void OnFetchTapped(object sender, EventArgs e)
+    //{
+    //    if (BindingContext is PayCheckViewModel vm)
+    //    {
+    //        string company = CompanyEntry.Text;
+    //        int.TryParse(MonthEntry.Text, out int month);
 
-            await vm.SalaryEstimationForMonthCommand.ExecuteAsync((company, month));
-        }
-    }
+    //        await vm.SalaryEstimationForMonthCommand.ExecuteAsync((company, month));
+    //    }
+    //}
 
 }
