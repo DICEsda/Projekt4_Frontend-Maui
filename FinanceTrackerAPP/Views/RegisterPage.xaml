@@ -1,7 +1,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:services="clr-namespace:MyApp.Services"
              x:Class="FinanceTracker.Views.RegisterPage"
-             Title="Register">
+             Title="{Binding [RegisterTitle], Source={x:Static services:TranslationService.Instance}}">
 
     <ScrollView>
         <Grid Padding="20">
@@ -22,14 +23,14 @@
                        WidthRequest="100"
                        HorizontalOptions="Center" />
 
-                <Label Text="Register"
+                <Label Text="{Binding [RegisterTitle], Source={x:Static services:TranslationService.Instance}}"
                        FontSize="35"
                        Margin="0,15"
                        FontAttributes="Bold"
                        HorizontalOptions="Start"
                        TextColor="{StaticResource TitleColor}" />
 
-                <Label Text="Full Name"
+                <Label Text="{Binding [RegisterName], Source={x:Static services:TranslationService.Instance}}"
                        FontSize="14"
                        TextColor="{StaticResource BodyColor}" />
             
@@ -39,7 +40,7 @@
                         StrokeShape="RoundRectangle 10"
                         Padding="5"
                         Margin="0,5,0,15">
-                    <Entry Placeholder="Full name (e.g., Jane Doe)"
+                    <Entry Placeholder="John Doe"
                            Text="{Binding FullName}"
                            TextColor="Black"
                            BackgroundColor="Transparent" />
@@ -54,14 +55,14 @@
                         StrokeShape="RoundRectangle 10"
                         Padding="5"
                         Margin="0,5,0,15">
-                    <Entry Placeholder="Email address"
+                    <Entry Placeholder="Reg123@Gmail.com"
                            Text="{Binding Email}"
                            Keyboard="Email"
                            TextColor="Black"
                            BackgroundColor="Transparent" />
                 </Border>
 
-                <Label Text="Phone"
+                <Label Text="{Binding [RegisterPhone], Source={x:Static services:TranslationService.Instance}}"
                        FontSize="14"
                        TextColor="{StaticResource BodyColor}" />
                 <Border BackgroundColor="White"
@@ -70,14 +71,14 @@
                         StrokeShape="RoundRectangle 10"
                         Padding="5"
                         Margin="0,5,0,15">
-                    <Entry Placeholder="Phone (e.g., +45 12 34 56 78)"
+                    <Entry Placeholder="+45 12 34 56 78"
                            Keyboard="Telephone"
                            Text="{Binding Phone}"
                            TextColor="Black"
                            BackgroundColor="Transparent" />
                 </Border>
 
-                <Label Text="Password"
+                <Label Text="{Binding [RegisterPassword], Source={x:Static services:TranslationService.Instance}}"
                        FontSize="14"
                        TextColor="{StaticResource BodyColor}" />
                 <Border BackgroundColor="White"
@@ -86,14 +87,14 @@
                         StrokeShape="RoundRectangle 10"
                         Padding="5"
                         Margin="0,5,0,20">
-                    <Entry Placeholder="Password"
+                    <Entry Placeholder="{Binding [RegisterPassword], Source={x:Static services:TranslationService.Instance}}"
                            IsPassword="True"
                            Text="{Binding Password}"
                            TextColor="Black"
                            BackgroundColor="Transparent" />
                 </Border>
 
-                <Button Text="Save Profile"
+                <Button Text="{Binding [RegisterButton], Source={x:Static services:TranslationService.Instance}}"
                         Command="{Binding RegisterUserCommand}"
                         BackgroundColor="#0078D7"
                         TextColor="White"

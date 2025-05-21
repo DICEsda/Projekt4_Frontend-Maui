@@ -79,6 +79,15 @@ namespace FinanceTracker.Resources.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Finance Tracker.
+        /// </summary>
+        internal static string AppTitle {
+            get {
+                return ResourceManager.GetString("AppTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Company name.
         /// </summary>
         internal static string CompanyName {
@@ -88,11 +97,29 @@ namespace FinanceTracker.Resources.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Company Name.
+        /// </summary>
+        internal static string CompanyNameLabel {
+            get {
+                return ResourceManager.GetString("CompanyNameLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create Job.
         /// </summary>
         internal static string CreateJob {
             get {
                 return ResourceManager.GetString("CreateJob", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dashoard.
+        /// </summary>
+        internal static string Dashboard {
+            get {
+                return ResourceManager.GetString("Dashboard", resourceCulture);
             }
         }
         
@@ -142,11 +169,29 @@ namespace FinanceTracker.Resources.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add/Edit Jobs .
+        /// </summary>
+        internal static string JobsTitle {
+            get {
+                return ResourceManager.GetString("JobsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Log Hours.
         /// </summary>
         internal static string LogHours {
             get {
                 return ResourceManager.GetString("LogHours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Workshifts.
+        /// </summary>
+        internal static string LogHoursTitle {
+            get {
+                return ResourceManager.GetString("LogHoursTitle", resourceCulture);
             }
         }
         
@@ -187,11 +232,38 @@ namespace FinanceTracker.Resources.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Compare!.
+        /// </summary>
+        internal static string PaycheckCompareButton {
+            get {
+                return ResourceManager.GetString("PaycheckCompareButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Paycheck Details.
         /// </summary>
         internal static string PaycheckDetails {
             get {
                 return ResourceManager.GetString("PaycheckDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Month 1-12.
+        /// </summary>
+        internal static string PaycheckMonthLabel {
+            get {
+                return ResourceManager.GetString("PaycheckMonthLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paycheck.
+        /// </summary>
+        internal static string PaycheckTitle {
+            get {
+                return ResourceManager.GetString("PaycheckTitle", resourceCulture);
             }
         }
         
@@ -232,6 +304,15 @@ namespace FinanceTracker.Resources.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Register Account.
+        /// </summary>
+        internal static string RegisterButton {
+            get {
+                return ResourceManager.GetString("RegisterButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Register Job.
         /// </summary>
         internal static string RegisterJobBtn {
@@ -241,7 +322,43 @@ namespace FinanceTracker.Resources.Strings {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sign-In.
+        ///   Looks up a localized string similar to Full Name.
+        /// </summary>
+        internal static string RegisterName {
+            get {
+                return ResourceManager.GetString("RegisterName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string RegisterPassword {
+            get {
+                return ResourceManager.GetString("RegisterPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone Number.
+        /// </summary>
+        internal static string RegisterPhone {
+            get {
+                return ResourceManager.GetString("RegisterPhone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register.
+        /// </summary>
+        internal static string RegisterTitle {
+            get {
+                return ResourceManager.GetString("RegisterTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log In.
         /// </summary>
         internal static string SignIn {
             get {
@@ -255,6 +372,60 @@ namespace FinanceTracker.Resources.Strings {
         internal static string StudentGrant {
             get {
                 return ResourceManager.GetString("StudentGrant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Supplement Detail.
+        /// </summary>
+        internal static string SubPayAddButton {
+            get {
+                return ResourceManager.GetString("SubPayAddButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Amount.
+        /// </summary>
+        internal static string SubPayAmount {
+            get {
+                return ResourceManager.GetString("SubPayAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Day.
+        /// </summary>
+        internal static string SubPayDayNumber {
+            get {
+                return ResourceManager.GetString("SubPayDayNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter End Time.
+        /// </summary>
+        internal static string SubPayEndTime {
+            get {
+                return ResourceManager.GetString("SubPayEndTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter Start Time.
+        /// </summary>
+        internal static string SubPayStartTime {
+            get {
+                return ResourceManager.GetString("SubPayStartTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Supplement Details.
+        /// </summary>
+        internal static string SubPayTitle {
+            get {
+                return ResourceManager.GetString("SubPayTitle", resourceCulture);
             }
         }
         
@@ -273,6 +444,15 @@ namespace FinanceTracker.Resources.Strings {
         internal static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vacation Pay.
+        /// </summary>
+        internal static string VacPayTitle {
+            get {
+                return ResourceManager.GetString("VacPayTitle", resourceCulture);
             }
         }
         

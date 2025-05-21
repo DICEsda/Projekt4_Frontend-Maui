@@ -4,7 +4,7 @@
             x:Class="FinanceTracker.Views.LogHours"  
             xmlns:cal="clr-namespace:Plugin.Maui.Calendar.Controls;assembly=Plugin.Maui.Calendar"
                xmlns:services="clr-namespace:MyApp.Services"
-            Title="LogHours">
+            Title="{Binding [LogHoursTitle], Source={x:Static services:TranslationService.Instance}}">
     
     <Grid Padding="20">
         <Grid.ColumnDefinitions>

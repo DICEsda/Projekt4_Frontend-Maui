@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:services="clr-namespace:MyApp.Services"
              x:Class="FinanceTracker.Views.SupplementDetails"
              
-             Title="SupplementDetails">
+             Title="{Binding [SubPayTitle], Source={x:Static services:TranslationService.Instance}}">
 
     <VerticalStackLayout>
-        
-    <Entry Text="{Binding CompanyName}" Placeholder="Enter company name">
+
+        <Entry Text="{Binding CompanyName}" Placeholder="{Binding [CompanyNameLabel], Source={x:Static services:TranslationService.Instance}}">
         
     </Entry>
     
@@ -15,23 +16,23 @@
         RowDefinitions="*,*"
         ColumnDefinitions="*,*,2*,2*,*,*"
         >
-            <Label Grid.Row="0" Grid.Column="0" FontSize="Small">Day</Label>
+            <Label Text="{Binding [SubPayDayNumber], Source={x:Static services:TranslationService.Instance}}" Grid.Row="0" Grid.Column="0" FontSize="Small"></Label>
 
             <Entry Text="{Binding DayNum}" Grid.Row="1" Grid.Column="0" Placeholder="Enter day number" ></Entry>
-                
-        
-        
-            <Label Grid.Row="0" Grid.Column="1">Amount</Label>
+
+
+
+            <Label Text="{Binding [SubPayAmount], Source={x:Static services:TranslationService.Instance}}" Grid.Row="0" Grid.Column="1"></Label>
         
             <Entry Text="{Binding Amount}" Grid.Row="1" Grid.Column="1" Placeholder="Enter Amount"></Entry>
 
-        
-           
-            <Label Grid.Row="0" Grid.Column="2">Enter start time</Label>
+
+
+            <Label Text="{Binding [SubPayStartTime], Source={x:Static services:TranslationService.Instance}}" Grid.Row="0" Grid.Column="2"></Label>
 
             <TimePicker Format="HH:mm" Time="{Binding StartTime}" Grid.Row="1" Grid.Column="2"></TimePicker>
 
-            <Label Grid.Row="0" Grid.Column="3">Enter end time</Label>
+            <Label Text="{Binding [SubPayEndTime], Source={x:Static services:TranslationService.Instance}}" Grid.Row="0" Grid.Column="3"></Label>
 
             <TimePicker Format="HH:mm" Time="{Binding EndTime}" Grid.Row="1" Grid.Column="3"></TimePicker>
 
@@ -45,7 +46,7 @@
 
 
 
-        <Button Command="{Binding AddSupplementDetailCommand}" Text="Add supplement details"></Button>
+        <Button Command="{Binding AddSupplementDetailCommand}" Text="{Binding [SubPayAddButton], Source={x:Static services:TranslationService.Instance}}"></Button>
 
         <Label Text="{Binding Status}"></Label>
         
