@@ -2,6 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:FinanceTracker.ViewModels"
              x:Class="FinanceTracker.Views.LoginPage"
+             xmlns:services="clr-namespace:MyApp.Services"
              Title="Login">
 
     <ScrollView>
@@ -24,14 +25,14 @@
                        WidthRequest="100"
                        HorizontalOptions="Center" />
 
-                <Label Text="Sign-In"
+                <Label Text="{Binding [SignIn], Source={x:Static services:TranslationService.Instance}}"
                        FontSize="35"
                        Margin="0,15"
                        FontAttributes="Bold"
                        HorizontalOptions="Start"
                        TextColor="{StaticResource TitleColor}" />
 
-                <Label Text="Email / Phone"
+                <Label Text="{Binding [EmailLabel], Source={x:Static services:TranslationService.Instance}}"
                        FontSize="14"
                        TextColor="{StaticResource BodyColor}"
                        />
@@ -42,14 +43,14 @@
                         StrokeShape="RoundRectangle 10"
                         Padding="5"
                         Margin="0,5,0,15">
-                    <Entry Placeholder="eg. name@mail.com"
+                    <Entry Placeholder="{Binding [PlaceholderEmail], Source={x:Static services:TranslationService.Instance}}"
                            Text="{Binding Email}"
                            TextColor="Black"
                            BackgroundColor="Transparent" 
                            />
                 </Border>
 
-                <Label Text="Password"
+                <Label Text="{Binding [PasswordLabel], Source={x:Static services:TranslationService.Instance}}"
                        FontSize="14"
                        TextColor="{StaticResource BodyColor}" />
 
@@ -59,14 +60,14 @@
                         StrokeShape="RoundRectangle 10"
                         Padding="5"
                         Margin="0,5,0,15">
-                    <Entry Placeholder="Enter your password"
+                    <Entry Placeholder="{Binding [PlaceholderPassword], Source={x:Static services:TranslationService.Instance}}"
                            Text="{Binding Password}"
                            IsPassword="True"
                            TextColor="Black"
                            BackgroundColor="Transparent" />
                 </Border>
 
-                <Button Text="Login"
+                <Button Text="{Binding [SignIn], Source={x:Static services:TranslationService.Instance}}"
                         BackgroundColor="#0078D7"
                         TextColor="White"
                         FontAttributes="Bold"
@@ -77,13 +78,13 @@
 
                 <StackLayout Orientation="Vertical"
                              HorizontalOptions="Center">
-                    <Label Text="or"
+                    <Label Text="{Binding [Or], Source={x:Static services:TranslationService.Instance}}"
                            FontSize="12"
                            TextColor="Gray"
                            HorizontalOptions="Center"
                            Margin="15" />
 
-                    <Button Text="Register"
+                    <Button Text="{Binding [Register], Source={x:Static services:TranslationService.Instance}}"
                             BackgroundColor="Transparent"
                             TextColor="#0078D7"
                             FontAttributes="Bold"
@@ -93,6 +94,11 @@
                             WidthRequest="200"
                             Command="{Binding NavigateToRegisterPageCommand}" />
                 </StackLayout>
+
+
+                <Button Text="da-en" Command="{Binding ToggleLanguageCommand}">
+                    
+                </Button>
             </VerticalStackLayout>
         </Grid>
     </ScrollView>

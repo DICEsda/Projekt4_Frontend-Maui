@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:style="clr-namespace:FinanceTracker.Resources.Styles"
              x:Class="FinanceTracker.Views.DashboardPage"
+              xmlns:services="clr-namespace:MyApp.Services"
              xmlns:vm="clr-namespace:FinanceTracker.ViewModels">
 
     <ContentPage.BindingContext>
@@ -36,11 +37,9 @@
                        FontSize="20"
                        VerticalOptions="Center"
                        TextColor="{StaticResource Primary}"/>
-                <Label Text=" DA/EN" 
-                       FontSize="18"
-                       FontAttributes="Bold"
-                       VerticalOptions="Center"
-                       TextColor="{StaticResource TextPrimary}"/>
+                    <Button Text="DA/EN" Command="{Binding ToggleLanguageCommand}">
+                        
+                    </Button>
             </HorizontalStackLayout>
         </Frame>
 
@@ -61,7 +60,7 @@
                        FontSize="20"
                        VerticalOptions="Center"
                        TextColor="{StaticResource Primary}"/>
-                <Label Text="Logout" 
+                    <Label Text="{Binding [Logout], Source={x:Static services:TranslationService.Instance}}" 
                        FontSize="16"
                        FontAttributes="Bold"
                        VerticalOptions="Center"
@@ -87,7 +86,7 @@
                        FontSize="20"
                        VerticalOptions="Center"
                        TextColor="{StaticResource Primary}"/>
-                <Label Text="Add and Edit Jobs" 
+                    <Label Text="{Binding [AddAndEditJobs], Source={x:Static services:TranslationService.Instance}}" 
                        FontSize="18"
                        VerticalOptions="Center"
                        TextColor="{StaticResource TextPrimary}"/>
@@ -111,7 +110,7 @@
                        FontSize="20"
                        VerticalOptions="Center"
                        TextColor="{StaticResource Primary}"/>
-                <Label Text="Log Hours" 
+                    <Label Text="{Binding [LogHours], Source={x:Static services:TranslationService.Instance}}" 
                        FontSize="18"
                        VerticalOptions="Center"
                        TextColor="{StaticResource TextPrimary}"/>
@@ -135,7 +134,7 @@
                        FontSize="20"
                        VerticalOptions="Center"
                        TextColor="{StaticResource Primary}"/>
-                <Label Text="Paycheck" 
+                    <Label Text="{Binding [Paycheck], Source={x:Static services:TranslationService.Instance}}" 
                        FontSize="18"
                        VerticalOptions="Center"
                        TextColor="{StaticResource TextPrimary}"/>
@@ -159,7 +158,7 @@
                        FontSize="20"
                        VerticalOptions="Center"
                        TextColor="{StaticResource Primary}"/>
-                <Label Text="Holiday Pay" 
+                    <Label Text="{Binding [HolidayPay], Source={x:Static services:TranslationService.Instance}}" 
                        FontSize="18"
                        VerticalOptions="Center"
                        TextColor="{StaticResource TextPrimary}"/>
@@ -186,7 +185,7 @@
                        FontSize="20"
                        VerticalOptions="Center"
                        TextColor="{StaticResource Primary}"/>
-                    <Label Text="Student Grant" 
+                    <Label Text="{Binding [StudentGrant], Source={x:Static services:TranslationService.Instance}}" 
                        FontSize="18"
                        VerticalOptions="Center"
                        TextColor="{StaticResource TextPrimary}"/>

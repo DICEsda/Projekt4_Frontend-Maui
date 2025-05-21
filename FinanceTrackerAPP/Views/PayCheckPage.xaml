@@ -4,6 +4,7 @@
              xmlns:vm="clr-namespace:FinanceTracker.ViewModels"
              x:Class="FinanceTracker.Views.PayCheckPage"
              x:DataType="vm:PayCheckViewModel"
+               xmlns:services="clr-namespace:MyApp.Services"
              Title="Paycheck">
 
     <ScrollView>
@@ -14,7 +15,7 @@
         <Label HorizontalOptions="Center" FontSize="Large" Text="{Binding CompareResult}"></Label>
 
         <!-- Header -->
-        <Label Text="Paycheck Details"
+            <Label Text="{Binding [PaycheckDetails], Source={x:Static services:TranslationService.Instance}}"
                HorizontalOptions="Start"
                Style="{StaticResource TitleLabelStyle}" />
 
