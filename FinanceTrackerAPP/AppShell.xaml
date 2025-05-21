@@ -44,12 +44,6 @@
         </ShellContent>
     </FlyoutItem>
 
-    <FlyoutItem Title="Vacation pay">
-        <ShellContent Route="VacationPay" ContentTemplate="{DataTemplate local:VacationPayPage}">
-            
-        </ShellContent>
-        
-    </FlyoutItem>
 
     <MenuItem Text="Logout" Clicked="OnMenuItemClicked" 
               IconImageSource="{FontImage FontFamily=FontAwesomeSolid, Color=Black, 
