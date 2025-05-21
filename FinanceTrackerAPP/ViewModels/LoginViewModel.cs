@@ -36,10 +36,19 @@ namespace FinanceTracker.ViewModels
                 UserName = email
             };
             var token = await _authenticationService.Login(financeUserDTO);
-            if (token != null)
+            try
             {
-                await Shell.Current.GoToAsync("//DashboardPage");
+                if (token != null)
+                {
+                    await Shell.Current.GoToAsync("//DashboardPage");
+                }
             }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+
         }
 
         [RelayCommand]

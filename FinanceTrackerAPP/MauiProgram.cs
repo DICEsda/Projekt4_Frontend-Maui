@@ -9,6 +9,8 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Hosting;
 using System;
 using System.Net.Http;
+using iText.Kernel.Pdf;
+
 namespace FinanceTracker
 {
     public static class MauiProgram
@@ -31,7 +33,6 @@ namespace FinanceTracker
             builder.Services.AddTransient<AuthHeaderHandler>();
             builder.Services.AddSingleton<IAuthenticationService, AuthenticationService>();
             builder.Services.AddSingleton<IUserService, UserService>();
-            
 
             builder.Services.AddHttpClient<IPayCheckService, PayCheckService>()
                 .AddHttpMessageHandler<AuthHeaderHandler>();
