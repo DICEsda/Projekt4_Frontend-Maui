@@ -104,6 +104,9 @@
     <MauiXaml Update="Views\SupplementDetails.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
+    <MauiXaml Update="Views\VacationPayPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
   </ItemGroup>
 
   <ItemGroup>

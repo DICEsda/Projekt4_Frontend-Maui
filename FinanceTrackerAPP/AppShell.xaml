@@ -49,5 +49,7 @@
               IconImageSource="{FontImage FontFamily=FontAwesomeSolid, Color=Black, 
         Glyph={x:Static style:FontAwesomeSolid.SignOutAlt}}">
     </MenuItem>
+    
+    
 
 </Shell>

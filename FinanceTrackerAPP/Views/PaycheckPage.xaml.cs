@@ -14,7 +14,6 @@ namespace FinanceTracker.Views;
 
 public partial class PayCheckPage : ContentPage
 {
-    private PayCheckViewModel payCheckViewModel;
 
     public PayCheckPage(PayCheckViewModel payCheckViewModel)
     {
