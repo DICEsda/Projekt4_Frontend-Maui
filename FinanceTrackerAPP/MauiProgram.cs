@@ -9,6 +9,8 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Hosting;
 using System;
 using System.Net.Http;
+using iText.Kernel.Pdf;
+
 namespace FinanceTracker
 {
     public static class MauiProgram
@@ -31,13 +33,16 @@ namespace FinanceTracker
             builder.Services.AddTransient<AuthHeaderHandler>();
             builder.Services.AddSingleton<IAuthenticationService, AuthenticationService>();
             builder.Services.AddSingleton<IUserService, UserService>();
-            
 
             builder.Services.AddHttpClient<IPayCheckService, PayCheckService>()
                 .AddHttpMessageHandler<AuthHeaderHandler>();
 
 
             builder.Services.AddHttpClient<IJobService, JobService>()
+                .AddHttpMessageHandler<AuthHeaderHandler>();
+
+
+            builder.Services.AddHttpClient<IVacationPayService, VacationPayService>()
                 .AddHttpMessageHandler<AuthHeaderHandler>();
 
 
@@ -48,7 +53,7 @@ namespace FinanceTracker
                 .AddHttpMessageHandler<AuthHeaderHandler>();
 
 
-
+            builder.Services.AddTransient<VacationPayViewModel>();
             builder.Services.AddTransient<SupplementDetailsViewModel>();
             // Register ViewModels
             builder.Services.AddTransient<LoginViewModel>();
@@ -57,6 +62,7 @@ namespace FinanceTracker
             // Register other ViewModels as needed
             builder.Services.AddTransient<PayCheckViewModel>();
             builder.Services.AddTransient<PayCheckPage>();
+            builder.Services.AddTransient<VacationPayPage>();
             // Register Views
             builder.Services.AddTransient<LoginPage>();
             builder.Services.AddTransient<RegisterPage>();
