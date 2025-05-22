@@ -1,115 +1,125 @@
-﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:FinanceTracker.ViewModels"
              x:Class="FinanceTracker.Views.JobsPage"
              x:DataType="viewmodels:JobsViewModel"
              xmlns:services="clr-namespace:MyApp.Services"
-             xmlns:style="clr-namespace:FinanceTracker.Resources.Styles">
+             xmlns:style="clr-namespace:FinanceTracker.Resources.Styles"
+             BackgroundColor="#1E1E1E">
 
     <ScrollView>
-        <Grid Padding="20">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
+        <Grid Padding="15" RowSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-            <!-- Left-side buttons -->
-            <VerticalStackLayout Grid.Column="1"
-                                 VerticalOptions="Center"
-                                 HorizontalOptions="Center"
+            <!-- Form Section -->
+            <VerticalStackLayout Grid.Row="0"
+                               Spacing="15"
+                               Padding="10"
+                               MaximumWidthRequest="600"
+                               HorizontalOptions="Fill">
+
+                <Label Text="{Binding [CreateJob], Source={x:Static services:TranslationService.Instance}}"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="{StaticResource TitleColor}"
+                       Margin="0,0,0,10"/>
+
+                <!-- Form fields -->
+                <Label Text="{Binding [Title], Source={x:Static services:TranslationService.Instance}}" 
+                       FontSize="14" 
+                       TextColor="{StaticResource BodyColor}"/>
+                <Border BackgroundColor="White" 
+                        Stroke="#ccc" 
+                        StrokeThickness="1" 
+                        StrokeShape="RoundRectangle 8" 
+                        Padding="15,5">
+                    <Entry Text="{Binding Title}" 
+                           TextColor="Black" 
+                           BackgroundColor="Transparent"/>
+                </Border>
+
+                <Label Text="{Binding [CompanyName], Source={x:Static services:TranslationService.Instance}}" 
+                       FontSize="14" 
+                       TextColor="{StaticResource BodyColor}"/>
+                <Border BackgroundColor="White" 
+                        Stroke="#ccc" 
+                        StrokeThickness="1" 
+                        StrokeShape="RoundRectangle 8" 
+                        Padding="15,5">
+                    <Entry Text="{Binding CompanyName}" 
+                           TextColor="Black" 
+                           BackgroundColor="Transparent"/>
+                </Border>
+
+                <Label Text="{Binding [HireType], Source={x:Static services:TranslationService.Instance}}" 
+                       FontSize="14" 
+                       TextColor="{StaticResource BodyColor}"/>
+                <Border BackgroundColor="White" 
+                        Stroke="#ccc" 
+                        StrokeThickness="1" 
+                        StrokeShape="RoundRectangle 8" 
+                        Padding="15,5">
+                    <Entry Text="{Binding EmploymentType}" 
+                           TextColor="Black" 
+                           BackgroundColor="Transparent"/>
+                </Border>
+
+                <Label Text="{Binding [HourlyRate], Source={x:Static services:TranslationService.Instance}}" 
+                       FontSize="14" 
+                       TextColor="{StaticResource BodyColor}"/>
+                <Border BackgroundColor="White" 
+                        Stroke="#ccc" 
+                        StrokeThickness="1" 
+                        StrokeShape="RoundRectangle 8" 
+                        Padding="15,5">
+                    <Entry Text="{Binding HourlyRate}" 
+                           Keyboard="Numeric" 
+                           TextColor="Black" 
+                           BackgroundColor="Transparent"/>
+                </Border>
+
+                <Label Text="{Binding [TaxCard], Source={x:Static services:TranslationService.Instance}}" 
+                       FontSize="14" 
+                       TextColor="{StaticResource BodyColor}"/>
+                <Border BackgroundColor="White" 
+                        Stroke="#ccc" 
+                        StrokeThickness="1" 
+                        StrokeShape="RoundRectangle 8" 
+                        Padding="15,5">
+                    <Entry Text="{Binding TaxCard}" 
+                           TextColor="Black" 
+                           BackgroundColor="Transparent"/>
+                </Border>
+            </VerticalStackLayout>
+
+            <!-- Action Buttons -->
+            <HorizontalStackLayout Grid.Row="1"
                                  Spacing="10"
-                                 Margin="20"
-                                 WidthRequest="250">
+                                 HorizontalOptions="Center"
+                                 Margin="0,10">
 
                 <Button Text="{Binding [RegisterJobBtn], Source={x:Static services:TranslationService.Instance}}"
                         Command="{Binding RegisterJobCommand}"
                         BackgroundColor="DodgerBlue"
                         TextColor="White"
-                        CornerRadius="10"
+                        CornerRadius="8"
+                        HeightRequest="45"
+                        Padding="20,0"
                         FontAttributes="Bold"/>
 
                 <Button Text="{Binding [GetJobsBtn], Source={x:Static services:TranslationService.Instance}}"
                         Command="{Binding GetAllJobsCommand}"
                         BackgroundColor="LightGreen"
                         TextColor="Black"
-                        CornerRadius="10"
+                        CornerRadius="8"
+                        HeightRequest="45"
+                        Padding="20,0"
                         FontAttributes="Bold"/>
-            </VerticalStackLayout>
-
-            <!-- Centered form -->
-            <VerticalStackLayout Grid.Column="0"
-                                 VerticalOptions="Center"
-                                 HorizontalOptions="Center"
-                                 WidthRequest="400"
-                                 Padding="10"
-                                 Margin="30"
-                                 Spacing="15">
-
-                <Label Text="{Binding [CreateJob], Source={x:Static services:TranslationService.Instance}}"
-                       FontSize="30"
-                       FontAttributes="Bold"
-                       TextColor="{StaticResource TitleColor}"
-                       HorizontalOptions="Start" />
-
-                <!-- Form fields with borders -->
-                <Label Text="{Binding [Title], Source={x:Static services:TranslationService.Instance}}" FontSize="14" TextColor="{StaticResource BodyColor}" />
-                <Border BackgroundColor="White" Stroke="#ccc" StrokeThickness="1" StrokeShape="RoundRectangle 10" Padding="5">
-                    <Entry  Text="{Binding Title}" TextColor="Black" BackgroundColor="Transparent"/>
-                </Border>
-
-                <Label Text="{Binding [CompanyName], Source={x:Static services:TranslationService.Instance}}" FontSize="14" TextColor="{StaticResource BodyColor}" />
-                <Border BackgroundColor="White" Stroke="#ccc" StrokeThickness="1" StrokeShape="RoundRectangle 10" Padding="5">
-                    <Entry  Text="{Binding CompanyName}" TextColor="Black" BackgroundColor="Transparent"/>
-                </Border>
-
-                <Label Text="{Binding [HireType], Source={x:Static services:TranslationService.Instance}}" FontSize="14" TextColor="{StaticResource BodyColor}" />
-                <Border BackgroundColor="White" Stroke="#ccc" StrokeThickness="1" StrokeShape="RoundRectangle 10" Padding="5">
-                    <Entry Text="{Binding EmploymentType}" TextColor="Black" BackgroundColor="Transparent"/>
-                </Border>
-
-                <Label Text="{Binding [HourlyRate], Source={x:Static services:TranslationService.Instance}}" FontSize="14" TextColor="{StaticResource BodyColor}" />
-                <Border BackgroundColor="White" Stroke="#ccc" StrokeThickness="1" StrokeShape="RoundRectangle 10" Padding="5">
-                    <Entry  Text="{Binding HourlyRate}" Keyboard="Numeric" TextColor="Black" BackgroundColor="Transparent"/>
-                </Border>
-
-                <Label Text="{Binding [TaxCard], Source={x:Static services:TranslationService.Instance}}" FontSize="14" TextColor="{StaticResource BodyColor}" />
-                <Border BackgroundColor="White" Stroke="#ccc" StrokeThickness="1" StrokeShape="RoundRectangle 10" Padding="5">
-                    <Entry  Text="{Binding TaxCard}" TextColor="Black" BackgroundColor="Transparent"/>
-                </Border>
-
-                <!-- Job list -->
-                <CollectionView ItemsSource="{Binding Jobs}" Margin="20">
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Frame BorderColor="#ccc" CornerRadius="10" Padding="10" Margin="0,5">
-                                <VerticalStackLayout>
-                                    <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="16" />
-                                    <Label Text="{Binding CompanyName}" />
-                                    <Label Text="{Binding EmploymentType}" />
-                                    <Label Text="{Binding HourlyRate, StringFormat='Timepris: {0} kr'}" />
-                                    <Label Text="{Binding TaxCard}" />
-
-                                    <HorizontalStackLayout Spacing="10" Margin="0,10,0,0">
-                                        <Button Text="Slet"
-                                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:JobsViewModel}}, Path=DeleteJobCommand}"
-                                                CommandParameter="{Binding CompanyName}"
-                                                BackgroundColor="Tomato"
-                                                TextColor="White"
-                                                CornerRadius="8" />
-
-                                        <Button Text="Opdater"
-                                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:JobsViewModel}}, Path=UpdateJobCommand}"
-                                                CommandParameter="{Binding CompanyName}"
-                                                BackgroundColor="Orange"
-                                                TextColor="White"
-                                                CornerRadius="8" />
-                                    </HorizontalStackLayout>
-                                </VerticalStackLayout>
-                            </Frame>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
-            </VerticalStackLayout>
+            </HorizontalStackLayout>
         </Grid>
     </ScrollView>
 </ContentPage>

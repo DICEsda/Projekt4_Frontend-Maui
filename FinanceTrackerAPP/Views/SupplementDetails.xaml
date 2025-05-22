@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:services="clr-namespace:MyApp.Services"
              x:Class="FinanceTracker.Views.SupplementDetails"
+             BackgroundColor="#1E1E1E"
+             
              
              Title="{Binding [SubPayTitle], Source={x:Static services:TranslationService.Instance}}">
 

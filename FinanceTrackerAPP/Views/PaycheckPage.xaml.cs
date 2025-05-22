@@ -25,8 +25,18 @@ public partial class PayCheckPage : ContentPage
     {
         if (BindingContext is PayCheckViewModel vm)
         {
-            string company = CompanyEntry.Text;
-            int.TryParse(MonthEntry.Text, out int month);
+            string company = CompanyEntry?.Text ?? string.Empty;
+            if (string.IsNullOrWhiteSpace(company))
+            {
+                await DisplayAlert("Error", "Please enter a company name", "OK");
+                return;
+            }
+
+            if (!int.TryParse(MonthEntry?.Text, out int month))
+            {
+                await DisplayAlert("Error", "Please enter a valid month number", "OK");
+                return;
+            }
 
             await vm.SalaryEstimationForMonthCommand.ExecuteAsync((company, month));
         }

@@ -1,97 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:services="clr-namespace:MyApp.Services"
              x:Class="FinanceTracker.Views.RegisterPage"
+             BackgroundColor="#1E1E1E"
              Title="{Binding [RegisterTitle], Source={x:Static services:TranslationService.Instance}}">
 
     <ScrollView>
-        <Grid Padding="20">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="2*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
+        <Grid Padding="20" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-        <VerticalStackLayout Grid.Column="1"
-                                VerticalOptions="Center"
-                                HorizontalOptions="Center"
-                                WidthRequest="400"
-                                Padding="10">
+            <VerticalStackLayout Grid.Row="0"
+                               Spacing="15"
+                               Padding="20,10"
+                               MaximumWidthRequest="500"
+                               HorizontalOptions="Center">
 
                 <Image Source="user_icon.png"
-                       HeightRequest="100"
-                       WidthRequest="100"
-                       HorizontalOptions="Center" />
+                       HeightRequest="80"
+                       WidthRequest="80"
+                       HorizontalOptions="Center"
+                       Margin="0,20,0,10"/>
 
                 <Label Text="{Binding [RegisterTitle], Source={x:Static services:TranslationService.Instance}}"
-                       FontSize="35"
-                       Margin="0,15"
+                       FontSize="28"
+                       Margin="0,10,0,20"
                        FontAttributes="Bold"
                        HorizontalOptions="Start"
-                       TextColor="{StaticResource TitleColor}" />
+                       TextColor="{StaticResource TitleColor}"/>
 
                 <Label Text="{Binding [RegisterName], Source={x:Static services:TranslationService.Instance}}"
                        FontSize="14"
-                       TextColor="{StaticResource BodyColor}" />
+                       TextColor="{StaticResource BodyColor}"
+                       Margin="0,0,0,5"/>
             
                 <Border BackgroundColor="White"
                         Stroke="#ccc"
                         StrokeThickness="1"
-                        StrokeShape="RoundRectangle 10"
-                        Padding="5"
-                        Margin="0,5,0,15">
+                        StrokeShape="RoundRectangle 8"
+                        Padding="15,5"
+                        Margin="0,0,0,15">
                     <Entry Placeholder="John Doe"
                            Text="{Binding FullName}"
                            TextColor="Black"
-                           BackgroundColor="Transparent" />
+                           BackgroundColor="Transparent"/>
                 </Border>
 
                 <Label Text="Email"
                        FontSize="14"
-                       TextColor="{StaticResource BodyColor}" />
+                       TextColor="{StaticResource BodyColor}"
+                       Margin="0,0,0,5"/>
+
                 <Border BackgroundColor="White"
                         Stroke="#ccc"
                         StrokeThickness="1"
-                        StrokeShape="RoundRectangle 10"
-                        Padding="5"
-                        Margin="0,5,0,15">
+                        StrokeShape="RoundRectangle 8"
+                        Padding="15,5"
+                        Margin="0,0,0,15">
                     <Entry Placeholder="Reg123@Gmail.com"
                            Text="{Binding Email}"
                            Keyboard="Email"
                            TextColor="Black"
-                           BackgroundColor="Transparent" />
+                           BackgroundColor="Transparent"/>
                 </Border>
 
-                <Label Text="{Binding [RegisterPhone], Source={x:Static services:TranslationService.Instance}}"
+                <Label Text="{Binding [PasswordLabel], Source={x:Static services:TranslationService.Instance}}"
                        FontSize="14"
-                       TextColor="{StaticResource BodyColor}" />
+                       TextColor="{StaticResource BodyColor}"
+                       Margin="0,0,0,5"/>
+
                 <Border BackgroundColor="White"
                         Stroke="#ccc"
                         StrokeThickness="1"
-                        StrokeShape="RoundRectangle 10"
-                        Padding="5"
-                        Margin="0,5,0,15">
-                    <Entry Placeholder="+45 12 34 56 78"
-                           Keyboard="Telephone"
-                           Text="{Binding Phone}"
-                           TextColor="Black"
-                           BackgroundColor="Transparent" />
-                </Border>
-
-                <Label Text="{Binding [RegisterPassword], Source={x:Static services:TranslationService.Instance}}"
-                       FontSize="14"
-                       TextColor="{StaticResource BodyColor}" />
-                <Border BackgroundColor="White"
-                        Stroke="#ccc"
-                        StrokeThickness="1"
-                        StrokeShape="RoundRectangle 10"
-                        Padding="5"
-                        Margin="0,5,0,20">
-                    <Entry Placeholder="{Binding [RegisterPassword], Source={x:Static services:TranslationService.Instance}}"
+                        StrokeShape="RoundRectangle 8"
+                        Padding="15,5"
+                        Margin="0,0,0,25">
+                    <Entry Text="{Binding Password}"
                            IsPassword="True"
-                           Text="{Binding Password}"
                            TextColor="Black"
-                           BackgroundColor="Transparent" />
+                           BackgroundColor="Transparent"/>
                 </Border>
 
                 <Button Text="{Binding [RegisterButton], Source={x:Static services:TranslationService.Instance}}"
@@ -99,8 +88,9 @@
                         BackgroundColor="#0078D7"
                         TextColor="White"
                         FontAttributes="Bold"
-                        CornerRadius="10"
-                        HeightRequest="50" />
+                        CornerRadius="8"
+                        HeightRequest="50"
+                        Margin="0,10,0,0"/>
             </VerticalStackLayout>
         </Grid>
     </ScrollView>

@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:services="clr-namespace:MyApp.Services"
              x:Class="FinanceTracker.Views.VacationPayPage"
+             BackgroundColor="#1E1E1E"
              Title="{Binding [VacPayTitle], Source={x:StaticExtension services:TranslationService.Instance}}">
 
     <VerticalStackLayout>

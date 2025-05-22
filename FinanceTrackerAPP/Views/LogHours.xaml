@@ -3,63 +3,77 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
             x:Class="FinanceTracker.Views.LogHours"  
             xmlns:cal="clr-namespace:Plugin.Maui.Calendar.Controls;assembly=Plugin.Maui.Calendar"
-               xmlns:services="clr-namespace:MyApp.Services"
-            Title="{Binding [LogHoursTitle], Source={x:Static services:TranslationService.Instance}}">
+            xmlns:services="clr-namespace:MyApp.Services"
+            Title="{Binding [LogHoursTitle], Source={x:Static services:TranslationService.Instance}}"
+             BackgroundColor="#1E1E1E">
     
-    <Grid Padding="20">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        
-        <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
-            <cal:Calendar 
-                Events="{Binding Events, Mode=TwoWay}" 
-                MonthLabelColor="{StaticResource BodyColor}"
-                YearLabelColor="{StaticResource BodyColor}"
-                ArrowsColor="NavajoWhite"
-                ArrowsBackgroundColor="Transparent"
-                ArrowsBorderColor="Transparent"
-                SelectedDateColor="{StaticResource BodyColor}"
-                DaysTitleColor="{StaticResource BodyColor}"
-                EventIndicatorTextColor="LightGreen" 
-                SelectedDate="{Binding SelectedDate, Mode=TwoWay}" 
-                OtherMonthDayIsVisible="True"/>
-        </VerticalStackLayout>
+    <ScrollView>
+        <Grid Padding="15" RowSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-        <VerticalStackLayout Grid.Column="0" VerticalOptions="Center">
+            <!-- Time Selection Section -->
+            <Frame Grid.Row="0"
+                   Padding="15"
+                   Margin="0,10"
+                   CornerRadius="8"
+                   HasShadow="True"
+                   BackgroundColor="{StaticResource CardBackground}">
+                
+                <VerticalStackLayout Spacing="15" HorizontalOptions="Center">
+                    <Label Text="{Binding [WorkshiftStarttime], Source={x:Static services:TranslationService.Instance}}"
+                           Style="{StaticResource LabelStyle}"
+                           FontSize="16"
+                           HorizontalOptions="Center"/>
 
-            <Label 
-                Style="{StaticResource LabelStyle}" 
-                Text="{Binding [WorkshiftStarttime], Source={x:Static services:TranslationService.Instance}}"
-                HorizontalOptions="Center">
-            </Label>
+                    <TimePicker Format="HH:mm" 
+                               Time="{Binding StartTime}"
+                               HorizontalOptions="Center"
+                               FontSize="16"/>
 
-            <TimePicker 
-                Format="HH:mm" 
-                Time="{Binding StartTime}"
-                HorizontalOptions="Center">
-            </TimePicker>
+                    <Label Text="{Binding [WorkshiftEndtime], Source={x:Static services:TranslationService.Instance}}"
+                           Style="{StaticResource LabelStyle}"
+                           FontSize="16"
+                           HorizontalOptions="Center"
+                           Margin="0,10,0,0"/>
 
-            <Label 
-                Style="{StaticResource LabelStyle}" 
-                Text="{Binding [WorkshiftEndtime], Source={x:Static services:TranslationService.Instance}}"
-                HorizontalOptions="Center">
-            </Label>
+                    <TimePicker HorizontalOptions="Center" 
+                               Format="HH:mm" 
+                               Time="{Binding EndTime}"
+                               FontSize="16"/>
+                    
+                    <Button Style="{StaticResource ConfirmButtonStyle}" 
+                            Text="{Binding [AddWorkshiftBtn], Source={x:Static services:TranslationService.Instance}}" 
+                            Command="{Binding AddWorkshiftCommand}"
+                            Margin="0,10"
+                            HeightRequest="45"
+                            CornerRadius="8"
+                            FontAttributes="Bold"/>
+                </VerticalStackLayout>
+            </Frame>
 
-            <TimePicker 
-                HorizontalOptions="Center" 
-                Format="HH:mm" 
-                Time="{Binding EndTime}">
-            </TimePicker>
-            
-            <Button 
-                Style="{StaticResource ConfirmButtonStyle}" 
-                Text="{Binding [AddWorkshiftBtn], Source={x:Static services:TranslationService.Instance}}" 
-                Command="{Binding AddWorkshiftCommand}"
-                Margin="0,10">
-            </Button>
-            
-        </VerticalStackLayout>
-    </Grid>
+            <!-- Calendar Section -->
+            <Frame Grid.Row="1"
+                   Padding="10"
+                   Margin="0,10"
+                   CornerRadius="8"
+                   HasShadow="True"
+                   BackgroundColor="{StaticResource CardBackground}">
+                
+                <cal:Calendar Events="{Binding Events, Mode=TwoWay}" 
+                             MonthLabelColor="{StaticResource BodyColor}"
+                             YearLabelColor="{StaticResource BodyColor}"
+                             ArrowsColor="NavajoWhite"
+                             ArrowsBackgroundColor="Transparent"
+                             ArrowsBorderColor="Transparent"
+                             SelectedDateColor="{StaticResource BodyColor}"
+                             DaysTitleColor="{StaticResource BodyColor}"
+                             EventIndicatorTextColor="LightGreen" 
+                             SelectedDate="{Binding SelectedDate, Mode=TwoWay}" 
+                             OtherMonthDayIsVisible="True"/>
+            </Frame>
+        </Grid>
+    </ScrollView>
 </ContentPage>
