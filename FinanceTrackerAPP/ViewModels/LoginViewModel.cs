@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FinanceTracker.Services.Interfaces;
+using System.Globalization;
+using MyApp.Services;
 
 namespace FinanceTracker.ViewModels
 {
@@ -56,7 +58,15 @@ namespace FinanceTracker.ViewModels
         {
             await Shell.Current.GoToAsync("//RegisterPage");
         }
+        [RelayCommand]
+        public void ToggleLanguage()
+        {
+            var current = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
 
+            var newCulture = current == "en" ? "da" : "en";
+
+            TranslationService.Instance.SetCulture(newCulture);
+        }
 
     }
 }

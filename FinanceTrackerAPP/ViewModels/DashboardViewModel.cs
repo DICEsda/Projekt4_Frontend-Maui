@@ -4,6 +4,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.Maui.Controls;
 using System.Globalization;
+using MyApp.Services;
 
 namespace FinanceTracker.ViewModels
 {
@@ -40,18 +41,28 @@ namespace FinanceTracker.ViewModels
 
         private bool _isDanish = true;
 
-        private void ToggleLanguage()
+       // private void ToggleLanguage()
+        //{
+        //    var culture = _isDanish ? new CultureInfo("en") : new CultureInfo("da");
+        //    Thread.CurrentThread.CurrentCulture = culture;
+        //    Thread.CurrentThread.CurrentUICulture = culture;
+
+        //    // Apply globally
+        //    CultureInfo.DefaultThreadCurrentCulture = culture;
+        //    CultureInfo.DefaultThreadCurrentUICulture = culture;
+
+        //    _isDanish = !_isDanish;
+
+        //}
+
+        [RelayCommand]
+        public void ToggleLanguage()
         {
-            var culture = _isDanish ? new CultureInfo("en") : new CultureInfo("da");
-            Thread.CurrentThread.CurrentCulture = culture;
-            Thread.CurrentThread.CurrentUICulture = culture;
+            var current = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
 
-            // Apply globally
-            CultureInfo.DefaultThreadCurrentCulture = culture;
-            CultureInfo.DefaultThreadCurrentUICulture = culture;
+            var newCulture = current == "en" ? "da" : "en";
 
-            _isDanish = !_isDanish;
-
+            TranslationService.Instance.SetCulture(newCulture);
         }
     }
 

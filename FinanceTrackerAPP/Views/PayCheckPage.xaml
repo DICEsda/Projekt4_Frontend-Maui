@@ -4,7 +4,8 @@
              xmlns:vm="clr-namespace:FinanceTracker.ViewModels"
              x:Class="FinanceTracker.Views.PayCheckPage"
              x:DataType="vm:PayCheckViewModel"
-             Title="Paycheck">
+               xmlns:services="clr-namespace:MyApp.Services"
+             Title="{Binding [PaycheckTitle], Source={x:Static services:TranslationService.Instance}}">
 
     <ScrollView>
 
@@ -13,8 +14,8 @@
 
             <Label HorizontalOptions="Center" FontSize="Large" Text="{Binding CompareResult}"></Label>
 
-            <!-- Header -->
-            <Label Text="Paycheck Details"
+        <!-- Header -->
+            <Label Text="{Binding [PaycheckDetails], Source={x:Static services:TranslationService.Instance}}"
                HorizontalOptions="Start"
                Style="{StaticResource TitleLabelStyle}" />
 
@@ -24,8 +25,8 @@
               ColumnSpacing="75"
               RowSpacing="5">
 
-                <!-- Company Name -->
-                <Label Text="Company Name"
+            <!-- Company Name -->
+                <Label Text="{Binding [CompanyNameLabel], Source={x:Static services:TranslationService.Instance}}"
                    Grid.Column="0"
                    Grid.Row="0"
                    Style="{StaticResource LabelStyle}" 
@@ -34,12 +35,12 @@
                 <Entry x:Name="CompanyEntry"
                    Grid.Row="1"
                    Grid.Column="0"
-                   Placeholder="e.g. Novo Nordisk"
+                   Placeholder="Novo Nordisk"
                    Text="{Binding CompanyName}"
                    Style="{StaticResource EntryStyle}" />
 
-                <!-- Month -->
-                <Label Text="Month (1-12)"
+            <!-- Month -->
+                <Label Text="{Binding [PaycheckMonthLabel], Source={x:Static services:TranslationService.Instance}}"
                    Grid.Row="2"
                    Grid.Column="0"
                 Margin="0,10,0,0"
@@ -109,8 +110,8 @@
                 <Label BackgroundColor="{Binding SalaryAfterTaxIndicator}" Grid.Row="4" Grid.Column="3"></Label>
             </Grid>
 
-            <Button Command="{Binding CompareCommand}" Margin="10,0,0,0" Text="Compare!">
-
+            <Button Command="{Binding CompareCommand}" Margin="10,0,0,0" Text="{Binding [PaycheckCompareButton], Source={x:Static services:TranslationService.Instance}}">
+                
             </Button>
             <Button Grid.Row="1" Text="Generate PDF" Clicked="Button_OnClicked" />
 

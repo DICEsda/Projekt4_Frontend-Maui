@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddAndEditJobs" xml:space="preserve">
+    <value>Tilføj og rediger jobs</value>
+  </data>
+  <data name="AddWorkshiftBtn" xml:space="preserve">
+    <value>Tilføj</value>
+  </data>
+  <data name="AppTitle" xml:space="preserve">
+    <value>Finans Styring</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Firma navn</value>
+  </data>
+  <data name="CompanyNameLabel" xml:space="preserve">
+    <value>Firma Navn</value>
+  </data>
+  <data name="CreateJob" xml:space="preserve">
+    <value>Opret Job</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Betjeningspanel</value>
+  </data>
+  <data name="EmailLabel" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="GetJobsBtn" xml:space="preserve">
+    <value>Hent Jobs</value>
+  </data>
+  <data name="HireType" xml:space="preserve">
+    <value>Ansættelsestype</value>
+  </data>
+  <data name="HolidayPay" xml:space="preserve">
+    <value>Feriepenge</value>
+  </data>
+  <data name="HourlyRate" xml:space="preserve">
+    <value>Timeløn</value>
+  </data>
+  <data name="JobsTitle" xml:space="preserve">
+    <value>Tilføj/Ændre Job</value>
+  </data>
+  <data name="LogHours" xml:space="preserve">
+    <value>Registrer timer</value>
+  </data>
+  <data name="LogHoursTitle" xml:space="preserve">
+    <value>Arbejds Vagter</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Log ud</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>eller</value>
+  </data>
+  <data name="PasswordLabel" xml:space="preserve">
+    <value>Kodeord</value>
+  </data>
+  <data name="Paycheck" xml:space="preserve">
+    <value>Lønseddel</value>
+  </data>
+  <data name="PaycheckCompareButton" xml:space="preserve">
+    <value>Samligne!</value>
+  </data>
+  <data name="PaycheckDetails" xml:space="preserve">
+    <value>Lønseddel detaljer</value>
+  </data>
+  <data name="PaycheckMonthLabel" xml:space="preserve">
+    <value>Måned 1-12</value>
+  </data>
+  <data name="PaycheckTitle" xml:space="preserve">
+    <value>Lønseddel</value>
+  </data>
+  <data name="PlaceholderEmail" xml:space="preserve">
+    <value>Indtast email</value>
+  </data>
+  <data name="PlaceholderPassword" xml:space="preserve">
+    <value>Indtast kodeord</value>
+  </data>
+  <data name="PlaceholderTitle" xml:space="preserve">
+    <value>for eksempel butiksassistent</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Registrer</value>
+  </data>
+  <data name="RegisterButton" xml:space="preserve">
+    <value>Registrer Konto</value>
+  </data>
+  <data name="RegisterJobBtn" xml:space="preserve">
+    <value>Registrer job</value>
+  </data>
+  <data name="RegisterName" xml:space="preserve">
+    <value>Fuld Navn</value>
+  </data>
+  <data name="RegisterPassword" xml:space="preserve">
+    <value>Kodeord</value>
+  </data>
+  <data name="RegisterPhone" xml:space="preserve">
+    <value>Telefon Nummer</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>Registrer</value>
+  </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>Log Ind</value>
+  </data>
+  <data name="StudentGrant" xml:space="preserve">
+    <value>SU</value>
+  </data>
+  <data name="SubPayAddButton" xml:space="preserve">
+    <value>Tilføj Tillægs Detalie</value>
+  </data>
+  <data name="SubPayAmount" xml:space="preserve">
+    <value>Mængde</value>
+  </data>
+  <data name="SubPayDayNumber" xml:space="preserve">
+    <value>Dag</value>
+  </data>
+  <data name="SubPayEndTime" xml:space="preserve">
+    <value>Indtast Slut Tid</value>
+  </data>
+  <data name="SubPayStartTime" xml:space="preserve">
+    <value>Indtast Start Tid</value>
+  </data>
+  <data name="SubPayTitle" xml:space="preserve">
+    <value>Tillæg Detalier</value>
+  </data>
+  <data name="TaxCard" xml:space="preserve">
+    <value>Skattekort</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Titel</value>
+  </data>
+  <data name="VacPayTitle" xml:space="preserve">
+    <value>Ferie Penge</value>
+  </data>
+  <data name="WorkshiftEndtime" xml:space="preserve">
+    <value>Arbejdsvagt Slut Tid</value>
+  </data>
+  <data name="WorkshiftStarttime" xml:space="preserve">
+    <value>Arbejdsvagt Start Tid</value>
+  </data>
+</root>
