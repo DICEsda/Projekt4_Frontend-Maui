@@ -86,8 +86,6 @@ npm run build
 npm run deploy
 ```
 
-You can also deploy using Vercel or Netlify.
-
 ---
 
 ## Live Demo
@@ -96,14 +94,6 @@ Portfolio Website: [https://DICEsda.github.io/Portfolio-Website](https://DICEsda
 GitHub Repository: [https://github.com/DICEsda/Portfolio-Website](https://github.com/DICEsda/Portfolio-Website)
 
 ---
-
-## Screenshots
-
-*(Add screenshots here once available)*
-`/public/preview.png`
-
----
-
 ## Contact
 
 Email: [yahya24680@gmail.com]
