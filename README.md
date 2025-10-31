@@ -96,9 +96,12 @@ GitHub Repository: [https://github.com/DICEsda/Portfolio-Website](https://github
 ---
 ## Contact
 
-Email: [yahya24680@gmail.com]
-Portfolio: [https://DICEsda.github.io/Portfolio-Website](https://DICEsda.github.io/Portfolio-Website)
-GitHub: [https://github.com/DICEsda](https://github.com/DICEsda)
+[Email](yahya24680@gmail.com)
+
+[Portfolio online](https://DICEsda.github.io/Portfolio-Website)
+
+[GitHub](https://github.com/DICEsda)
+
 [LinkedIn](https://www.linkedin.com/in/jahye-ali-72267916b/)
 
 ---
